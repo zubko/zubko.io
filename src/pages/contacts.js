@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "gatsby-link";
 
-const ThirdPage = () => (
+const ContactsPage = () => (
   <div>
-    <h1>Hi from the third page</h1>
-    <p>Welcome to page 3</p>
+    <h1>Contacts</h1>
+    <p>You can find me here</p>
     <Link to="/">Go back to the homepage</Link>
   </div>
 );
 
-export default ThirdPage;
+export default ContactsPage;

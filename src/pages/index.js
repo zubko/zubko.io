@@ -3,13 +3,27 @@ import Link from "gatsby-link";
 
 const IndexPage = ({ data }) => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to my website.</p>
-    <h2>Pages</h2>
+    <h1>Hello</h1>
     <p>
-      <Link to="/page-2/">Go to page 2</Link>
+      My name is Alexander. I enjoy making apps and working with React Native
+      and React.
+    </p>
+    <p>
+      This website as a tool to share my experiences and thoughts in my work.
+      Check out my <a href="blog/">blog</a>. Also I keep my{" "}
+      <a href="portfolio/">portfolio</a> and my{" "}
+      <a href="/CV.pdf">most recent CV</a>.
+    </p>
+    <h2>Menu</h2>
+    <p>
+      <Link to="/about/">About</Link>
       <br />
-      <Link to="/page-3/">Go to page 3</Link>
+      <Link to="/blog/">Blog</Link>
+      <br />
+      <Link to="/portfolio/">Portfolio</Link>
+      <br />
+      <Link to="/contacts/">Contacts</Link>
+      <br />
     </p>
     <h2>Posts</h2>
     <p>
@@ -25,7 +39,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage;
 
 export const postsQuery = graphql`
-  query GetAllPosts {
+  query GetRecentPosts {
     allMarkdownRemark {
       edges {
         node {
