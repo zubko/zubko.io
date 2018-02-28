@@ -1,5 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
+// @flow
+
+import React from 'react';
+import Helmet from 'react-helmet';
 
 const Template = ({ data }) => {
   const { markdownRemark: post } = data;

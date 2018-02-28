@@ -1,0 +1,4 @@
+{
+  "flow.useNPMPackagedFlow": true,
+  "eslint.packageManager": "yarn"
+}

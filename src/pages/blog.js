@@ -1,5 +1,7 @@
-import React from "react";
-import Link from "gatsby-link";
+// @flow
+
+import React from 'react';
+import Link from 'gatsby-link';
 
 const BlogPage = ({ data }) => (
   <div>
