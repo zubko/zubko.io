@@ -12,7 +12,9 @@ const IndexPage = ({ data }) => (
       This website as a tool to share my experiences and thoughts in my work.
       Check out my <a href="blog/">blog</a>. Also I keep my{" "}
       <a href="portfolio/">portfolio</a> and my{" "}
-      <a href="/CV.pdf">most recent CV</a>.
+      <a href="/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf">
+        most recent CV
+      </a>.
     </p>
     <h2>Menu</h2>
     <p>
