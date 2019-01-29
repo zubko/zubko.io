@@ -1,12 +1,15 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
+
+import { Layout, SEO } from '../components';
 
 const AboutPage = () => (
-  <div>
-    <h1>About Me</h1>
-    <p>Longer intro</p>
-    <Link to="/">Go back to the homepage</Link>
-  </div>
+  <Layout>
+    <SEO title="About" keywords={[`about`]} />
+    <h2>About Me</h2>
+    <p>Longer intro will be here...</p>
+    <Link to="/">← Home</Link>
+  </Layout>
 );
 
 export default AboutPage;

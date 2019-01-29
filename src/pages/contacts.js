@@ -1,12 +1,16 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
+
+import { Layout, SEO, AsciiEmail } from '../components';
 
 const ContactsPage = () => (
-  <div>
-    <h1>Contacts</h1>
-    <p>You can find me here</p>
-    <Link to="/">Go back to the homepage</Link>
-  </div>
+  <Layout>
+    <SEO title="Contacts" keywords={[`contacts`]} />
+    <h2>Contacts</h2>
+    <p>You can reach me here:</p>
+    <AsciiEmail />
+    <Link to="/">← Home</Link>
+  </Layout>
 );
 
 export default ContactsPage;

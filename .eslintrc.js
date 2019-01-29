@@ -1,8 +1,15 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:flowtype/recommended'],
+  extends: ['fbjs'],
+  plugins: ['prettier', 'react'],
   parser: 'babel-eslint',
-  plugins: ['flowtype'],
   rules: {
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'relay/graphql-naming': 0,
+    'max-len': 0,
+    indent: 0,
+    quotes: 0,
+  },
+  env: {
+    node: true,
+    browser: true,
   },
 };

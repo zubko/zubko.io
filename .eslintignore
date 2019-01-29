@@ -1,0 +1,7 @@
+node_modules/*
+
+# Ignore markdown files and examples
+posts/*
+
+# Ignore built files
+public/*

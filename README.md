@@ -1,4 +1,4 @@
-# TL;DR
+# Short
 
 The source code of my personal [website/blog/portfolio/playground](https://zubko.io/) built with [Gatsby](https://www.gatsbyjs.org) hosted on [Netlify](https://www.netlify.com/)
 
