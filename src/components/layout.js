@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
+import { Header, Link } from '../components';
 import './layout.css';
 
 const Layout = ({ children }) => (
@@ -30,7 +30,7 @@ const Layout = ({ children }) => (
           <footer style={{ marginTop: '1rem' }}>
             © {new Date().getFullYear()}, Built with
             {` 🚀 `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a> ⚛
+            <Link to="https://www.gatsbyjs.org">Gatsby</Link> ⚛
           </footer>
         </div>
       </>

@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO, Link } from '../components';
 
 const PortfolioPage = () => (
   <Layout>

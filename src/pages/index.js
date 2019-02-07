@@ -1,8 +1,7 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { Layout, SEO, Link } from '../components';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -27,11 +26,11 @@ const IndexPage = ({ data }) => {
       </p>
       <p>
         This website as a tool to share{' '}
-        <a href="blog/">my experiences and thoughts in my work</a>. Also I keep
-        my <a href="portfolio/">portfolio</a> and my{' '}
-        <a href="/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf">
+        <Link to="/blog">my experiences and thoughts in my work</Link>. Also I
+        keep my <Link to="/portfolio">portfolio</Link> and my{' '}
+        <Link useAnchor to="/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf">
           most recent CV
-        </a>{' '}
+        </Link>{' '}
         here.
       </p>
       <h2>Menu</h2>

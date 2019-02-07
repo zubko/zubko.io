@@ -3,5 +3,6 @@ import Image from './image';
 import Layout from './layout';
 import SEO from './seo';
 import AsciiEmail from './asciiemail';
+import Link from './link';
 
-export { Header, Image, Layout, SEO, AsciiEmail };
+export { Header, Image, Layout, SEO, AsciiEmail, Link };

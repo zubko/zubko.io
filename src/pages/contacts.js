@@ -1,7 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
 
-import { Layout, SEO, AsciiEmail } from '../components';
+import { Layout, SEO, AsciiEmail, Link } from '../components';
 
 const ContactsPage = () => (
   <Layout>

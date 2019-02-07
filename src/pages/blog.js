@@ -1,10 +1,9 @@
 // @flow
 
 import React from 'react';
-import Link from 'gatsby-link';
 import { graphql } from 'gatsby';
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO, Link } from '../components';
 
 const BlogPage = ({ data }: Object) => {
   const { edges } = data.allMarkdownRemark;
