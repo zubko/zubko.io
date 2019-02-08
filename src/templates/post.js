@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import { Layout, SEO, Link } from '../components';
 
@@ -17,10 +18,10 @@ const Template = ({ data, pageContext }: Object) => {
       <div>
         <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <div style={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
+        <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
           {next && <Link to={next.frontmatter.path}>Next</Link>}
         </div>
-        <div style={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
+        <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
           {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
         </div>
       </div>

@@ -1,3 +1,5 @@
+const MAIN_COLOR = '#3CB534';
+
 module.exports = {
   siteMetadata: {
     title: `Alexander Zubko`,
@@ -21,8 +23,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#3CB534`,
-        theme_color: `#3CB534`,
+        background_color: MAIN_COLOR,
+        theme_color: MAIN_COLOR,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
@@ -37,5 +39,12 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: MAIN_COLOR,
+      },
+    },
+    `gatsby-plugin-glamor`,
   ],
 };

@@ -15,7 +15,7 @@ const BlogPage = ({ data }: Object) => {
         {edges.map(edge => {
           const { frontmatter } = edge.node;
           return (
-            <div key={frontmatter.path} style={{ marginBottom: '1rem' }}>
+            <div key={frontmatter.path} css={{ marginBottom: '1rem' }}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
             </div>
           );

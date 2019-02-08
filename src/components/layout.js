@@ -20,14 +20,14 @@ const Layout = ({ children }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
-          style={{
+          css={{
             margin: `0 auto`,
             maxWidth: 960,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
           }}>
           {children}
-          <footer style={{ marginTop: '1rem' }}>
+          <footer css={{ marginTop: '1rem' }}>
             © {new Date().getFullYear()}, Built with
             {` 🚀 `}
             <Link to="https://www.gatsbyjs.org">Gatsby</Link> ⚛

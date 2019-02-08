@@ -10,12 +10,11 @@ const Colors = {
 
 const LinkStyle = {
   color: Colors.mainDarker,
+  textDecoration: 'none',
 
   ':hover': {
-    color: Colors.mainDarker,
-  },
-  ':visited': {
-    color: Colors.mainDarker,
+    color: Colors.main,
+    textDecoration: 'underline',
   },
 };
 
