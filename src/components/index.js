@@ -1,8 +1,8 @@
-import Header from './header';
-import Image from './image';
-import Layout from './layout';
-import SEO from './seo';
-import AsciiEmail from './asciiemail';
-import Link from './link';
+import Header from './Header';
+import Image from './Image';
+import Layout from './Layout';
+import SEO from './Seo';
+import AsciiEmail from './Asciiemail';
+import Link from './Link';
 
 export { Header, Image, Layout, SEO, AsciiEmail, Link };

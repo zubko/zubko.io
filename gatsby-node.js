@@ -8,16 +8,16 @@
 
 const path = require('path');
 
-exports.createPages = ({graphql, actions}) => {
-  const {createPage} = actions;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve('src/templates/post.js');
+    const blogPostTemplate = path.resolve('src/templates/Post.js');
     resolve(
       graphql(
         `
           query {
             allMarkdownRemark(
-              sort: {order: ASC, fields: [frontmatter___date]}
+              sort: { order: ASC, fields: [frontmatter___date] }
             ) {
               edges {
                 node {
@@ -37,8 +37,8 @@ exports.createPages = ({graphql, actions}) => {
 
         //createTagPages(createPage, posts);
 
-        posts.forEach(({node}, index) => {
-          const {path} = node.frontmatter;
+        posts.forEach(({ node }, index) => {
+          const { path } = node.frontmatter;
           createPage({
             path,
             component: blogPostTemplate,
