@@ -4,6 +4,13 @@
   "description": "Webiste for Alexander Zubko",
   "version": "1.0.0",
   "author": "Alexander Zubko <alex@zubko.io>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --config .prettierrc --write \"{gatsby-*.js,{flow-typed,plugins,src}/**/*.js}\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-flow": "^7.0.0",
@@ -43,13 +50,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
-  },
   "devDependencies": {
     "prettier": "^1.15.2"
   },
