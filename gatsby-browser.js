@@ -4,4 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+'use strict';
+
+// Import global styles
+require('normalize.css');
+require('./src/css/reset.css');
+
+// A stub function is needed because gatsby won't load this file otherwise
+// (https://github.com/gatsbyjs/gatsby/issues/6759)
+exports.onClientEntry = () => {};
