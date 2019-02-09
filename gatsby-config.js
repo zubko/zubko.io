@@ -3,7 +3,7 @@ const MAIN_COLOR = '#3CB534';
 module.exports = {
   siteMetadata: {
     title: `Alexander Zubko`,
-    description: `I'm building natime and React Native mobile app and sharing my experience here.`,
+    description: `I'm building native and React Native mobile apps and React websites and sharing my experience here.`,
     author: `@_zubko`,
   },
   plugins: [
