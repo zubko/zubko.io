@@ -3,6 +3,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import { Styles } from '../Theme';
 import { Layout, SEO, Link } from '../components';
 
 const Template = ({ data, pageContext }: Object) => {
@@ -17,7 +18,10 @@ const Template = ({ data, pageContext }: Object) => {
       <SEO title={title} keywords={[]} />
       <div>
         <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          css={Styles.markdown}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
           {next && <Link to={next.frontmatter.path}>Next</Link>}
         </div>
