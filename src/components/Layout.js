@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
           {children}
           <footer css={{ marginTop: '1rem' }}>
             © {new Date().getFullYear()}, Built with
-            {` 🚀 `}
+            {` 🚀`}
             <Link to="https://www.gatsbyjs.org">Gatsby</Link> ⚛
           </footer>
         </div>
