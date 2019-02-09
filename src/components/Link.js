@@ -9,7 +9,7 @@ import { Link as GatsbyLink } from 'gatsby';
 
 import { css as cssGlam } from 'glamor';
 
-import { Styles } from '../theme';
+import { Styles } from '../Theme';
 
 export default ({ useAnchor, children, to, css, ...otherProps }: Object) => {
   const internal = /^\/(?!\/)/.test(to);
