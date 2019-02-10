@@ -37,7 +37,19 @@ module.exports = {
         path: `${__dirname}/posts/`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              inlineCodeMarker: '›',
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-nprogress`,

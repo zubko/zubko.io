@@ -91,6 +91,46 @@ const Styles = {
   markdown: {
     lineHeight: '25px',
 
+    '& .gatsby-highlight-code-line': {
+      backgroundColor: '#feb',
+      display: 'block',
+      marginRight: '-1em',
+      marginLeft: '-1em',
+      paddingRight: '1em',
+      paddingLeft: '0.75em',
+      borderLeft: '0.25em solid #f99',
+    },
+
+    /**
+     * Add back the container background-color, border-radius, padding, margin
+     * and overflow that we removed from <pre>.
+     */
+    '& .gatsby-highlight': {
+      backgroundColor: '#fdf6e3',
+      borderRadius: '0.3em',
+      margin: '0.5em 0',
+      padding: '1em',
+      overflow: 'auto',
+    },
+
+    /**
+     * Remove the default PrismJS theme background-color, border-radius, margin,
+     * padding and overflow.
+     */
+    '& .gatsby-highlight pre[class*="language-"]': {
+      backgroundColor: 'transparent',
+      margin: '0',
+      padding: '0',
+      overflow: 'initial',
+      float: 'left',
+      minWidth: '100%',
+    },
+
+    /* Adjust the position of the line numbers */
+    '& .gatsby-highlight pre[class*="language-"].line-numbers': {
+      paddingLeft: '2.8em',
+    },
+
     '& a:not(.anchor):not(.gatsby-resp-image-link)': LinkStyle,
 
     '& > p:first-child': {
