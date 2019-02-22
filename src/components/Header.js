@@ -1,37 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Link } from '../components';
+import { Link, Menu } from '../components';
 import { Colors } from '../Theme';
 
 const Header = ({ siteTitle }) => (
-  <div
-    css={{
-      background: Colors.main,
-      marginBottom: `1.45rem`,
-    }}>
-    <div
-      css={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}>
-      <h1 css={{ margin: 0 }}>
-        <Link
-          to="/"
-          css={{
-            color: `white`,
-            textDecoration: `none`,
-            ':hover': {
-              color: `white`,
-            },
-          }}>
-          {siteTitle}
-        </Link>
-      </h1>
+  <div css={styles.headerOutter}>
+    <div css={styles.headerInner}>
+      <Link to="/" css={styles.home}>
+        {siteTitle}
+      </Link>
+      <Menu />
     </div>
   </div>
 );
+
+const styles = {
+  headerOutter: {
+    background: Colors.main,
+    marginBottom: `1.45rem`,
+  },
+  headerInner: {
+    margin: `0 auto`,
+    maxWidth: 960,
+    padding: `1.45rem 1.0875rem`,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  home: {
+    color: `white`,
+    textDecoration: `none`,
+    ':hover': {
+      color: `white`,
+    },
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+  },
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

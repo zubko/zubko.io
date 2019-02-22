@@ -33,17 +33,6 @@ const IndexPage = ({ data }) => {
         </Link>{' '}
         here.
       </p>
-      <h2>Menu</h2>
-      <p>
-        <Link to="/about/">About</Link>
-        <br />
-        <Link to="/blog/">Blog</Link>
-        <br />
-        <Link to="/portfolio/">Portfolio</Link>
-        <br />
-        <Link to="/contacts/">Contacts</Link>
-        <br />
-      </p>
       <h2>Posts</h2>
       <div>
         {edges.map(edge => {
