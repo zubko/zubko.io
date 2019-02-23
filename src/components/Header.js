@@ -33,6 +33,7 @@ const styles = {
     textDecoration: `none`,
     ':hover': {
       color: `white`,
+      textDecoration: `none`,
     },
     fontSize: '1.5rem',
     fontWeight: 'bold',

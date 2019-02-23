@@ -57,6 +57,6 @@ module.exports = {
         color: MAIN_COLOR,
       },
     },
-    `gatsby-plugin-glamor`,
+    `gatsby-plugin-emotion`,
   ],
 };

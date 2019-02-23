@@ -19,7 +19,8 @@
         "pragma": "React.createElement"
       }
     ],
-    "@babel/flow"
+    "@babel/flow",
+    "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
     [
