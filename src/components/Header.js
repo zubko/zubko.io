@@ -1,19 +1,70 @@
-import React from 'react';
+/**
+ * Top common part of the website
+ * @flow
+ */
+
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Link, Menu } from '../components';
-import { Colors } from '../Theme';
+import { Link, MenuVertical, MenuHorizontal } from '../components';
+import { Colors, Media } from '../Theme';
 
-const Header = ({ siteTitle }) => (
-  <div css={styles.headerOutter}>
-    <div css={styles.headerInner}>
-      <Link to="/" css={styles.home}>
-        {siteTitle}
-      </Link>
-      <Menu />
+const Links = [
+  {
+    path: '/',
+    title: 'Home',
+  },
+  {
+    path: '/about/',
+    title: 'About',
+  },
+  {
+    path: '/blog/',
+    title: 'Blog',
+  },
+  {
+    path: '/portfolio/',
+    title: 'Portfolio',
+  },
+  {
+    path: '/contacts/',
+    title: 'Contacts',
+  },
+];
+
+const MediaForVertMenu = Media.lessThan('medium');
+const MediaForHorzMenu = Media.greaterThan('medium');
+
+const Header = ({ siteTitle }: Object) => {
+  const [isMenuOpened, setMenuOpened] = useState(false);
+  return (
+    <div css={styles.headerOutter}>
+      <div css={styles.headerInner}>
+        <Link to="/" css={styles.home}>
+          {siteTitle}
+        </Link>
+        <MenuHorizontal
+          css={{ [MediaForVertMenu]: { display: 'none' } }}
+          links={Links}
+        />
+        <MenuVertical
+          isHead
+          isOpened={isMenuOpened}
+          setOpened={setMenuOpened}
+          css={{ [MediaForHorzMenu]: { display: 'none' } }}
+          links={Links}
+        />
+      </div>
+      <MenuVertical
+        isBody
+        isOpened={isMenuOpened}
+        setOpened={setMenuOpened}
+        stl={{ [MediaForHorzMenu]: { display: 'none' } }}
+        links={Links}
+      />
     </div>
-  </div>
-);
+  );
+};
 
 const styles = {
   headerOutter: {
@@ -27,6 +78,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   home: {
     color: `white`,
