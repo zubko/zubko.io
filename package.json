@@ -29,7 +29,7 @@
     "eslint-plugin-prettier": "^2.7.0",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-relay": "^0.0.19",
-    "flow-bin": "^0.75.0",
+    "flow-bin": "^0.93.0",
     "gatsby": "^2.1.17",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-catch-links": "^2.0.11",
@@ -51,6 +51,9 @@
     "react-dom": "npm:@hot-loader/react-dom",
     "react-helmet": "^5.2.0"
   },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
   "engines": {
     "node": ">8.4.0",
     "yarn": "^1.3.2"
@@ -59,9 +62,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "devDependencies": {
-    "prettier": "^1.16.4"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
