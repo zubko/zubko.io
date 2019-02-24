@@ -61,6 +61,11 @@ const AcknowledgementsPage = () => (
         <Link to="https://www.netlify.com/">Netlify</Link>
       </li>
     </ul>
+    <h3>Code</h3>
+    <p>
+      The code of this website is{' '}
+      <Link to="https://github.com/zubko/zubko.io">available on GitHub</Link>
+    </p>
   </Layout>
 );
 export default AcknowledgementsPage;
