@@ -59,7 +59,7 @@ const Header = ({ siteTitle }: Object) => {
         isBody
         isOpened={isMenuOpened}
         setOpened={setMenuOpened}
-        stl={{ [MediaForHorzMenu]: { display: 'none' } }}
+        css={{ [MediaForHorzMenu]: { display: 'none' } }}
         links={Links}
       />
     </div>
