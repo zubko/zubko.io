@@ -8,49 +8,108 @@
 
 const path = require('path');
 
-exports.createPages = ({ graphql, actions }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  // https://github.com/gatsbyjs/gatsby/issues/1634#issuecomment-388899348
+
+  if (node.internal && node.internal.type === `MarkdownRemark`) {
+    const parent = getNode(node.parent);
+    createNodeField({
+      node,
+      name: 'collection',
+      value: parent.sourceInstanceName,
+    });
+  }
+};
+
+exports.createPages = async function({ graphql, actions }) {
+  await createBlogPages({ graphql, actions });
+  await createProjectsPages({ graphql, actions });
+};
+
+async function createBlogPages({ graphql, actions }) {
   const { createPage } = actions;
-  return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve('src/templates/Post.js');
-    resolve(
-      graphql(
-        `
-          query {
-            allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
-            ) {
-              edges {
-                node {
-                  frontmatter {
-                    title
-                    path
-                    date
-                    tags
-                  }
-                }
+  const template = path.resolve('src/templates/Post.js');
+
+  const queryResult = await graphql(
+    `
+      query {
+        allMarkdownRemark(
+          sort: { order: ASC, fields: [frontmatter___date] }
+          filter: { fields: { collection: { eq: "posts" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+                date
+                tags
               }
             }
           }
-        `,
-      ).then(result => {
-        const posts = result.data.allMarkdownRemark.edges;
+        }
+      }
+    `,
+  );
 
-        //createTagPages(createPage, posts);
+  const posts = queryResult.data.allMarkdownRemark.edges;
 
-        posts.forEach(({ node }, index) => {
-          const { path } = node.frontmatter;
-          createPage({
-            path,
-            component: blogPostTemplate,
-            context: {
-              pathSlug: path,
-              prev: index > 0 ? posts[index - 1].node : null,
-              next: index < posts.length - 1 ? posts[index + 1].node : null,
-            },
-          });
-          resolve();
-        });
-      }),
-    );
+  posts.forEach(({ node }, index) => {
+    const { path } = node.frontmatter;
+    createPage({
+      path,
+      component: template,
+      context: {
+        pathSlug: path,
+        prev: index > 0 ? posts[index - 1].node : null,
+        next: index < posts.length - 1 ? posts[index + 1].node : null,
+      },
+    });
   });
-};
+}
+
+async function createProjectsPages({ graphql, actions }) {
+  const { createPage } = actions;
+  const template = path.resolve('src/templates/Project.js');
+
+  const queryResult = await graphql(
+    `
+      query {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { fields: { collection: { eq: "projects" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                path
+                date
+                tags
+              }
+            }
+          }
+        }
+      }
+    `,
+  );
+
+  const projects = queryResult.data.allMarkdownRemark.edges;
+
+  //createTagPages(createPage, projects);
+
+  projects.forEach(({ node }, index) => {
+    const { path } = node.frontmatter;
+    createPage({
+      path,
+      component: template,
+      context: {
+        pathSlug: path,
+        prev: index > 0 ? projects[index - 1].node : null,
+        next: index < projects.length - 1 ? projects[index + 1].node : null,
+      },
+    });
+  });
+}

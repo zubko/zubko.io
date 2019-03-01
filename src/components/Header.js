@@ -23,8 +23,8 @@ const Links = [
     title: 'Blog',
   },
   {
-    path: '/portfolio/',
-    title: 'Portfolio',
+    path: '/projects/',
+    title: 'Projects',
   },
   {
     path: '/contacts/',

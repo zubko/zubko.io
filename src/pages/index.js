@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       <p>
         This website as a tool to share{' '}
         <Link to="/blog">my experiences and thoughts in my work</Link>. Also I
-        keep my <Link to="/portfolio">portfolio</Link> and my{' '}
+        keep a list my <Link to="/projects">projects</Link> and my{' '}
         <Link useAnchor to="/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf">
           most recent CV
         </Link>{' '}
@@ -50,7 +50,10 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fields: { collection: { eq: "posts" } } }
+    ) {
       edges {
         node {
           frontmatter {
