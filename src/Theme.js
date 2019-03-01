@@ -48,8 +48,16 @@ const Media = {
     }
   },
 
+  greaterThanPx(px: number) {
+    return `@media (min-width: ${px}px)`;
+  },
+
   greaterThan(key: Size) {
     return `@media (min-width: ${SIZES[key].min}px)`;
+  },
+
+  lessThanPx(px: number) {
+    return `@media (max-width: ${px - 1}px)`;
   },
 
   lessThan(key: Size) {

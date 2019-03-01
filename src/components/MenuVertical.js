@@ -8,7 +8,7 @@ import React, { Fragment } from 'react';
 import { Link } from '../components';
 import { Colors } from '../Theme';
 
-const Separator = () => <span css={Styles.separator}>{' – '}</span>;
+const Separator = () => <span css={Styles.separator}>{' '}</span>;
 
 type Props = {
   links: { path: string, title: string }[],
@@ -90,6 +90,7 @@ const Styles = {
     fontWeight: 'medium',
   },
   separator: {
+    height: '0.5rem',
     color: 'white',
     cursor: 'default',
   },

@@ -32,8 +32,9 @@ const Links = [
   },
 ];
 
-const MediaForVertMenu = Media.lessThan('medium');
-const MediaForHorzMenu = Media.greaterThan('medium');
+const MENU_MEDIA_SPLIT = 780;
+const MediaForVertMenu = Media.lessThanPx(MENU_MEDIA_SPLIT);
+const MediaForHorzMenu = Media.greaterThanPx(MENU_MEDIA_SPLIT);
 
 const Header = ({ siteTitle }: Object) => {
   const [isMenuOpened, setMenuOpened] = useState(false);
