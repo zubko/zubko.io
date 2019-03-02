@@ -8,7 +8,7 @@ import React, { Fragment } from 'react';
 import { Link } from '../components';
 import { Colors } from '../Theme';
 
-const Separator = () => <span css={Styles.separator}>{' '}</span>;
+const Separator = () => <span css={Styles.separator}> </span>;
 
 type Props = {
   links: { path: string, title: string }[],
@@ -65,14 +65,24 @@ export default MenuVertical;
 const Styles = {
   button: {
     cursor: 'pointer',
-    color: 'white',
-    border: '1px solid white',
+    color: Colors.mainDarker,
+    border: `1px solid ${Colors.mainDarker}`,
     padding: '0.5rem',
     backgroundColor: 'transparent',
     ':focus': { outline: 0 },
   },
   buttonSelected: {
+    color: 'white',
+    border: `1px solid white`,
     backgroundColor: Colors.mainDarker,
+    background: `repeating-linear-gradient(
+      45deg,
+      ${Colors.main},
+      ${Colors.main} 10px,
+      ${Colors.mainDarker} 10px,
+      ${Colors.mainDarker} 20px
+    )`,
+    opacity: 0.9,
   },
   body: {
     display: 'flex',
@@ -81,11 +91,8 @@ const Styles = {
     paddingBottom: '1rem',
   },
   menuItem: {
-    color: 'white',
     textDecoration: 'none',
-    ':hover': {
-      color: `white`,
-    },
+    ':hover': {},
     fontSize: '1rem',
     fontWeight: 'medium',
   },

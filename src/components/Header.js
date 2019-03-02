@@ -41,7 +41,7 @@ const Header = ({ siteTitle }: Object) => {
   return (
     <div css={styles.headerOutter}>
       <div css={styles.headerInner}>
-        <Link to="/" css={styles.home}>
+        <Link to="/" css={styles.homeLink}>
           {siteTitle}
         </Link>
         <MenuHorizontal
@@ -69,7 +69,6 @@ const Header = ({ siteTitle }: Object) => {
 
 const styles = {
   headerOutter: {
-    background: Colors.main,
     marginBottom: `1.45rem`,
   },
   headerInner: {
@@ -81,11 +80,9 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  home: {
-    color: `white`,
+  homeLink: {
     textDecoration: `none`,
     ':hover': {
-      color: `white`,
       textDecoration: `none`,
     },
     fontSize: '1.5rem',

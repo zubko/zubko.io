@@ -12,7 +12,7 @@ type Props = {
   css: any,
 };
 
-const Separator = () => <span css={Styles.separator}>{' '}</span>;
+const Separator = () => <span css={Styles.separator}> </span>;
 
 const MenuHorizontal = ({ links, ...otherProps }: Props) => {
   return (
@@ -38,11 +38,8 @@ export default MenuHorizontal;
 
 const Styles = {
   menuItem: {
-    color: 'white',
     textDecoration: 'none',
-    ':hover': {
-      color: `white`,
-    },
+    ':hover': {},
     fontSize: '1rem',
     fontWeight: 'medium',
   },
