@@ -52,7 +52,10 @@ export const query = graphql`
   query HomePageQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fields: { collection: { eq: "posts" } } }
+      filter: {
+        fields: { collection: { eq: "posts" } }
+        frontmatter: { hidden: { ne: true } }
+      }
     ) {
       edges {
         node {

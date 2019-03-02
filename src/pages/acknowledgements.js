@@ -66,6 +66,11 @@ const AcknowledgementsPage = () => (
       The code of this website is{' '}
       <Link to="https://github.com/zubko/zubko.io">available on GitHub</Link>
     </p>
+    {process.env.DEV ? (
+      <p>
+        <Link to="/posts/test">Test mardown page</Link>
+      </p>
+    ) : null}
   </Layout>
 );
 export default AcknowledgementsPage;
