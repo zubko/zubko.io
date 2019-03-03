@@ -8,6 +8,7 @@ FairyGates.overrideThemeStyles = () => ({
 });
 
 delete FairyGates.googleFonts;
+FairyGates.baseLineHeight = 1.618;
 
 const typography = new Typography(FairyGates);
 
