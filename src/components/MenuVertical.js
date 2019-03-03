@@ -7,6 +7,7 @@ import React, { Fragment } from 'react';
 
 import { Link } from '../components';
 import { Colors } from '../Theme';
+import { rhythm } from '../Typography';
 
 const Separator = () => <span css={Styles.separator}> </span>;
 
@@ -88,7 +89,8 @@ const Styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingBottom: '1rem',
+    paddingBottom: rhythm(0.5),
+    paddingTop: rhythm(1),
   },
   menuItem: {
     textDecoration: 'none',

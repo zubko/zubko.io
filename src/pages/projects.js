@@ -14,18 +14,18 @@ const ProjectsPage = ({ data }) => {
       {activeProjects.map(edge => {
         const { frontmatter } = edge.node;
         return (
-          <div key={frontmatter.path}>
+          <p key={frontmatter.path}>
             <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </div>
+          </p>
         );
       })}
       <p>List of previous works</p>
       {pastProjects.map(edge => {
         const { frontmatter } = edge.node;
         return (
-          <div key={frontmatter.path}>
+          <p key={frontmatter.path}>
             <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </div>
+          </p>
         );
       })}
       <Link to="/">← Home</Link>

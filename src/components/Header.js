@@ -7,7 +7,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link, MenuVertical, MenuHorizontal } from '../components';
-import { Colors, Media } from '../Theme';
+import { Media } from '../Theme';
+import { rhythm } from '../Typography';
 
 const Links = [
   {
@@ -69,12 +70,10 @@ const Header = ({ siteTitle }: Object) => {
 
 const styles = {
   headerOutter: {
-    marginBottom: `1.45rem`,
+    marginBottom: `${rhythm(0.5)}`,
   },
   headerInner: {
-    margin: `0 auto`,
-    maxWidth: 960,
-    padding: `1.45rem 1.0875rem`,
+    paddingTop: rhythm(0.5),
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

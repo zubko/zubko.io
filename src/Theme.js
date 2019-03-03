@@ -16,7 +16,7 @@ const LinkStyle = {
 
   ':hover': {
     color: Colors.main,
-    textDecoration: 'underline',
+    textDecoration: 'none',
   },
 };
 
@@ -96,83 +96,65 @@ const Fonts = {
 const Styles = {
   link: LinkStyle,
 
-  markdown: {
-    lineHeight: '25px',
+  markdown: {},
+};
 
-    '& .gatsby-highlight-code-line': {
-      backgroundColor: '#feb',
-      display: 'block',
-      marginRight: '-1em',
-      marginLeft: '-1em',
-      paddingRight: '1em',
-      paddingLeft: '0.75em',
-      borderLeft: '0.25em solid #f99',
+Styles.markdown = {
+  lineHeight: '25px',
+
+  '& .gatsby-highlight-code-line': {
+    backgroundColor: '#feb',
+    display: 'block',
+    marginRight: '-1em',
+    marginLeft: '-1em',
+    paddingRight: '1em',
+    paddingLeft: '0.75em',
+    borderLeft: '0.25em solid #f99',
+  },
+
+  /**
+   * Add back the container background-color, border-radius, padding, margin
+   * and overflow that we removed from <pre>.
+   */
+  '& .gatsby-highlight': {
+    backgroundColor: '#fdf6e3',
+    borderRadius: '0.3em',
+    margin: '0.5em 0',
+    padding: '1em',
+    overflow: 'auto',
+  },
+
+  /**
+   * Remove the default PrismJS theme background-color, border-radius, margin,
+   * padding and overflow.
+   */
+  '& .gatsby-highlight pre[class*="language-"]': {
+    backgroundColor: 'transparent',
+    margin: '0',
+    padding: '0',
+    overflow: 'initial',
+    float: 'left',
+    minWidth: '100%',
+  },
+
+  /* Adjust the position of the line numbers */
+  '& .gatsby-highlight pre[class*="language-"].line-numbers': {
+    paddingLeft: '2.8em',
+  },
+
+  '& a:not(.anchor):not(.gatsby-resp-image-link)': LinkStyle,
+
+  '& > p:first-child': {
+    fontSize: '1.1em',
+    fontWeight: 300,
+    color: Colors.subtle,
+
+    [Media.greaterThan('xlarge')]: {
+      fontSize: '1.2em',
     },
 
-    /**
-     * Add back the container background-color, border-radius, padding, margin
-     * and overflow that we removed from <pre>.
-     */
-    '& .gatsby-highlight': {
-      backgroundColor: '#fdf6e3',
-      borderRadius: '0.3em',
-      margin: '0.5em 0',
-      padding: '1em',
-      overflow: 'auto',
-    },
-
-    /**
-     * Remove the default PrismJS theme background-color, border-radius, margin,
-     * padding and overflow.
-     */
-    '& .gatsby-highlight pre[class*="language-"]': {
-      backgroundColor: 'transparent',
-      margin: '0',
-      padding: '0',
-      overflow: 'initial',
-      float: 'left',
-      minWidth: '100%',
-    },
-
-    /* Adjust the position of the line numbers */
-    '& .gatsby-highlight pre[class*="language-"].line-numbers': {
-      paddingLeft: '2.8em',
-    },
-
-    '& a:not(.anchor):not(.gatsby-resp-image-link)': LinkStyle,
-
-    '& > p:first-child': {
-      fontSize: 18,
-      fontWeight: 300,
-      color: Colors.subtle,
-
-      [Media.greaterThan('xlarge')]: {
-        fontSize: 24,
-      },
-
-      '& a, & strong': {
-        fontWeight: 400,
-      },
-    },
-
-    '& p': {
-      marginTop: 30,
-      fontSize: 17,
-      lineHeight: 1.7,
-      maxWidth: '42em',
-
-      '&:first-of-type': {
-        marginTop: 15,
-      },
-
-      '&:first-child': {
-        marginTop: 0,
-      },
-
-      [Media.lessThan('large')]: {
-        fontSize: 16,
-        marginTop: 25,
-      },
+    '& a, & strong': {
+      fontWeight: 400,
     },
   },
 };
