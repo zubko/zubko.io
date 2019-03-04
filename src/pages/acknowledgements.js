@@ -1,11 +1,12 @@
 /**
- * Achnowledgements page
+ * Acknowledgements page
  * @flow
  */
 
 import React from 'react';
 
 import { Layout, SEO, Link } from '../components';
+import { rhythm } from '../Typography';
 
 const AcknowledgementsPage = () => (
   <Layout>
@@ -18,21 +19,30 @@ const AcknowledgementsPage = () => (
       This website wouldn't be possible without awesome modern JS based open
       source projects like:
     </p>
-    <ul>
-      <li css={Styles.listItem}>
-        <Link to="https://reactjs.org/">⚛️ React</Link>
+    <ul css={Styles.list}>
+      <li css={Styles.listItemBullet('⚛️')}>
+        <Link to="https://reactjs.org/">React</Link>
       </li>
-      <li css={Styles.listItem}>
-        <Link to="https://www.gatsbyjs.org">🚀 Gatsby</Link>
+      <li css={Styles.listItemBullet('🚀')}>
+        <Link to="https://www.gatsbyjs.org">Gatsby</Link>
       </li>
-      <li css={Styles.listItem}>
-        <Link to="https://emotion.sh">👩‍🎤 Emotion</Link>
+      <li css={Styles.listItemBullet('👩‍🎤')}>
+        <Link to="https://emotion.sh">Emotion</Link>
+      </li>
+      <li css={Styles.listItemBullet('🖋')}>
+        <Link to="https://kyleamathews.github.io/typography.js/">
+          Typography.js
+        </Link>
       </li>
     </ul>
     <h3>Inspired by:</h3>
-    <ul>
+    <ul css={Styles.list}>
       <li css={Styles.listItemBullet('💜')}>
         Structure and configs heavily inspired by{' '}
+        <Link to="https://github.com/gatsbyjs/gatsby-starter-blog">
+          https://github.com/gatsbyjs/gatsby-starter-blog
+        </Link>
+        {' and '}
         <Link to="https://github.com/reactjs/reactjs.org/">
           https://github.com/reactjs/reactjs.org/
         </Link>
@@ -45,7 +55,7 @@ const AcknowledgementsPage = () => (
       </li>
     </ul>
     <h3>Tools:</h3>
-    <ul>
+    <ul css={Styles.list}>
       <li css={Styles.listItemBullet('🛠')}>
         Codded with <Link to="https://code.visualstudio.com/">VS Code</Link>
       </li>
@@ -75,12 +85,13 @@ const AcknowledgementsPage = () => (
 );
 export default AcknowledgementsPage;
 const Styles = {
-  listItem: { marginLeft: '0.5rem' },
+  list: {
+    listStyle: 'none',
+  },
   listItemBullet: bullet => ({
     '&::before': {
-      content: `"${bullet}"`,
-      marginLeft: '0.5rem',
-      marginRight: '0.5rem',
+      content: `"${bullet}"`, // marginLeft: '0.5rem',
+      marginRight: rhythm(0.5),
     },
   }),
 };
