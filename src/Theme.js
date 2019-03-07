@@ -7,7 +7,7 @@ const Colors = {
   main: '#3CB534',
   mainDarker: '#2C8127',
   text: '#1a1a1a',
-  subtle: '#6d6d6d',
+  subtle: '#8d8d8d',
 };
 
 const LinkStyle = {
@@ -100,8 +100,6 @@ const Styles = {
 };
 
 Styles.markdown = {
-  lineHeight: '25px',
-
   '& .gatsby-highlight-code-line': {
     backgroundColor: '#feb',
     display: 'block',
@@ -146,7 +144,7 @@ Styles.markdown = {
 
   '& > p:first-child': {
     fontSize: '1.1em',
-    fontWeight: 300,
+    fontWeight: 200,
     color: Colors.subtle,
 
     [Media.greaterThan('xlarge')]: {

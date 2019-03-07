@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 
 import { Styles } from '../Theme';
 import { Layout, SEO, Link } from '../components';
+import { rhythm } from '../Typography';
 
 const Template = ({ data, pageContext }: Object) => {
   const { next, prev } = pageContext;
@@ -22,11 +23,21 @@ const Template = ({ data, pageContext }: Object) => {
           css={Styles.markdown}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
-          {next && <Link to={next.frontmatter.path}>Next</Link>}
+        <div css={{ marginBottom: rhythm(1) }}>
+          {next && (
+            <span>
+              Next: <br />
+              <Link to={next.frontmatter.path}>{next.frontmatter.title} →</Link>
+            </span>
+          )}
         </div>
-        <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
-          {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
+        <div css={{ marginBottom: rhythm(1) }}>
+          {prev && (
+            <span>
+              Prev: <br />
+              <Link to={prev.frontmatter.path}>← {prev.frontmatter.title}</Link>
+            </span>
+          )}
         </div>
       </div>
     </Layout>

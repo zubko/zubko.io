@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { Header, Link } from '../components';
+import { Header, Footer } from '../components';
 import { rhythm, scale } from '../Typography';
 
 const Layout = ({ children }) => (
@@ -20,7 +20,7 @@ const Layout = ({ children }) => (
       <div
         css={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: rhythm(24),
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
         }}>
@@ -28,10 +28,7 @@ const Layout = ({ children }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
         </header>
         <main>{children}</main>
-        <footer css={{ marginTop: '1rem' }}>
-          © {new Date().getFullYear()}, Built{' '}
-          <Link to="/acknowledgements">with ❤️and open source ⚛</Link>
-        </footer>
+        <Footer />
       </div>
     )}
   />
