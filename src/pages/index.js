@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
       <p>
         This website as a tool to share{' '}
         <Link to="/blog">my experiences and thoughts in my work</Link>. Also I
-        keep a list my <Link to="/projects">projects</Link> and my{' '}
+        keep a list of my <Link to="/projects">projects</Link> and my{' '}
         <Link useAnchor to="/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf">
           most recent CV
         </Link>{' '}
