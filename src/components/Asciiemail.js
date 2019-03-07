@@ -4,6 +4,7 @@ const style = {
   fontFamily: 'Monospace',
   fontWeight: 'bold',
   fontSize: '8px',
+  lineHeight: '8px',
   backgroundColor: 'black',
   color: 'yellow',
   whiteSpace: 'pre',
