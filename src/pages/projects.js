@@ -9,7 +9,7 @@ const ProjectsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Projects" keywords={['projects', 'portfolio']} />
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       <p>Active projects</p>
       {activeProjects.map(edge => {
         const { frontmatter } = edge.node;

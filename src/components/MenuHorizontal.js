@@ -42,6 +42,7 @@ const Styles = {
     ':hover': {},
     fontSize: '1rem',
     fontWeight: 'medium',
+    background: 'none',
   },
   separator: {
     color: 'white',

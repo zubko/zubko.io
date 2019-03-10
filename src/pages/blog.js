@@ -10,7 +10,7 @@ const BlogPage = ({ data }: Object) => {
   return (
     <Layout>
       <SEO title="Blog" keywords={[`iOS`, `Android`, `React Native`]} />
-      <h2>Posts</h2>
+      <h1>Posts</h1>
       <div>
         {edges.map(edge => {
           const { frontmatter } = edge.node;

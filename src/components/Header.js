@@ -7,10 +7,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link, MenuVertical, MenuHorizontal } from '../components';
-import { Media } from '../Theme';
+import { Media, Colors } from '../Theme';
 import { rhythm } from '../Typography';
 
-const Links = [
+const MenuLinks = [
   {
     path: '/',
     title: 'Home',
@@ -43,18 +43,19 @@ const Header = ({ siteTitle }: Object) => {
     <div css={styles.headerOutter}>
       <div css={styles.headerInner}>
         <Link to="/" css={styles.homeLink}>
-          {siteTitle}
+          <h3>{siteTitle}</h3>
         </Link>
+
         <MenuHorizontal
           css={{ [MediaForVertMenu]: { display: 'none' } }}
-          links={Links}
+          links={MenuLinks}
         />
         <MenuVertical
           isHead
           isOpened={isMenuOpened}
           setOpened={setMenuOpened}
           css={{ [MediaForHorzMenu]: { display: 'none' } }}
-          links={Links}
+          links={MenuLinks}
         />
       </div>
       <MenuVertical
@@ -62,7 +63,7 @@ const Header = ({ siteTitle }: Object) => {
         isOpened={isMenuOpened}
         setOpened={setMenuOpened}
         css={{ [MediaForHorzMenu]: { display: 'none' } }}
-        links={Links}
+        links={MenuLinks}
       />
     </div>
   );
@@ -84,8 +85,16 @@ const styles = {
     ':hover': {
       textDecoration: `none`,
     },
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
+    background: 'none',
+    textShadow: 'none',
+    '> h3': {
+      marginTop: 0,
+      marginBottom: 0,
+      color: Colors.mainDarker,
+    },
+    ':hover > h3': {
+      color: Colors.main,
+    },
   },
 };
 

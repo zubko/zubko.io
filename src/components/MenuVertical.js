@@ -49,7 +49,7 @@ const MenuVertical = ({
           ]}>
           {links.map((item, index) => (
             <Fragment key={item.path}>
-              <Link to={item.path} css={Styles.menuItem}>
+              <Link to={item.path} css={Styles.menuLink}>
                 {item.title}
               </Link>
               {index < links.length - 1 ? <Separator /> : null}
@@ -92,11 +92,12 @@ const Styles = {
     paddingBottom: rhythm(0.5),
     paddingTop: rhythm(1),
   },
-  menuItem: {
+  menuLink: {
     textDecoration: 'none',
     ':hover': {},
     fontSize: '1rem',
     fontWeight: 'medium',
+    background: 'none',
   },
   separator: {
     height: '0.5rem',
