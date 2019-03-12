@@ -42,6 +42,7 @@ async function createBlogPages({ graphql, actions }) {
           edges {
             node {
               frontmatter {
+                hidden
                 title
                 path
                 date
@@ -56,15 +57,32 @@ async function createBlogPages({ graphql, actions }) {
 
   const posts = queryResult.data.allMarkdownRemark.edges;
 
-  posts.forEach(({ node }, index) => {
+  const postsVisible = posts.filter(({ node }) => !node.frontmatter.hidden);
+  const postsHidden = posts.filter(({ node }) => node.frontmatter.hidden);
+
+  postsVisible.forEach(({ node }, index) => {
     const { path } = node.frontmatter;
     createPage({
       path,
       component: template,
       context: {
         pathSlug: path,
-        prev: index > 0 ? posts[index - 1].node : null,
-        next: index < posts.length - 1 ? posts[index + 1].node : null,
+        prev: index > 0 ? postsVisible[index - 1].node : null,
+        next:
+          index < postsVisible.length - 1 ? postsVisible[index + 1].node : null,
+      },
+    });
+  });
+
+  postsHidden.forEach(({ node }, index) => {
+    const { path } = node.frontmatter;
+    createPage({
+      path,
+      component: template,
+      context: {
+        pathSlug: path,
+        prev: null,
+        next: null,
       },
     });
   });
