@@ -78,7 +78,7 @@ const AcknowledgementsPage = () => (
     </p>
     {process.env.DEV ? (
       <p>
-        <Link to="/posts/test">Test mardown page</Link>
+        <Link to="/posts/test">Test markdown page</Link>
       </p>
     ) : null}
   </Layout>
