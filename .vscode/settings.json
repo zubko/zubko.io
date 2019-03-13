@@ -1,4 +1,10 @@
 {
   "flow.useNPMPackagedFlow": true,
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "cSpell.words": [
+    "nprogress",
+    "prettierrc",
+    "quattrocento",
+    "xsmall"
+  ]
 }

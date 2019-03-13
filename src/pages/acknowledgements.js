@@ -12,7 +12,7 @@ const AcknowledgementsPage = () => (
   <Layout>
     <SEO
       title="Acknowledgements"
-      keywords={['aknowledgements', 'gatsby', 'react', 'open-source']}
+      keywords={['acknowledgements', 'gatsby', 'react', 'open-source']}
     />
     <h2>Acknowledgements</h2>
     <p>

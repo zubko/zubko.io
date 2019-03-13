@@ -1,7 +1,7 @@
 {
   "name": "zubko.io",
   "private": true,
-  "description": "Webiste for Alexander Zubko",
+  "description": "Website for Alexander Zubko",
   "version": "1.0.0",
   "author": "Alexander Zubko <alex@zubko.io>",
   "scripts": {

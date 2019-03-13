@@ -15,7 +15,7 @@ Right now the website is on a very early stage. I have a lot of notes how it sho
 ## Ideology
 
 * Personal playground.
-* Adoping `release early and often` mantra.
+* Adopting `release early and often` mantra.
 * Using only the best tools.
 * Trying to keep ~~perfectionism~~ at a short leash.
 * Yet attention to details is important.

@@ -22,10 +22,10 @@ const Template = ({ data, pageContext }: Object) => {
           css={Styles.markdown}
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-        <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
+        <div css={{ marginBottom: '1rem' }}>
           {next && <Link to={next.frontmatter.path}>Next</Link>}
         </div>
-        <div css={{ marginBottom: '1rem', fontFamily: 'avenir' }}>
+        <div css={{ marginBottom: '1rem' }}>
           {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
         </div>
       </div>
