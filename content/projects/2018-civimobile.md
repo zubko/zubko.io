@@ -3,6 +3,7 @@ path: '/projects/civimobile'
 title: 'CiviMobile for iOS and Android'
 tags: ['ios', 'android', 'react-native']
 active: true
+tech: ['React Native', 'Redux', 'Redux Saga']
 ---
 
 Mobile app and app framework which is able to connect to different types of CiviCRM backends to provide native mobile experience for the users of CiviCRM platform.

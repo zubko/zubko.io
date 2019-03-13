@@ -10,24 +10,28 @@ const ProjectsPage = ({ data }) => {
     <Layout>
       <SEO title="Projects" keywords={['projects', 'portfolio']} />
       <h1>Projects</h1>
-      <p>Active projects</p>
-      {activeProjects.map(edge => {
-        const { frontmatter } = edge.node;
-        return (
-          <p key={frontmatter.path}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </p>
-        );
-      })}
-      <p>List of previous works</p>
-      {pastProjects.map(edge => {
-        const { frontmatter } = edge.node;
-        return (
-          <p key={frontmatter.path}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </p>
-        );
-      })}
+      <h4>Active projects</h4>
+      <ul>
+        {activeProjects.map(edge => {
+          const { frontmatter } = edge.node;
+          return (
+            <li key={frontmatter.path}>
+              <Link to={frontmatter.path}>{frontmatter.title}</Link>
+            </li>
+          );
+        })}
+      </ul>
+      <h4>List of previous works</h4>
+      <ul>
+        {pastProjects.map(edge => {
+          const { frontmatter } = edge.node;
+          return (
+            <li key={frontmatter.path}>
+              <Link to={frontmatter.path}>{frontmatter.title}</Link>
+            </li>
+          );
+        })}
+      </ul>
       <Link to="/">← Home</Link>
     </Layout>
   );
