@@ -16,19 +16,30 @@ const Template = ({ data, pageContext }: Object) => {
     <Layout>
       {/* TODO: add tags from post */}
       <SEO title={title} keywords={[]} />
-      <div>
-        <h1>{title}</h1>
-        <div
-          css={Styles.markdown}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-        <div css={{ marginBottom: '1rem' }}>
-          {next && <Link to={next.frontmatter.path}>Next</Link>}
-        </div>
-        <div css={{ marginBottom: '1rem' }}>
-          {prev && <Link to={prev.frontmatter.path}>Prev</Link>}
-        </div>
-      </div>
+      <h1>{title}</h1>
+      <div
+        css={Styles.markdown}
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
+      <p>
+        {next && (
+          <span>
+            Next:{' '}
+            <Link to={next.frontmatter.path}>{next.frontmatter.title}</Link>
+          </span>
+        )}
+      </p>
+      <p>
+        {prev && (
+          <span>
+            Prev:{' '}
+            <Link to={prev.frontmatter.path}>{prev.frontmatter.title}</Link>
+          </span>
+        )}
+      </p>
+      <p>
+        <Link to="/projects">← Projects</Link>
+      </p>
     </Layout>
   );
 };

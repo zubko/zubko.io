@@ -125,8 +125,8 @@ async function createProjectsPages({ graphql, actions }) {
       component: template,
       context: {
         pathSlug: path,
-        prev: index > 0 ? projects[index - 1].node : null,
-        next: index < projects.length - 1 ? projects[index + 1].node : null,
+        next: index > 0 ? projects[index - 1].node : null,
+        prev: index < projects.length - 1 ? projects[index + 1].node : null,
       },
     });
   });
