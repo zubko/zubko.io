@@ -1,5 +1,5 @@
 ---
-date: '2016-01-01'
+date: '2017-01-01'
 path: '/projects/clever-max'
 title: 'Clever Max for iOS'
 tags: ['iOS', 'native', 'Swift', 'SpriteKit']
