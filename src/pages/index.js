@@ -19,10 +19,8 @@ const IndexPage = ({ data }) => {
       />
       <h2>Hello</h2>
       <p>
-        My name is Alexander. I'm a fan of technology and I'm programming from
-        my early age. In the recent time I concentrate my efforts mostly on iOS
-        and Android native and React Native development and also Web development
-        with React.
+        My name is Alexander. I'm an iOS and Android native and React Native
+        developer with Web development and game development skills.
       </p>
       <p>
         This website is a tool to share{' '}
