@@ -1,0 +1,15 @@
+-
+  path: '/'
+  title: 'Home'
+-
+  path: '/about/'
+  title: 'About'
+-
+  path: '/blog/'
+  title: 'Blog'
+-
+  path: '/projects/'
+  title: 'Projects'
+-
+  path: '/contacts/'
+  title: 'Contacts'
