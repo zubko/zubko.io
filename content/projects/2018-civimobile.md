@@ -1,8 +1,8 @@
 ---
 path: '/projects/civimobile'
 title: 'CiviMobile for iOS and Android'
-tags: ['ios', 'android', 'react-native']
-active: true
+tags: ['iOS', 'Android', 'React Native']
+active: false
 tech: ['React Native', 'Redux', 'Redux Saga']
 ---
 

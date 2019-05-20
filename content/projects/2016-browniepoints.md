@@ -2,7 +2,7 @@
 date: '2016-01-01'
 path: '/projects/browniepoints'
 title: 'BrowniePoints for iOS'
-tags: ['ios', 'objective-c', 'swift']
+tags: ['iOS', 'Objective-C', 'Swift']
 active: false
 tech: ['React Native', 'Redux', 'Redux Saga']
 ---

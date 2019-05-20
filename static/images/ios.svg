@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="537px" height="537px" viewBox="0 0 537 537" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>ios</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="38.4079628%" y1="18.7840151%" x2="46.692978%" y2="83.1208882%" id="linearGradient-1">
+            <stop stop-color="#F70B4E" offset="0%"></stop>
+            <stop stop-color="#FE1333" offset="18.9486994%"></stop>
+            <stop stop-color="#FF15CD" offset="37.7416004%"></stop>
+            <stop stop-color="#9A73E5" offset="58.3047327%"></stop>
+            <stop stop-color="#0FCADC" offset="79.855592%"></stop>
+            <stop stop-color="#1293A9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="ios" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <circle id="Oval" stroke="url(#linearGradient-1)" stroke-width="6" fill="#FFFFFF" fill-rule="nonzero" cx="268.5" cy="268.5" r="265.5"></circle>
+            <text id="iOS" fill="url(#linearGradient-1)" font-family="EuphemiaUCAS, Euphemia UCAS" font-size="270" font-weight="normal" letter-spacing="1.85624993">
+                <tspan x="48" y="367">iOS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

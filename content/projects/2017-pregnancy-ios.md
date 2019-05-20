@@ -2,7 +2,7 @@
 date: '2017-01-01'
 path: '/projects/pregnancy-ios'
 title: 'Pregnancy week by week for iOS'
-tags: ['ios', 'objective-c', 'react-native']
+tags: ['iOS', 'Objective-C', 'React Native']
 active: false
 tech: ['React Native', 'Redux', 'Material UI']
 ---
