@@ -143,6 +143,7 @@ Styles.markdown = {
 
   '& a:not(.anchor):not(.gatsby-resp-image-link)': LinkStyle,
 
+  /* Fix font size in code blocks to match regular text */
   '& code[class*="language-"]': {
     fontSize: '0.83em',
   },
