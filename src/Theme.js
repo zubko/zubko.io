@@ -143,6 +143,11 @@ Styles.markdown = {
 
   '& a:not(.anchor):not(.gatsby-resp-image-link)': LinkStyle,
 
+  '& code[class*="language-"]': {
+    fontSize: '0.83em',
+  },
+
+  /* First paragraph of the blog */
   '& > p:first-child': {
     fontSize: '1.1em',
     fontWeight: 200,
