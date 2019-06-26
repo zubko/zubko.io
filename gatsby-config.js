@@ -49,6 +49,10 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-embed-gist",
+            options: {}
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               inlineCodeMarker: '›',
