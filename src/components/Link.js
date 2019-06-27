@@ -21,7 +21,7 @@ export default ({ useAnchor, children, to, ...otherProps }: Object) => {
     );
   }
   return (
-    <a href={to} css={Styles.link} {...otherProps}>
+    <a href={to} css={Styles.link} target="_blank" {...otherProps}>
       {children}
     </a>
   );
