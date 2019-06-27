@@ -20,6 +20,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: 'collection',
       value: parent.sourceInstanceName,
     });
+    createNodeField({
+      node,
+      name: 'relativePath',
+      value: parent.relativePath,
+    });
   }
 };
 

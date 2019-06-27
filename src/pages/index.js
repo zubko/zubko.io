@@ -19,8 +19,8 @@ const IndexPage = ({ data }) => {
       />
       <h2>Hello</h2>
       <p>
-        My name is Alexander. I'm an iOS and Android native and React Native
-        developer with Web development and game development skills.
+        My name is Alexander. I'm Mobile Developer with Full Stack Web
+        development skills.
       </p>
       <p>
         This website is a tool to share{' '}
@@ -30,6 +30,11 @@ const IndexPage = ({ data }) => {
           most recent CV
         </Link>{' '}
         here.
+      </p>
+      <p>
+        Also I'm learning constantly, so I keep a list of{' '}
+        <Link to="/learning">books and courses</Link> that I'm taking with a
+        little bit of review of the ones that I finished.
       </p>
       <h2>Recent posts</h2>
       <div>

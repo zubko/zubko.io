@@ -96,7 +96,8 @@ const Fonts = {
 const Styles = {
   link: LinkStyle,
 
-  markdown: {},
+  markdown: {}, // MD as a separate page
+  markdownInline: {}, // MD included in the page
 };
 
 Styles.markdown = {
@@ -162,6 +163,10 @@ Styles.markdown = {
       fontWeight: 400,
     },
   },
+};
+
+Styles.markdownInline = {
+  '& a': LinkStyle,
 };
 
 export { Colors, Styles, Media, Fonts };
