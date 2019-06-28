@@ -23,7 +23,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: 'relativePath',
-      value: parent.relativePath,
+      // HACK: I needed to add a constant string at the beginning,
+      // otherwise the sorting request will fail for some reason
+      // sort: { fields: [fields___relativePath], order: DESC }
+      value: '/' + parent.relativePath,
     });
   }
 };
