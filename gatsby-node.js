@@ -7,6 +7,7 @@
 'use strict';
 
 const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -23,10 +24,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: 'relativePath',
-      // HACK: I needed to add a constant string at the beginning,
-      // otherwise the sorting request will fail for some reason
-      // sort: { fields: [fields___relativePath], order: DESC }
-      value: '/' + parent.relativePath,
+      value: createFilePath({ node, getNode }),
     });
   }
 };
