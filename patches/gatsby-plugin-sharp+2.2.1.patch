@@ -1,0 +1,24 @@
+diff --git a/node_modules/gatsby-plugin-sharp/index.js b/node_modules/gatsby-plugin-sharp/index.js
+index 0d7b880..466e167 100644
+--- a/node_modules/gatsby-plugin-sharp/index.js
++++ b/node_modules/gatsby-plugin-sharp/index.js
+@@ -335,11 +335,17 @@ async function fluid({
+ 
+   let presentationWidth, presentationHeight;
+ 
++  let pixelRatio = 1;
++  const match = file.name.match(/@(\d+)x$/);
++  if (match) {
++    pixelRatio = Number(match[1]);
++  }  
++
+   if (fixedDimension === `maxWidth`) {
+-    presentationWidth = Math.min(options.maxWidth, width);
++    presentationWidth = Math.min(options.maxWidth, Math.floor(width / pixelRatio));
+     presentationHeight = Math.round(presentationWidth * (height / width));
+   } else {
+-    presentationHeight = Math.min(options.maxHeight, height);
++    presentationHeight = Math.min(options.maxHeight, Math.floor(height / pixelRatio));
+     presentationWidth = Math.round(presentationHeight * (width / height));
+   } // If the users didn't set default sizes, we'll make one.
+ 

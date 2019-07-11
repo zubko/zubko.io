@@ -56,8 +56,26 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-embed-gist",
-            options: {}
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+              showCaptions: false,
+              quality: 80,
+              linkImagesToOriginal: true,
+              withWebp: {
+                quality: 80,
+              },
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {},
           },
           {
             resolve: `gatsby-remark-prismjs`,
