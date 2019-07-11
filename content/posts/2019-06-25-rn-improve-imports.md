@@ -21,7 +21,7 @@ So far I know 3 possibilities for that:
 
 <div id="option-two"></div>
 
-2. Use [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver) babel plugin. This is more or less popular way to do it currently. And there are workarounds for VSCode / ESLint / Flow to support this. But I don't like that each tool is needed to be configured / tweaked separately because of this, I'd rather stick to the method which has a 1 time setup and then everything just works.
+2. Use [babel-plugin-module-resolver](https://github.com/tleunen/babel-plugin-module-resolver). This is more or less popular way to do it currently. And there are workarounds for VSCode / ESLint / Flow to support this. But I don't like that each tool is needed to be configured / tweaked separately because of this, I'd rather stick to the method which has a 1 time setup and then everything just works.
 
 <div id="option-three"></div>
 
@@ -44,7 +44,7 @@ NPM's `preinstall` and `postinstall` hooks come in handy here. And it's nice to 
 
 This looks much longer than `.. ln -s ..`! It's true, but some RN developers can be on Windows, so for them terminal commands won't work so easily and it nice to show some echos in the process to make it visible what is happening.
 
-It's good to notice that NPM sets the [`npm_lifecycle_event` env var](https://docs.npmjs.com/misc/scripts#current-lifecycle-event) before calling a script, so we can avoid passing the params to it. And to make it work we just need to add these steps to `package.json`:
+It's good to notice that NPM sets the `npm_lifecycle_event` [env var](https://docs.npmjs.com/misc/scripts#current-lifecycle-event) before calling a script, so we can avoid passing the params to it. And to make it work we just need to add these steps to `package.json`:
 
 ```json
   ...
@@ -69,7 +69,7 @@ Almost. And it would be, if Metro bundler could work with symlinks. [But it can'
 
 <div id="option-three-tweak-metro"></div>
 
-Just add your folders to `metro.config.js` and now now are good to go, for example:
+Just add your folders to `metro.config.js` and now we are good to go, for example:
 
 ```js
 const rootDir = __dirname;
