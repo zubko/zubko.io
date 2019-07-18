@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
       />
       <h2>Hello</h2>
       <p>
-        My name is Alexander. I'm Mobile Developer with Full Stack Web
+        My name is Alexander. I'm a Mobile Developer with Full Stack Web
         development skills.
       </p>
       <p>

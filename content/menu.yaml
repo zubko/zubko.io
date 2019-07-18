@@ -11,5 +11,8 @@
   path: '/projects/'
   title: 'Projects'
 -
+  path: '/learning/'
+  title: 'Learning'
+-
   path: '/contacts/'
   title: 'Contacts'
