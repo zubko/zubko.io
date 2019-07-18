@@ -7,7 +7,19 @@
 'use strict';
 
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
+
+exports.sourceNodes = ({ actions }) => {
+  // specify explicitly that `fileSystemName` has the type of string
+  // otherwise it can become File type if the vale will match the file name
+  actions.createTypes(`
+    type MarkdownRemark implements Node {
+      fields: MarkdownRemarkFields
+    }
+    type MarkdownRemarkFields {
+      fileSystemName: String
+    }
+  `);
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -23,8 +35,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
     createNodeField({
       node,
-      name: 'relativePath',
-      value: createFilePath({ node, getNode }),
+      name: 'fileSystemName',
+      value: parent.relativeDirectory || parent.name,
     });
   }
 };

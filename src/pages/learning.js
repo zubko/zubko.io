@@ -58,7 +58,7 @@ export default LearningPage;
 export const query = graphql`
   query LearningItems {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [fields___relativePath] }
+      sort: { order: DESC, fields: [fields___fileSystemName] }
       filter: { fields: { collection: { eq: "learning" } } }
     ) {
       edges {
@@ -66,7 +66,7 @@ export const query = graphql`
           fileAbsolutePath
           html
           fields {
-            relativePath
+            fileSystemName
           }
           frontmatter {
             type
