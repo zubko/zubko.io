@@ -8,7 +8,7 @@
     "postinstall": "patch-package",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "format": "prettier --config .prettierrc --write \"{gatsby-*.js,{flow-typed,plugins,src}/**/*.js}\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
