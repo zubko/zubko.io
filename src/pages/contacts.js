@@ -29,20 +29,20 @@ const ContactsPage = () => (
 );
 export default ContactsPage;
 
-const Button = ({ l }) => {
+const Button = ({ data: { color, borderColor, to, title, icon } }) => {
   return (
     <ButtonLink
       css={styles.button}
-      backgroundColor={l.color}
-      borderColor={l.borderColor}
-      to={l.to}>
+      backgroundColor={color}
+      borderColor={borderColor}
+      to={to}>
       <FontAwesomeIcon
-        icon={l.icon}
+        icon={icon}
         css={styles.buttonIcon}
         width={18}
         height={18}
       />
-      {l.title}
+      {title}
     </ButtonLink>
   );
 };
