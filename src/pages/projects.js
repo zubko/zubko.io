@@ -4,10 +4,20 @@ import { graphql } from 'gatsby';
 import { Layout, SEO, Link } from '../components';
 import { rhythm } from '../Typography';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faReact,
+  faApple,
+  faAndroid,
+} from '@fortawesome/free-brands-svg-icons';
+
 const AVAILABLE_ICONS = ['React Native', 'Android', 'iOS'];
 
-const TAG_TO_ICON = tag =>
-  `/images/${tag.toLowerCase().replace(/\s/g, '-')}.svg`;
+const TAG_TO_ICON = {
+  'React Native': faReact,
+  Android: faAndroid,
+  iOS: faApple,
+};
 
 const TAG_SORT = (a, b) => a.toLowerCase().localeCompare(b.toLowerCase());
 
@@ -18,12 +28,17 @@ const ProjectItem = ({ node }) => {
   const sortedTags = [...tags].sort(TAG_SORT);
   return (
     <li key={path}>
-      {sortedTags.map(tag =>
-        AVAILABLE_ICONS.includes(tag) ? (
-          <img src={TAG_TO_ICON(tag)} css={STYLES.platformIcon} key={tag} />
-        ) : null,
-      )}
-      <Link to={path}>{title}</Link>
+      <Link to={path}>
+        {title}
+        {sortedTags.map(tag =>
+          AVAILABLE_ICONS.includes(tag) ? (
+            <FontAwesomeIcon
+              css={STYLES.platformIcon}
+              icon={TAG_TO_ICON[tag]}
+            />
+          ) : null,
+        )}
+      </Link>
     </li>
   );
 };
@@ -82,14 +97,9 @@ export const query = graphql`
 const STYLES = {
   list: {
     marginLeft: rhythm(0.5),
-    listStyle: 'none',
   },
   platformIcon: {
-    display: 'inline',
-    marginBottom: 0,
-    verticalAlign: 'text-bottom',
-    marginRight: rhythm(0.1),
-    height: '1.3em',
+    marginLeft: rhythm(0.1),
   },
 };
 
