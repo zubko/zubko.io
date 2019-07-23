@@ -21,32 +21,30 @@ const ContactsPage = () => (
     <p>You can find me here:</p>
     <div css={styles.group}>
       {links.map(l => (
-        <ButtonLink
-          css={styles.button}
-          backgroundColor={l.color}
-          borderColor={l.borderColor}
-          to={l.to}>
-          <FontAwesomeIcon icon={l.icon} css={{ marginRight: '0.4em' }} />
-          {l.title}
-        </ButtonLink>
+        <Button data={l} />
       ))}
     </div>
     <Link to="/">← Home</Link>
   </Layout>
 );
-
 export default ContactsPage;
 
-const styles = {
-  group: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  button: {
-    margin: '0 0.8em 1.5em',
-  },
+const Button = ({ l }) => {
+  return (
+    <ButtonLink
+      css={styles.button}
+      backgroundColor={l.color}
+      borderColor={l.borderColor}
+      to={l.to}>
+      <FontAwesomeIcon
+        icon={l.icon}
+        css={styles.buttonIcon}
+        width={18}
+        height={18}
+      />
+      {l.title}
+    </ButtonLink>
+  );
 };
 
 const links = [
@@ -93,3 +91,20 @@ const links = [
     borderColor: '#1a4d17',
   },
 ];
+
+const styles = {
+  group: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  button: {
+    margin: '0 0.8em 1.5em',
+  },
+  buttonIcon: {
+    width: '1em',
+    height: '1em',
+    marginRight: '0.4em',
+  },
+};

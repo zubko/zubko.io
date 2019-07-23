@@ -31,15 +31,21 @@ const ProjectItem = ({ node }) => {
       <Link to={path}>
         {title}
         {sortedTags.map(tag =>
-          AVAILABLE_ICONS.includes(tag) ? (
-            <FontAwesomeIcon
-              css={STYLES.platformIcon}
-              icon={TAG_TO_ICON[tag]}
-            />
-          ) : null,
+          AVAILABLE_ICONS.includes(tag) ? <ProjectIcon tag={tag} /> : null,
         )}
       </Link>
     </li>
+  );
+};
+
+const ProjectIcon = ({ tag }) => {
+  return (
+    <FontAwesomeIcon
+      css={STYLES.platformIcon}
+      icon={TAG_TO_ICON[tag]}
+      width={18}
+      height={18}
+    />
   );
 };
 
@@ -99,6 +105,8 @@ const STYLES = {
     marginLeft: rhythm(0.5),
   },
   platformIcon: {
+    width: '1em',
+    height: '1em',
     marginLeft: rhythm(0.1),
   },
 };
