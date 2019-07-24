@@ -9,6 +9,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "yarn develop",
+    "production": "yarn build && yarn http-server",
     "format": "prettier --config .prettierrc --write \"{gatsby-*.js,{flow-typed,plugins,src}/**/*.js}\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
@@ -69,6 +70,7 @@
   },
   "devDependencies": {
     "gatsby-cli": "^2.7.15",
+    "http-server": "^0.11.1",
     "prettier": "^1.18.2"
   },
   "engines": {
