@@ -31,6 +31,7 @@ const ContactsPage = () => (
 export default ContactsPage;
 
 const Button = ({ data: { color, borderColor, to, title, icon } }) => {
+  const Title = typeof title === 'function' ? title : null;
   return (
     <ButtonLink
       css={styles.button}
@@ -45,7 +46,7 @@ const Button = ({ data: { color, borderColor, to, title, icon } }) => {
           height={18}
         />
       ) : null}
-      {title}
+      {Title ? <Title /> : title}
     </ButtonLink>
   );
 };
@@ -95,7 +96,7 @@ const links = [
   },
   {
     to: 'https://www.upwork.com/o/profiles/users/_~015053205b348e8586/',
-    title: (
+    title: () => (
       <>
         <UpworkSvg css={styles.upworkIcon} />
         work
