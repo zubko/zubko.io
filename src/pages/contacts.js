@@ -13,6 +13,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import Link from '../components/Link';
 import ButtonLink from '../components/ButtonLink';
+import UpworkSvg from '../components/UpworkSvg';
 
 const ContactsPage = () => (
   <Layout>
@@ -36,12 +37,14 @@ const Button = ({ data: { color, borderColor, to, title, icon } }) => {
       backgroundColor={color}
       borderColor={borderColor}
       to={to}>
-      <FontAwesomeIcon
-        icon={icon}
-        css={styles.buttonIcon}
-        width={18}
-        height={18}
-      />
+      {icon ? (
+        <FontAwesomeIcon
+          icon={icon}
+          css={styles.buttonIcon}
+          width={18}
+          height={18}
+        />
+      ) : null}
       {title}
     </ButtonLink>
   );
@@ -90,6 +93,17 @@ const links = [
     color: '#2C8127',
     borderColor: '#1a4d17',
   },
+  {
+    to: 'https://www.upwork.com/o/profiles/users/_~015053205b348e8586/',
+    title: (
+      <>
+        <UpworkSvg css={styles.upworkIcon} />
+        work
+      </>
+    ),
+    color: '#64d737',
+    borderColor: '#429a1f',
+  },
 ];
 
 const styles = {
@@ -106,5 +120,8 @@ const styles = {
     width: '1em',
     height: '1em',
     marginRight: '0.4em',
+  },
+  upworkIcon: {
+    width: '1.25em',
   },
 };
