@@ -13,13 +13,9 @@ const Colors = {
   linkBackground: '#bcebb9',
 };
 
-const linkBase = css`
+const linkPlain = css`
   color: ${Colors.mainDarker};
   text-decoration: none;
-`;
-
-const linkPlain = css`
-  ${linkBase};
   background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 0),
@@ -35,7 +31,8 @@ const linkPlain = css`
 `;
 
 const linkAnimated = css`
-  ${linkBase};
+  color: ${Colors.mainDarker};
+  text-decoration: none;
 
   background-image: linear-gradient(
     to bottom,
@@ -47,7 +44,7 @@ const linkAnimated = css`
   background-size: 4px 1px;
   transition: background-size 0s;
 
-  &:hover {
+  :hover {
     color: black;
     text-decoration: none;
     background-image: linear-gradient(
@@ -131,81 +128,92 @@ const Fonts = {
   },
 };
 
-const Styles = {
-  linkPlain,
-  linkAnimated,
-
-  markdown: {}, // MD as a separate page
-  markdownInline: {}, // MD included in the page
-};
-
-Styles.markdown = {
-  '& .gatsby-highlight-code-line': {
-    backgroundColor: '#feb',
-    display: 'block',
-    marginRight: '-1em',
-    marginLeft: '-1em',
-    paddingRight: '1em',
-    paddingLeft: '0.75em',
-    borderLeft: '0.25em solid #f99',
-  },
+// MD as a separate page
+const markdownStyle = css`
+  .gatsby-highlight-code-line {
+    background-color: #feb;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #f99;
+  }
 
   /**
    * Add back the container background-color, border-radius, padding, margin
    * and overflow that we removed from <pre>.
    */
-  '& .gatsby-highlight': {
-    backgroundColor: '#fdf6e3',
-    borderRadius: '0.3em',
-    margin: '0.5em 0',
-    marginBottom: '1.618rem', // from typography
-    padding: '1em',
-    overflow: 'auto',
-  },
+  .gatsby-highlight {
+    background-color: #fdf6e3;
+    border-radius: 0.3em;
+    margin: 0.5em 0;
+    margin-bottom: 1.618rem;
+    padding: 1em;
+    overflow: auto;
+  }
 
   /**
    * Remove the default PrismJS theme background-color, border-radius, margin,
    * padding and overflow.
    */
-  '& .gatsby-highlight pre[class*="language-"]': {
-    backgroundColor: 'transparent',
-    margin: '0',
-    padding: '0',
-    overflow: 'initial',
-    float: 'left',
-    minWidth: '100%',
-  },
+  .gatsby-highlight pre[class*='language-'] {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow: initial;
+    float: left;
+    min-width: 100%;
+  }
 
   /* Adjust the position of the line numbers */
-  '& .gatsby-highlight pre[class*="language-"].line-numbers': {
-    paddingLeft: '2.8em',
-  },
+  .gatsby-highlight pre[class*='language-'].line-numbers {
+    padding-left: 2.8em;
+  }
 
-  '& a:not(.anchor):not(.gatsby-resp-image-link)': linkAnimated,
+  a:not(.anchor):not(.gatsby-resp-image-link) {
+    ${linkAnimated}
+  }
 
-  /* Fix font size in code blocks to match regular text */
-  '& code[class*="language-"]': {
-    fontSize: '0.83em',
-  },
+  /**
+   * Fix the font size of the code.
+   * It looks bigger than the current font
+   */
+  code[class*='language-'] {
+    font-size: 0.85em;
+    line-height: 1.618em;
+  }
 
   /* First paragraph of the blog */
-  '& > p:first-child': {
-    fontSize: '1.1em',
-    fontWeight: 200,
-    color: Colors.subtle,
+  & > p:first-child {
+    font-size: 1.1em;
+    font-weight: 200;
+    color: ${Colors.subtle};
 
-    [Media.greaterThan('xlarge')]: {
-      fontSize: '1.2em',
-    },
+    ${Media.greaterThan('xlarge')} {
+      font-size: 1.2em;
+    }
 
-    '& a, & strong': {
-      fontWeight: 400,
-    },
-  },
-};
+    a,
+    strong {
+      font-weight: 400;
+    }
+  }
+`;
 
-Styles.markdownInline = {
-  '& a': linkAnimated,
+// MD included in the page
+const markdownInlineStyle = css`
+  a {
+    ${linkAnimated}
+  }
+`;
+
+const Styles = {
+  linkPlain,
+  linkAnimated,
+
+  markdown: markdownStyle,
+  markdownInline: markdownInlineStyle,
 };
 
 export { Colors, Styles, Media, Fonts };
