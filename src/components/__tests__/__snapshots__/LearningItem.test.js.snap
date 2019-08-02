@@ -2,19 +2,19 @@
 
 exports[`LearningItem renders without regressions 1`] = `
 <li
-  className="css-pia374-LearningItemContainer exa79cs0"
+  className="css-1mcfn8a-Container exa79cs0"
 >
   <div
-    className="css-h2lzyt-Triangle exa79cs2"
+    className="css-h2lzyt-Triangle exa79cs3"
     onClick={[Function]}
   >
     ▶
   </div>
   <div
-    className="css-drbu7m-LearningItemMain exa79cs1"
+    className="css-vx98lc-Main exa79cs1"
   >
     <a
-      className="css-mybdcv-linkAnimated"
+      className="exa79cs2 css-1i4fh7c-linkPlain-StyledLink"
       href="#"
       onClick={[Function]}
     >

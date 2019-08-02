@@ -30,13 +30,13 @@ const LearningItem = ({ node }: Props) => {
     setOpened(!opened);
   };
   return (
-    <LearningItemContainer>
+    <Container>
       <Triangle opened={opened} onClick={handleClick} />
-      <LearningItemMain>
-        <Link to="#" onClick={handleClick}>
+      <Main>
+        <StyledLink to="#" usePlainStyle onClick={handleClick}>
           {author} - {title}
           {year ? ` '${year}` : ''}
-        </Link>
+        </StyledLink>
         {opened && (
           <p>
             <div
@@ -45,19 +45,23 @@ const LearningItem = ({ node }: Props) => {
             />
           </p>
         )}
-      </LearningItemMain>
-    </LearningItemContainer>
+      </Main>
+    </Container>
   );
 };
 
 export default LearningItem;
 
-const LearningItemContainer = styled.li`
+const Container = styled.li`
   display: flex;
   flex-direction: row;
 `;
-const LearningItemMain = styled.div`
+const Main = styled.div`
   flex: 1;
+`;
+
+const StyledLink = styled(Link)`
+  background-image: none;
 `;
 
 const Triangle = styled.div`
