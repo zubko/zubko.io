@@ -11,6 +11,7 @@ export default ({
   ...otherProps
 }) => (
   <Link
+    usePlainStyle
     to={to}
     css={[styles.button, { backgroundColor, '--boxShadowColor': borderColor }]}
     {...otherProps}>
