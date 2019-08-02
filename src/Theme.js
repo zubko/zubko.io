@@ -172,7 +172,7 @@ const markdownStyle = css`
   }
 
   a:not(.anchor):not(.gatsby-resp-image-link) {
-    ${linkAnimated}
+    ${linkAnimated};
   }
 
   /**
