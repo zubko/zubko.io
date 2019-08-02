@@ -4,7 +4,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { Styles } from '../Theme';
-import { Layout, SEO, Link } from '../components';
+import { Layout, SEO } from '../components';
+import BottomNavigation from '../components/BottomNavigation';
 
 const Template = ({ data, pageContext }: Object) => {
   const { next, prev } = pageContext;
@@ -21,25 +22,11 @@ const Template = ({ data, pageContext }: Object) => {
         css={Styles.markdown}
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
-      <p>
-        {next && (
-          <span>
-            Next:{' '}
-            <Link to={next.frontmatter.path}>{next.frontmatter.title}</Link>
-          </span>
-        )}
-      </p>
-      <p>
-        {prev && (
-          <span>
-            Prev:{' '}
-            <Link to={prev.frontmatter.path}>{prev.frontmatter.title}</Link>
-          </span>
-        )}
-      </p>
-      <p>
-        <Link to="/projects">← Projects</Link>
-      </p>
+      <BottomNavigation
+        next={next && next.frontmatter}
+        prev={prev && prev.frontmatter}
+        back={{ title: 'Projects', path: '/projects' }}
+      />
     </Layout>
   );
 };
