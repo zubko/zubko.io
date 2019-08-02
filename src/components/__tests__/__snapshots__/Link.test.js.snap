@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link inner animated link renders without regressions 1`] = `
+<a
+  className="css-mybdcv-linkAnimated"
+  href="/inner-link"
+>
+  Title
+</a>
+`;
+
+exports[`Link inner plain link renders without regressions 1`] = `
+<a
+  className="css-1a4dihx-linkPlain"
+  href="/inner-link"
+>
+  Title
+</a>
+`;
+
+exports[`Link outer link renders without regressions 1`] = `
+<a
+  className="css-mybdcv-linkAnimated"
+  href="https://outer.link.to"
+  target="_blank"
+>
+  Title
+</a>
+`;

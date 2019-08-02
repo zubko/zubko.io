@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LearningItem renders without regressions 1`] = `
+<li
+  className="css-pia374-LearningItemContainer exa79cs0"
+>
+  <div
+    className="css-h2lzyt-Triangle exa79cs2"
+    onClick={[Function]}
+  >
+    ▶
+  </div>
+  <div
+    className="css-drbu7m-LearningItemMain exa79cs1"
+  >
+    <a
+      className="css-mybdcv-linkAnimated"
+      href="#"
+      onClick={[Function]}
+    >
+      author
+       - 
+      title
+       '2019
+    </a>
+  </div>
+</li>
+`;

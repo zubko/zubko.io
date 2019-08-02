@@ -1,15 +1,27 @@
-import React from 'react';
+/**
+ * Component which renders a button to be used as a link
+ *
+ * @flow
+ */
+
+import * as React from 'react';
 
 import Link from './Link';
+
+type Props = {
+  backgroundColor: string,
+  borderColor: string,
+  to: string,
+  children?: React.Node,
+};
 
 export default ({
   backgroundColor,
   borderColor,
-  title,
   to,
   children,
   ...otherProps
-}) => (
+}: Props) => (
   <Link
     usePlainStyle
     to={to}
@@ -41,12 +53,12 @@ const styles = {
     '&:hover': {
       color: 'white',
       transform: 'translate(0, -2px)',
-      'box-shadow': '0px 8px 0px  var(--boxShadowColor, #000)',
+      boxShadow: '0px 8px 0px  var(--boxShadowColor, #000)',
       filter: 'brightness(110%)',
     },
     '&:active': {
       transform: 'translate(0, 3px)',
-      'box-shadow': '0px 2px 0px  var(--boxShadowColor, #000)',
+      boxShadow: '0px 2px 0px  var(--boxShadowColor, #000)',
     },
   },
 };

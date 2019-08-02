@@ -1,6 +1,12 @@
+/**
+ * Component to encapsulate the SVG for the Upwork logo
+ *
+ * @flow
+ */
+
 import React from 'react';
 
-export default props => (
+export default (props: Object) => (
   <svg
     width="20px"
     height="20px"

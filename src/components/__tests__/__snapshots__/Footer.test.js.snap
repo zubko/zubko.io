@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders without regressions 1`] = `
+<footer
+  className="css-1o3tyej"
+>
+  <p>
+    ~~~
+    <br />
+     © 
+    2019
+    , Built
+     
+    <a
+      className="css-1a4dihx-linkPlain"
+      href="/acknowledgements"
+    >
+      with ❤️and open source ⚛
+    </a>
+  </p>
+</footer>
+`;

@@ -9,13 +9,20 @@ import { Link as GatsbyLink } from 'gatsby';
 
 import { Styles } from '../Theme';
 
+type Props = {
+  useAnchor?: boolean,
+  usePlainStyle?: boolean,
+  children?: React.Node,
+  to: string,
+};
+
 export default ({
   useAnchor,
   usePlainStyle,
   children,
   to,
   ...otherProps
-}: Object) => {
+}: Props) => {
   const internal = to === '#' || to.indexOf('/') === 0;
   const style = usePlainStyle ? Styles.linkPlain : Styles.linkAnimated;
   if (!useAnchor && internal) {

@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders without regressions 1`] = `
+<div
+  className="css-3yvbqg-Layout"
+>
+  <header>
+    <div
+      className="css-1pcmc93"
+    >
+      <div
+        className="css-13o4jer"
+      >
+        <a
+          className="css-9bb8dy-linkPlain"
+          href="/"
+        >
+          <h3>
+            title
+          </h3>
+        </a>
+        <div
+          className="css-albw4v-MenuHorizontal-Header"
+        >
+          <a
+            className="css-kbxh37-linkPlain"
+            href="/path-1/"
+          >
+            title-1
+          </a>
+          <span
+            className="css-x4n1ct-Separator"
+          >
+             
+          </span>
+          <a
+            className="css-kbxh37-linkPlain"
+            href="/path-2/"
+          >
+            title-2
+          </a>
+        </div>
+        <div
+          className="css-1hw5nl3-Header"
+        >
+          <button
+            className="css-91zqk4-MenuVertical"
+            onClick={[Function]}
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+      <div
+        className="css-1hw5nl3-Header"
+      >
+        <div
+          className="css-1h6xv3r-MenuVertical"
+        >
+          <a
+            className="css-kbxh37-linkPlain"
+            href="/path-1/"
+          >
+            title-1
+          </a>
+          <span
+            className="css-1gnmjk0-Separator"
+          >
+             
+          </span>
+          <a
+            className="css-kbxh37-linkPlain"
+            href="/path-2/"
+          >
+            title-2
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    Child
+  </main>
+  <footer
+    className="css-1o3tyej"
+  >
+    <p>
+      ~~~
+      <br />
+       © 
+      2019
+      , Built
+       
+      <a
+        className="css-1a4dihx-linkPlain"
+        href="/acknowledgements"
+      >
+        with ❤️and open source ⚛
+      </a>
+    </p>
+  </footer>
+</div>
+`;

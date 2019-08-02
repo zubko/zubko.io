@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuVertical body renders without regressions 1`] = `
+<div>
+  <div
+    className="css-1h6xv3r-MenuVertical"
+  >
+    <a
+      className="css-kbxh37-linkPlain"
+      href="path-1"
+      target="_blank"
+    >
+      title-1
+    </a>
+    <span
+      className="css-1gnmjk0-Separator"
+    >
+       
+    </span>
+    <a
+      className="css-kbxh37-linkPlain"
+      href="path-2"
+      target="_blank"
+    >
+      title-2
+    </a>
+  </div>
+</div>
+`;
+
+exports[`MenuVertical head renders without regressions 1`] = `
+<div>
+  <button
+    className="css-91zqk4-MenuVertical"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`MenuVertical opened body renders without regressions 1`] = `
+<div>
+  <div
+    className="css-tq7kwx-MenuVertical"
+  >
+    <a
+      className="css-kbxh37-linkPlain"
+      href="path-1"
+      target="_blank"
+    >
+      title-1
+    </a>
+    <span
+      className="css-1gnmjk0-Separator"
+    >
+       
+    </span>
+    <a
+      className="css-kbxh37-linkPlain"
+      href="path-2"
+      target="_blank"
+    >
+      title-2
+    </a>
+  </div>
+</div>
+`;
+
+exports[`MenuVertical opened head renders without regressions 1`] = `
+<div>
+  <button
+    className="css-4rp9vw-MenuVertical"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;

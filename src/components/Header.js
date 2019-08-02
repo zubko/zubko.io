@@ -1,5 +1,6 @@
 /**
  * Top common part of the website
+ *
  * @flow
  */
 
@@ -15,7 +16,11 @@ const MENU_MEDIA_SPLIT = 780;
 const MediaForVertMenu = Media.lessThanPx(MENU_MEDIA_SPLIT);
 const MediaForHorzMenu = Media.greaterThanPx(MENU_MEDIA_SPLIT);
 
-const Header = ({ siteTitle }: Object) => {
+type Props = {
+  siteTitle: string,
+};
+
+const Header = ({ siteTitle }: Props) => {
   const [isMenuOpened, setMenuOpened] = useState(false);
   return (
     <StaticQuery
@@ -34,7 +39,7 @@ const Header = ({ siteTitle }: Object) => {
       render={({ allMenuYaml: { edges: menuEdges } }: Object) => {
         const menuLinks = menuEdges.map(e => e.node);
         return (
-          <div css={styles.headerOutter}>
+          <div css={styles.headerOuter}>
             <div css={styles.headerInner}>
               <Link usePlainStyle to="/" css={styles.homeLink}>
                 <h3>{siteTitle}</h3>
@@ -67,7 +72,7 @@ const Header = ({ siteTitle }: Object) => {
 };
 
 const styles = {
-  headerOutter: {
+  headerOuter: {
     marginBottom: `${rhythm(0.5)}`,
   },
   headerInner: {

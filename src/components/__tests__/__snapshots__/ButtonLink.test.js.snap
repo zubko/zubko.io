@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonLink renders without regressions 1`] = `
+<a
+  className="css-1r6qdek-linkPlain"
+  href="https://button.link.to"
+  target="_blank"
+>
+  Title
+</a>
+`;

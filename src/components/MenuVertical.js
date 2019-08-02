@@ -17,7 +17,6 @@ type Props = {
   isBody: boolean,
   isOpened: boolean,
   setOpened: (val: boolean) => any,
-  css: any,
 };
 
 const MenuVertical = ({

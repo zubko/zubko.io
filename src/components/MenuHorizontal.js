@@ -1,5 +1,6 @@
 /**
  * Top bar menu component
+ *
  * @flow
  */
 
@@ -9,7 +10,6 @@ import { Link } from '../components';
 
 type Props = {
   links: { path: string, title: string }[],
-  css: any,
 };
 
 const Separator = () => <span css={Styles.separator}> </span>;
