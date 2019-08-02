@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomNavigation renders without regressions 1`] = `
+Array [
+  <hr />,
+  <div
+    className="css-of2qkk-OptionContainer ey9fjcg0"
+  >
+    <span>
+      <span
+        className="css-c540v4-OptionTitle ey9fjcg1"
+      >
+        Next:
+      </span>
+       
+      <br />
+      <a
+        className="css-mybdcv-linkAnimated"
+        href="next-path"
+        target="_blank"
+      >
+        next-title
+         →
+      </a>
+    </span>
+  </div>,
+  <div
+    className="css-of2qkk-OptionContainer ey9fjcg0"
+  >
+    <span>
+      <span
+        className="css-c540v4-OptionTitle ey9fjcg1"
+      >
+        Prev:
+      </span>
+       
+      <br />
+      <a
+        className="css-mybdcv-linkAnimated"
+        href="prev-path"
+        target="_blank"
+      >
+        ← 
+        prev-title
+      </a>
+    </span>
+  </div>,
+  <div
+    className="css-of2qkk-OptionContainer ey9fjcg0"
+  >
+    <span>
+      <span
+        className="css-c540v4-OptionTitle ey9fjcg1"
+      >
+        Back:
+      </span>
+       
+      <br />
+      <a
+        className="css-mybdcv-linkAnimated"
+        href="back-path"
+        target="_blank"
+      >
+        ← 
+        back-title
+      </a>
+    </span>
+  </div>,
+]
+`;

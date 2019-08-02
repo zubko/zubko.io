@@ -9,9 +9,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "yarn develop",
-    "production": "yarn build && yarn http-server",
+    "serve": "yarn build && yarn http-server",
     "format": "prettier --config .prettierrc --write \"{gatsby-*.js,{flow-typed,plugins,src}/**/*.js}\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "yarn jest --verbose"
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
@@ -69,9 +69,13 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "babel-jest": "^24.8.0",
     "gatsby-cli": "^2.7.15",
     "http-server": "^0.11.1",
-    "prettier": "^1.18.2"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6"
   },
   "engines": {
     "node": ">8.4.0",
