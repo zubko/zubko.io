@@ -36,7 +36,7 @@ const Header = ({ siteTitle }: Object) => {
         return (
           <div css={styles.headerOutter}>
             <div css={styles.headerInner}>
-              <Link to="/" css={styles.homeLink}>
+              <Link usePlainStyle to="/" css={styles.homeLink}>
                 <h3>{siteTitle}</h3>
               </Link>
 
@@ -88,9 +88,6 @@ const styles = {
       marginTop: 0,
       marginBottom: 0,
       color: Colors.mainDarker,
-    },
-    ':hover > h3': {
-      color: Colors.main,
     },
   },
 };

@@ -49,7 +49,7 @@ const MenuVertical = ({
           ]}>
           {links.map((item, index) => (
             <Fragment key={item.path}>
-              <Link to={item.path} css={Styles.menuLink}>
+              <Link usePlainStyle to={item.path} css={Styles.menuLink}>
                 {item.title}
               </Link>
               {index < links.length - 1 ? <Separator /> : null}

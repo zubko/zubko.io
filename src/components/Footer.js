@@ -14,7 +14,9 @@ export default () => (
     <p>
       ~~~
       <br /> © {new Date().getFullYear()}, Built{' '}
-      <Link to="/acknowledgements">with ❤️and open source ⚛</Link>
+      <Link usePlainStyle to="/acknowledgements">
+        with ❤️and open source ⚛
+      </Link>
     </p>
   </footer>
 );

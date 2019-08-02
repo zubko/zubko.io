@@ -3,22 +3,62 @@
  * @flow
  */
 
+import { css } from '@emotion/core';
+
 const Colors = {
   main: '#3CB534',
   mainDarker: '#2C8127',
   text: '#1a1a1a',
   subtle: '#8d8d8d',
+  linkBackground: '#bcebb9',
 };
 
-const LinkStyle = {
-  color: Colors.mainDarker,
-  textDecoration: 'none',
+const linkBase = css`
+  color: ${Colors.mainDarker};
+  text-decoration: none;
+`;
 
-  ':hover': {
-    color: Colors.main,
-    textDecoration: 'none',
-  },
-};
+const linkPlain = css`
+  ${linkBase};
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );
+  &:hover {
+    background-image: none;
+    filter: brightness(1.3);
+  }
+`;
+
+const linkAnimated = css`
+  ${linkBase};
+
+  background-image: linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  transition: background-size 0s;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      ${Colors.linkBackground} 0%,
+      ${Colors.linkBackground} 100%
+    );
+    background-size: 4px 100%;
+    transition: background-size 0.15s;
+  }
+`;
 
 const SIZES = {
   xsmall: { min: 0, max: 599 },
@@ -41,9 +81,7 @@ const Media = {
       if (SIZES[largeKey].max === Infinity) {
         return `@media (min-width: ${SIZES[smallKey].min}px)`;
       } else {
-        return `@media (min-width: ${SIZES[smallKey].min}px) and (max-width: ${
-          SIZES[largeKey].max
-        }px)`;
+        return `@media (min-width: ${SIZES[smallKey].min}px) and (max-width: ${SIZES[largeKey].max}px)`;
       }
     }
   },
@@ -94,7 +132,8 @@ const Fonts = {
 };
 
 const Styles = {
-  link: LinkStyle,
+  linkPlain,
+  linkAnimated,
 
   markdown: {}, // MD as a separate page
   markdownInline: {}, // MD included in the page
@@ -142,7 +181,7 @@ Styles.markdown = {
     paddingLeft: '2.8em',
   },
 
-  '& a:not(.anchor):not(.gatsby-resp-image-link)': LinkStyle,
+  '& a:not(.anchor):not(.gatsby-resp-image-link)': linkAnimated,
 
   /* Fix font size in code blocks to match regular text */
   '& code[class*="language-"]': {
@@ -166,7 +205,7 @@ Styles.markdown = {
 };
 
 Styles.markdownInline = {
-  '& a': LinkStyle,
+  '& a': linkAnimated,
 };
 
 export { Colors, Styles, Media, Fonts };

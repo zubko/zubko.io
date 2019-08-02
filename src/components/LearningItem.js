@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
 import Link from './Link';
 import { rhythm } from '../Typography';

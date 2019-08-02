@@ -24,7 +24,7 @@ const MenuHorizontal = ({ links, ...otherProps }: Props) => {
       {...otherProps}>
       {links.map((item, index) => (
         <Fragment key={item.path}>
-          <Link to={item.path} css={Styles.menuItem}>
+          <Link usePlainStyle to={item.path} css={Styles.menuItem}>
             {item.title}
           </Link>
           {index < links.length - 1 ? <Separator /> : null}
