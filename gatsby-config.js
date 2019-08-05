@@ -1,10 +1,13 @@
 const MAIN_COLOR = '#3CB534';
+const rssFeedConfig = require('./gatsby/rssFeedConfig');
+
 
 module.exports = {
   siteMetadata: {
     title: `Alexander Zubko`,
     description: `I'm building native and React Native mobile apps and React websites and sharing my experience here.`,
     author: `@_zubko`,
+    siteUrl: `https://zubko.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -108,6 +111,9 @@ module.exports = {
         name: `content`,
         path: `${__dirname}/content/`,
       },
+    },
+    {
+      ...rssFeedConfig,
     },
   ],
 };
