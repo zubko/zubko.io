@@ -1,6 +1,6 @@
-const MAIN_COLOR = '#3CB534';
 const rssFeedConfig = require('./gatsby/rssFeedConfig');
 
+const MAIN_COLOR = '#2C8127';
 
 module.exports = {
   siteMetadata: {
