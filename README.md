@@ -1,30 +1,38 @@
 # Short
 
-The source code of my personal [website/blog/portfolio/playground](https://zubko.io/) built with [Gatsby](https://www.gatsbyjs.org) hosted on [Netlify](https://www.netlify.com/)
+The source code of my personal [website / blog / portfolio / playground](https://zubko.io/) built with [Gatsby](https://www.gatsbyjs.org) hosted on [Netlify](https://www.netlify.com/)
 
 ---
 
 # Intro
 
-This is my take of how I see my ideal personal website and yet a wish to share some knowledge that I get while programming, which I hope will be indexed by search engines and from which other developers can benefit.
+The idea of the website is to:
+- have a personal playground for Web/React
+- to have a place where I keep track of what I've done and what I'm doing
+- to share experience that I get while developing something
 
-Right now the website is on a very early stage. I have a lot of notes how it should and can be. And there is a lot for what I don't have a vision yet, and the new ideas will come on the way.
+# What libraries were used so far:
 
-# What I know
+- [Gatsby](https://www.gatsbyjs.org/) (and some plugins)
+- Gatsby means - [React](https://reactjs.org/) + [GraphQL](https://graphql.org/) + SSR (behind the curtains)
+- [Emotion](https://emotion.sh)
+- [Flow](https://flow.org/)
+- [ESLint](https://eslint.org/)
+- [Jest](https://jestjs.io/)
 
-## Ideology
+# Structure
 
-* Personal playground.
-* Adopting `release early and often` mantra.
-* Using only the best tools.
-* Trying to keep ~~perfectionism~~ at a short leash.
-* Yet attention to details is important.
-* Minimalism in design.
+More or less default structure for a Gatsby website is used so far.
+There are some `components`, some `pages`, some `templates` - all of them are React components used for various purposes.
 
-## Technology and tools stack which I love
+Gatsby specific code is either in the root folder or inside `gatsby` folder. Eventually all Gatsby specific code should be inside that folder.
 
-* [Gatsby](https://www.gatsbyjs.org) + React - yes! i always wanted to be able to [embed a date picker to a blog post](https://gatsbyjs.github.io/gatsby-starter-blog/2016-12-9-react-component-post/) 😀
-* [Netlify](https://www.netlify.com/) - I can't praise it enough: CI, static website hosting, HTTPS at the same time. I ❤️ to be able to push code change to git and to see it live in production in a minute. (It's a special pleasure for an iOS developer, where we need to wait for App Store review (esp before React Native, CodePush and Expo entered the stage)).
-* [VS Code](https://code.visualstudio.com) - A modern, extensible and yet pretty lightweight editor which is a pleasure to use on a daily basis for anything Web and RN related.
-* [Tower App 🗼](https://www.git-tower.com/mac/) - the best Git app out there (after the original command line tool of course 🙇🏼)
-* [Sketch App](https://www.sketchapp.com) - sometimes it's much faster to explore ideas in drawing than in code 👨🏻‍🎨🎨
+# Scripts
+
+`yarn install` to get dependencies
+
+`yarn develop` to run development version
+
+`yarn serve` to build and run production version
+
+`yarn test` to run unit tests
