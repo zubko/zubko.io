@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { Layout, SEO, Link } from '../components';
+import Ampersand from '../components/Ampersand';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -25,9 +26,14 @@ const IndexPage = ({ data }) => {
       <p>
         This website is a tool to share{' '}
         <Link to="/blog">my experiences and thoughts in my work</Link>. Also I
-        keep a list of my <Link to="/projects">projects</Link> and my{' '}
+        keep a list of my <Link to="/projects">projects</Link> and my most
+        recent{' '}
         <Link useAnchor to="/CV-Alexander-Zubko-iOS-Android-ReactNative.pdf">
-          most recent CV
+          CV&nbsp;for&nbsp;Mobile
+        </Link>{' '}
+        <Ampersand />{' '}
+        <Link useAnchor to="/CV-Alexander-Zubko-Web-React.pdf">
+          CV&nbsp;for&nbsp;Web
         </Link>{' '}
         here.
       </p>

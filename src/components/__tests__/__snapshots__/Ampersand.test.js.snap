@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ampersand renders without regressions 1`] = `
+<span
+  className="css-xz2ho5-TextWithAmp e14ddotw0"
+>
+  &
+</span>
+`;
