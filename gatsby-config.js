@@ -120,6 +120,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-146846227-1',
+        anonymize: true,
+        cookieDomain: 'zubko.io',
+      },
+    },
+    {
       ...rssFeedConfig,
     },
   ],
