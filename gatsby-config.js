@@ -5,7 +5,7 @@ const MAIN_COLOR = '#2C8127';
 module.exports = {
   siteMetadata: {
     title: `Alexander Zubko`,
-    description: `I'm building native and React Native mobile apps and React websites and sharing my experience here.`,
+    description: `I'm building mobile apps and React websites and sharing my experience here.`,
     author: `@_zubko`,
     siteUrl: `https://zubko.io`,
   },
