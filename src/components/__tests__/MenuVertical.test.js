@@ -5,8 +5,8 @@ import MenuVertical from '../MenuVertical';
 
 describe('MenuVertical', () => {
   const links = [
-    { path: 'path-1', title: 'title-1' },
-    { path: 'path-2', title: 'title-2' },
+    { path: '/path-1', title: 'title-1' },
+    { path: '/path-2', title: 'title-2' },
   ];
 
   it('head renders without regressions', () => {

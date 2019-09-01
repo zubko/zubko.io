@@ -16,8 +16,7 @@ Array [
       <br />
       <a
         className="css-mybdcv-linkAnimated"
-        href="next-path"
-        target="_blank"
+        href="/next-path"
       >
         next-title
          →
@@ -37,8 +36,7 @@ Array [
       <br />
       <a
         className="css-mybdcv-linkAnimated"
-        href="prev-path"
-        target="_blank"
+        href="/prev-path"
       >
         ← 
         prev-title
@@ -58,8 +56,7 @@ Array [
       <br />
       <a
         className="css-mybdcv-linkAnimated"
-        href="back-path"
-        target="_blank"
+        href="/back-path"
       >
         ← 
         back-title

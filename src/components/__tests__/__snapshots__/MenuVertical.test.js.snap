@@ -7,8 +7,7 @@ exports[`MenuVertical body renders without regressions 1`] = `
   >
     <a
       className="css-kbxh37-linkPlain"
-      href="path-1"
-      target="_blank"
+      href="/path-1"
     >
       title-1
     </a>
@@ -19,8 +18,7 @@ exports[`MenuVertical body renders without regressions 1`] = `
     </span>
     <a
       className="css-kbxh37-linkPlain"
-      href="path-2"
-      target="_blank"
+      href="/path-2"
     >
       title-2
     </a>
@@ -46,8 +44,7 @@ exports[`MenuVertical opened body renders without regressions 1`] = `
   >
     <a
       className="css-kbxh37-linkPlain"
-      href="path-1"
-      target="_blank"
+      href="/path-1"
     >
       title-1
     </a>
@@ -58,8 +55,7 @@ exports[`MenuVertical opened body renders without regressions 1`] = `
     </span>
     <a
       className="css-kbxh37-linkPlain"
-      href="path-2"
-      target="_blank"
+      href="/path-2"
     >
       title-2
     </a>

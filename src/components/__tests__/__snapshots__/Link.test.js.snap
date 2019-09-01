@@ -22,6 +22,7 @@ exports[`Link outer link renders without regressions 1`] = `
 <a
   className="css-mybdcv-linkAnimated"
   href="https://outer.link.to"
+  rel="noopener noreferrer"
   target="_blank"
 >
   Title

@@ -8,9 +8,9 @@ describe('BottomNavigation', () => {
     const tree = renderer
       .create(
         <BottomNavigation
-          prev={{ title: 'prev-title', path: 'prev-path' }}
-          next={{ title: 'next-title', path: 'next-path' }}
-          back={{ title: 'back-title', path: 'back-path' }}
+          prev={{ title: 'prev-title', path: '/prev-path' }}
+          next={{ title: 'next-title', path: '/next-path' }}
+          back={{ title: 'back-title', path: '/back-path' }}
         />,
       )
       .toJSON();

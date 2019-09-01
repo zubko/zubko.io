@@ -37,7 +37,7 @@ export default ({
     <a
       href={to}
       css={style}
-      {...(!sameTab ? { target: '_blank' } : null)}
+      {...(!sameTab ? { target: '_blank', rel: 'noopener noreferrer' } : null)}
       {...otherProps}>
       {children}
     </a>
