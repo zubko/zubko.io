@@ -95,7 +95,7 @@ Actually, no. The imports are different, but the path of the module file remains
 
 You can test it, do a number of different imports, absolute and relative, then build a release bundle with:
 
-```sh
+```bash
 bundle --platform ios --dev false --entry-file index.js --bundle-output=bundle.js
 ```
 

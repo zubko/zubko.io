@@ -125,7 +125,7 @@ function useAutoHitSlop() {
         setFrameSize({ frameSize: { x: layout.width, y: layout.height } });
       }
     },
-    [size]
+    [frameSize]
   );
   return [getHitSlopForSize(frameSize), onLayout];
 }
