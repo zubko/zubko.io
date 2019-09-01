@@ -1,7 +1,7 @@
 ---
 date: '2019-08-30'
-title: 'Setting hitSlop with React Hooks'
-path: '/posts/hitslop-hook'
+title: 'Automatically handling hitSlop with React Hooks'
+path: '/blog/auto-hitslop-hook'
 tags: ['react-native', 'hooks']
 ---
 

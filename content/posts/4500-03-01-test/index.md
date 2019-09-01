@@ -1,7 +1,7 @@
 ---
 date: '2019-03-01'
 title: 'Test formatting'
-path: '/posts/test'
+path: '/blog/test'
 hidden: true
 tags: []
 ---

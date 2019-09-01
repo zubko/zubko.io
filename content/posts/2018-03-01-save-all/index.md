@@ -1,7 +1,7 @@
 ---
 date: '2018-03-01'
 title: 'Save all edited files with ⌘-S'
-path: '/posts/save-all'
+path: '/blog/save-all'
 tags: ['tiny', 'advice']
 ---
 

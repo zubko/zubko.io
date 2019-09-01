@@ -1,7 +1,7 @@
 ---
 date: '2019-07-19'
 title: 'Feature oriented React Native app structure'
-path: '/posts/feature-oriented-rn-app'
+path: '/blog/feature-oriented-rn-app'
 tags: ['architecture', 'react-native']
 ---
 

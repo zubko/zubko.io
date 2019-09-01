@@ -1,7 +1,7 @@
 ---
 date: '2019-05-09'
 title: 'Running Android emulator from the terminal'
-path: '/posts/android-emulator'
+path: '/blog/android-emulator'
 tags: ['advice', 'android', 'react-native']
 ---
 

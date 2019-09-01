@@ -1,7 +1,7 @@
 ---
 date: '2019-06-25'
 title: 'How to improve local imports in React Native'
-path: '/posts/rn-improve-imports'
+path: '/blog/rn-improve-imports'
 tags: ['advice', 'react-native', 'npm', 'metro']
 ---
 

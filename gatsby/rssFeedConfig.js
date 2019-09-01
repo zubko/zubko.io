@@ -8,6 +8,7 @@ module.exports = {
           title
           description
           siteUrl
+          site_url: siteUrl
         }
       }
     }
@@ -52,7 +53,9 @@ module.exports = {
           }
         }
       `,
+        title: `Alexander Zubko Blog RSS feed`,
         output: '/rss.xml',
+        match: '^/blog/',
       },
     ],
   },

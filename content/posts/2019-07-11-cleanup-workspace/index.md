@@ -1,7 +1,7 @@
 ---
 date: '2019-07-11'
 title: 'Cleanup workspace to boost productivity'
-path: '/posts/cleanup-workspace'
+path: '/blog/cleanup-workspace'
 tags: ['advice', 'productivity']
 ---
 
