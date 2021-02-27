@@ -1,4 +1,5 @@
 ---
+date: '2018-01-01'
 path: '/projects/civimobile'
 title: 'CiviMobile for iOS and Android'
 tags: ['iOS', 'Android', 'React Native']

@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { Layout, SEO, Link } from '../components';
-import Ampersand from '../components/Ampersand';
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;

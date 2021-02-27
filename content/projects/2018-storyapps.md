@@ -1,5 +1,5 @@
 ---
-date: '2019-01-01'
+date: '2018-01-01'
 path: '/projects/storyapps'
 title: 'StoryApps for Android and iOS'
 tags: ['iOS', 'Android', 'React Native']
