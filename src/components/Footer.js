@@ -5,6 +5,8 @@
  */
 
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 import { Link } from '../components';
 import { rhythm } from '../Typography';
@@ -14,9 +16,18 @@ export default () => (
     <p>
       ~~~
       <br /> © {new Date().getFullYear()}, Built{' '}
-      <Link usePlainStyle to="/acknowledgements">
-        with ❤️and open source ⚛
+      <Link css={Styles.link} usePlainStyle to="/acknowledgements">
+        with 💜 and open source{' '}
+        <FontAwesomeIcon icon={faReact} css={Styles.faIcon} size="lg" />
       </Link>
     </p>
   </footer>
 );
+
+const Styles = {
+  link: {
+    textDecoration: 'none',
+    background: 'none',
+  },
+  faIcon: { color: 'violet' },
+};
