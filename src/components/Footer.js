@@ -18,7 +18,13 @@ export default () => (
       <br /> © {new Date().getFullYear()}, Built{' '}
       <Link css={Styles.link} usePlainStyle to="/acknowledgements">
         with 💜 and open source{' '}
-        <FontAwesomeIcon icon={faReact} css={Styles.faIcon} size="lg" />
+        <FontAwesomeIcon
+          icon={faReact}
+          css={Styles.faIcon}
+          size="lg"
+          width={25}
+          height={25}
+        />
       </Link>
     </p>
   </footer>
