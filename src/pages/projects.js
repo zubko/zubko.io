@@ -11,13 +11,14 @@ import {
   faAndroid,
 } from '@fortawesome/free-brands-svg-icons';
 
-const AVAILABLE_ICONS = ['React Native', 'Android', 'iOS'];
-
 const TAG_TO_ICON = {
   'React Native': faReact,
   Android: faAndroid,
   iOS: faApple,
+  React: faReact,
 };
+
+const AVAILABLE_ICONS = Object.keys(TAG_TO_ICON);
 
 const TAG_SORT = (a, b) => a.toLowerCase().localeCompare(b.toLowerCase());
 
