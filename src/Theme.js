@@ -199,6 +199,11 @@ const markdownStyle = css`
       font-weight: 400;
     }
   }
+
+  /* using **bold** inside > quote */
+  blockquote em {
+    font-weight: 600;
+  }
 `;
 
 // MD included in the page
