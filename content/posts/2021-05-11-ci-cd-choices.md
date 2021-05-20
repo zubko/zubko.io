@@ -20,7 +20,7 @@ Also to make any CI/CD solution work for mobile app, we need to take care about 
 
 ## Dedicated mobile CI/CDs
 
-Dedicated mobile CI/CDs services can definitely attract developers by the smaller learning curve needed to setup building and testing in the cloud. Usually they provide pre-made build actions that will recognize the project and build it. If you are developing a native mobile app or if you are using popular frameworks (like React Native or Ionic) and your project structure or build tools don't deviate much from the default for each platform these services can do their job pretty well.
+Dedicated mobile CI/CDs services can definitely attract developers by the smaller learning curve needed to setup building and testing in the cloud. Usually they provide pre-made build actions that will recognize the project and build it. If you are developing using only native SDKs and libraries or if you are using popular frameworks to develop for both iOS and Android (like React Native or Ionic) and your project structure or build tools don't deviate much from the default for each platform these services can do their job pretty well.
 
 I've started my own CI/CD journey from this type of solutions as I was attracted by their ease of use. At first, doing a couple of clicks or dragging some boxes looked more attractive than getting into YAML syntax or writing my own build scripts. But eventually, I've seen that such approach has its own tradeoffs:
 
