@@ -2,21 +2,49 @@
 
 exports[`MenuHorizontal renders without regressions 1`] = `
 <div
-  className="css-1jou1fb-MenuHorizontal"
+  css={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+    }
+  }
 >
   <a
-    className="css-kbxh37-linkPlain"
+    css={
+      Object {
+        ":hover": Object {},
+        "background": "none",
+        "fontSize": "1rem",
+        "fontWeight": "medium",
+        "textDecoration": "none",
+      }
+    }
     href="/path-1"
   >
     title-1
   </a>
   <span
-    className="css-x4n1ct-Separator"
+    css={
+      Object {
+        "color": "white",
+        "cursor": "default",
+        "marginLeft": "0.5rem",
+        "marginRight": "0.5rem",
+      }
+    }
   >
      
   </span>
   <a
-    className="css-kbxh37-linkPlain"
+    css={
+      Object {
+        ":hover": Object {},
+        "background": "none",
+        "fontSize": "1rem",
+        "fontWeight": "medium",
+        "textDecoration": "none",
+      }
+    }
     href="/path-2"
   >
     title-2

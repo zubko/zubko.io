@@ -2,13 +2,39 @@
 
 exports[`Header renders without regressions 1`] = `
 <div
-  className="css-1pcmc93"
+  css={
+    Object {
+      "marginBottom": "0.809rem",
+    }
+  }
 >
   <div
-    className="css-13o4jer"
+    css={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingTop": "0.809rem",
+      }
+    }
   >
     <a
-      className="css-9bb8dy-linkPlain"
+      css={
+        Object {
+          ":hover": Object {
+            "textDecoration": "none",
+          },
+          "> h3": Object {
+            "color": "#2C8127",
+            "marginBottom": 0,
+            "marginTop": 0,
+          },
+          "background": "none",
+          "textDecoration": "none",
+          "textShadow": "none",
+        }
+      }
       href="/"
     >
       <h3>
@@ -16,31 +42,80 @@ exports[`Header renders without regressions 1`] = `
       </h3>
     </a>
     <div
-      className="css-albw4v-MenuHorizontal-Header"
+      css={
+        Object {
+          "@media (max-width: 779px)": Object {
+            "display": "none",
+          },
+        }
+      }
     >
       <a
-        className="css-kbxh37-linkPlain"
+        css={
+          Object {
+            ":hover": Object {},
+            "background": "none",
+            "fontSize": "1rem",
+            "fontWeight": "medium",
+            "textDecoration": "none",
+          }
+        }
         href="/path-1/"
       >
         title-1
       </a>
       <span
-        className="css-x4n1ct-Separator"
+        css={
+          Object {
+            "color": "white",
+            "cursor": "default",
+            "marginLeft": "0.5rem",
+            "marginRight": "0.5rem",
+          }
+        }
       >
          
       </span>
       <a
-        className="css-kbxh37-linkPlain"
+        css={
+          Object {
+            ":hover": Object {},
+            "background": "none",
+            "fontSize": "1rem",
+            "fontWeight": "medium",
+            "textDecoration": "none",
+          }
+        }
         href="/path-2/"
       >
         title-2
       </a>
     </div>
     <div
-      className="css-1hw5nl3-Header"
+      css={
+        Object {
+          "@media (min-width: 780px)": Object {
+            "display": "none",
+          },
+        }
+      }
     >
       <button
-        className="css-91zqk4-MenuVertical"
+        css={
+          Array [
+            Object {
+              ":focus": Object {
+                "outline": 0,
+              },
+              "backgroundColor": "transparent",
+              "border": "1px solid #2C8127",
+              "color": "#2C8127",
+              "cursor": "pointer",
+              "padding": "0.5rem",
+            },
+            null,
+          ]
+        }
         onClick={[Function]}
       >
         Menu
@@ -48,24 +123,65 @@ exports[`Header renders without regressions 1`] = `
     </div>
   </div>
   <div
-    className="css-1hw5nl3-Header"
+    css={
+      Object {
+        "@media (min-width: 780px)": Object {
+          "display": "none",
+        },
+      }
+    }
   >
     <div
-      className="css-1h6xv3r-MenuVertical"
+      css={
+        Array [
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "column",
+            "paddingBottom": "0.809rem",
+            "paddingTop": "1.618rem",
+          },
+          Object {
+            "display": "none",
+          },
+        ]
+      }
     >
       <a
-        className="css-kbxh37-linkPlain"
+        css={
+          Object {
+            ":hover": Object {},
+            "background": "none",
+            "fontSize": "1rem",
+            "fontWeight": "medium",
+            "textDecoration": "none",
+          }
+        }
         href="/path-1/"
       >
         title-1
       </a>
       <span
-        className="css-1gnmjk0-Separator"
+        css={
+          Object {
+            "color": "white",
+            "cursor": "default",
+            "height": "0.5rem",
+          }
+        }
       >
          
       </span>
       <a
-        className="css-kbxh37-linkPlain"
+        css={
+          Object {
+            ":hover": Object {},
+            "background": "none",
+            "fontSize": "1rem",
+            "fontWeight": "medium",
+            "textDecoration": "none",
+          }
+        }
         href="/path-2/"
       >
         title-2

@@ -2,7 +2,43 @@
 
 exports[`ButtonLink renders without regressions 1`] = `
 <a
-  className="css-1r6qdek-linkPlain"
+  css={
+    Array [
+      Object {
+        "&:active": Object {
+          "boxShadow": "0px 2px 0px  var(--boxShadowColor, #000)",
+          "transform": "translate(0, 3px)",
+        },
+        "&:hover": Object {
+          "boxShadow": "0px 8px 0px  var(--boxShadowColor, #000)",
+          "color": "white",
+          "filter": "brightness(110%)",
+          "transform": "translate(0, -2px)",
+        },
+        "alignItems": "center",
+        "backgroundImage": "none",
+        "borderRadius": "6px",
+        "boxShadow": "0px 6px 0px var(--boxShadowColor, #000)",
+        "color": "white",
+        "cursor": "pointer",
+        "display": "flex",
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "padding": "0.3em 0.7em 0.2em",
+        "textAlign": "center",
+        "textDecoration": "none",
+        "textShadow": "none",
+        "transform": "translate(0, 0)",
+        "transition": "all .2s ease",
+        "userSelect": "none",
+        "verticalAlign": "center",
+      },
+      Object {
+        "--boxShadowColor": "blue",
+        "backgroundColor": "red",
+      },
+    ]
+  }
   href="https://button.link.to"
   rel="noopener noreferrer"
   target="_blank"

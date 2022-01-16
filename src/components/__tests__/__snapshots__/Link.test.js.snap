@@ -2,7 +2,40 @@
 
 exports[`Link inner animated link renders without regressions 1`] = `
 <a
-  className="css-mybdcv-linkAnimated"
+  css={
+    Object {
+      "map": undefined,
+      "name": "1k30ml3",
+      "next": undefined,
+      "styles": "
+  color: #2C8127;
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  transition: background-size 0s;
+
+  :hover {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );
+    background-size: 4px 100%;
+    transition: background-size 0.15s;
+  }
+",
+      "toString": [Function],
+    }
+  }
   href="/inner-link"
 >
   Title
@@ -11,7 +44,30 @@ exports[`Link inner animated link renders without regressions 1`] = `
 
 exports[`Link inner plain link renders without regressions 1`] = `
 <a
-  className="css-1a4dihx-linkPlain"
+  css={
+    Object {
+      "map": undefined,
+      "name": "gpp53d",
+      "next": undefined,
+      "styles": "
+  color: #2C8127;
+  text-decoration: none;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );
+  &:hover {
+    background-image: none;
+    filter: brightness(1.3);
+  }
+",
+      "toString": [Function],
+    }
+  }
   href="/inner-link"
 >
   Title
@@ -20,7 +76,40 @@ exports[`Link inner plain link renders without regressions 1`] = `
 
 exports[`Link outer link renders without regressions 1`] = `
 <a
-  className="css-mybdcv-linkAnimated"
+  css={
+    Object {
+      "map": undefined,
+      "name": "1k30ml3",
+      "next": undefined,
+      "styles": "
+  color: #2C8127;
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  transition: background-size 0s;
+
+  :hover {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );
+    background-size: 4px 100%;
+    transition: background-size 0.15s;
+  }
+",
+      "toString": [Function],
+    }
+  }
   href="https://outer.link.to"
   rel="noopener noreferrer"
   target="_blank"

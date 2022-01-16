@@ -3,19 +3,68 @@
 exports[`BottomNavigation renders without regressions 1`] = `
 Array [
   <hr />,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-ldhagr{margin-bottom:1.618rem;}",
+      }
+    }
+    data-emotion="css ldhagr"
+  />,
   <div
-    className="css-of2qkk-OptionContainer ey9fjcg0"
+    className="css-ldhagr"
   >
     <span>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-66vicj{font-weight:600;}",
+          }
+        }
+        data-emotion="css 66vicj"
+      />
       <span
-        className="css-c540v4-OptionTitle ey9fjcg1"
+        className="css-66vicj"
       >
         Next:
       </span>
        
       <br />
       <a
-        className="css-mybdcv-linkAnimated"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1k30ml3",
+            "next": undefined,
+            "styles": "
+  color: #2C8127;
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  transition: background-size 0s;
+
+  :hover {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );
+    background-size: 4px 100%;
+    transition: background-size 0.15s;
+  }
+",
+            "toString": [Function],
+          }
+        }
         href="/next-path"
       >
         next-title
@@ -23,19 +72,68 @@ Array [
       </a>
     </span>
   </div>,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-ldhagr{margin-bottom:1.618rem;}",
+      }
+    }
+    data-emotion="css ldhagr"
+  />,
   <div
-    className="css-of2qkk-OptionContainer ey9fjcg0"
+    className="css-ldhagr"
   >
     <span>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-66vicj{font-weight:600;}",
+          }
+        }
+        data-emotion="css 66vicj"
+      />
       <span
-        className="css-c540v4-OptionTitle ey9fjcg1"
+        className="css-66vicj"
       >
         Prev:
       </span>
        
       <br />
       <a
-        className="css-mybdcv-linkAnimated"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1k30ml3",
+            "next": undefined,
+            "styles": "
+  color: #2C8127;
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  transition: background-size 0s;
+
+  :hover {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );
+    background-size: 4px 100%;
+    transition: background-size 0.15s;
+  }
+",
+            "toString": [Function],
+          }
+        }
         href="/prev-path"
       >
         ← 
@@ -43,19 +141,68 @@ Array [
       </a>
     </span>
   </div>,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-ldhagr{margin-bottom:1.618rem;}",
+      }
+    }
+    data-emotion="css ldhagr"
+  />,
   <div
-    className="css-of2qkk-OptionContainer ey9fjcg0"
+    className="css-ldhagr"
   >
     <span>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-66vicj{font-weight:600;}",
+          }
+        }
+        data-emotion="css 66vicj"
+      />
       <span
-        className="css-c540v4-OptionTitle ey9fjcg1"
+        className="css-66vicj"
       >
         Back:
       </span>
        
       <br />
       <a
-        className="css-mybdcv-linkAnimated"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1k30ml3",
+            "next": undefined,
+            "styles": "
+  color: #2C8127;
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  transition: background-size 0s;
+
+  :hover {
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );
+    background-size: 4px 100%;
+    transition: background-size 0.15s;
+  }
+",
+            "toString": [Function],
+          }
+        }
         href="/back-path"
       >
         ← 

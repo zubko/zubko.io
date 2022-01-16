@@ -1,9 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Ampersand renders without regressions 1`] = `
-<span
-  className="css-xz2ho5-TextWithAmp e14ddotw0"
->
-  &
-</span>
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "@font-face{font-family:Ampersand;src:local('Baskerville-Italic'),local('GoudyOldStyleT-Italic'),local('Palatino-Italic'),local('BookAntiqua-Italic');unicode-range:U+26;}",
+      }
+    }
+    data-emotion="css-global xpv7vx"
+  />,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-1an0k18{font-family:Ampersand,sans-serif;font-size:115%;}",
+      }
+    }
+    data-emotion="css 1an0k18"
+  />,
+  <span
+    className="css-1an0k18"
+  >
+    &
+  </span>,
+]
 `;

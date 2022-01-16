@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { css, Global } from '@emotion/core';
+import { css, Global } from '@emotion/react';
 import styled from '@emotion/styled';
 
 const globalCss = css`

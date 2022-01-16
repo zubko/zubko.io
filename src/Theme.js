@@ -3,7 +3,7 @@
  * @flow
  */
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 const Colors = {
   main: '#3CB534',

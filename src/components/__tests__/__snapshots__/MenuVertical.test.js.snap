@@ -3,21 +3,56 @@
 exports[`MenuVertical body renders without regressions 1`] = `
 <div>
   <div
-    className="css-1h6xv3r-MenuVertical"
+    css={
+      Array [
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "column",
+          "paddingBottom": "0.809rem",
+          "paddingTop": "1.618rem",
+        },
+        Object {
+          "display": "none",
+        },
+      ]
+    }
   >
     <a
-      className="css-kbxh37-linkPlain"
+      css={
+        Object {
+          ":hover": Object {},
+          "background": "none",
+          "fontSize": "1rem",
+          "fontWeight": "medium",
+          "textDecoration": "none",
+        }
+      }
       href="/path-1"
     >
       title-1
     </a>
     <span
-      className="css-1gnmjk0-Separator"
+      css={
+        Object {
+          "color": "white",
+          "cursor": "default",
+          "height": "0.5rem",
+        }
+      }
     >
        
     </span>
     <a
-      className="css-kbxh37-linkPlain"
+      css={
+        Object {
+          ":hover": Object {},
+          "background": "none",
+          "fontSize": "1rem",
+          "fontWeight": "medium",
+          "textDecoration": "none",
+        }
+      }
       href="/path-2"
     >
       title-2
@@ -29,7 +64,21 @@ exports[`MenuVertical body renders without regressions 1`] = `
 exports[`MenuVertical head renders without regressions 1`] = `
 <div>
   <button
-    className="css-91zqk4-MenuVertical"
+    css={
+      Array [
+        Object {
+          ":focus": Object {
+            "outline": 0,
+          },
+          "backgroundColor": "transparent",
+          "border": "1px solid #2C8127",
+          "color": "#2C8127",
+          "cursor": "pointer",
+          "padding": "0.5rem",
+        },
+        null,
+      ]
+    }
     onClick={[Function]}
   >
     Menu
@@ -40,21 +89,54 @@ exports[`MenuVertical head renders without regressions 1`] = `
 exports[`MenuVertical opened body renders without regressions 1`] = `
 <div>
   <div
-    className="css-tq7kwx-MenuVertical"
+    css={
+      Array [
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "column",
+          "paddingBottom": "0.809rem",
+          "paddingTop": "1.618rem",
+        },
+        null,
+      ]
+    }
   >
     <a
-      className="css-kbxh37-linkPlain"
+      css={
+        Object {
+          ":hover": Object {},
+          "background": "none",
+          "fontSize": "1rem",
+          "fontWeight": "medium",
+          "textDecoration": "none",
+        }
+      }
       href="/path-1"
     >
       title-1
     </a>
     <span
-      className="css-1gnmjk0-Separator"
+      css={
+        Object {
+          "color": "white",
+          "cursor": "default",
+          "height": "0.5rem",
+        }
+      }
     >
        
     </span>
     <a
-      className="css-kbxh37-linkPlain"
+      css={
+        Object {
+          ":hover": Object {},
+          "background": "none",
+          "fontSize": "1rem",
+          "fontWeight": "medium",
+          "textDecoration": "none",
+        }
+      }
       href="/path-2"
     >
       title-2
@@ -66,7 +148,33 @@ exports[`MenuVertical opened body renders without regressions 1`] = `
 exports[`MenuVertical opened head renders without regressions 1`] = `
 <div>
   <button
-    className="css-4rp9vw-MenuVertical"
+    css={
+      Array [
+        Object {
+          ":focus": Object {
+            "outline": 0,
+          },
+          "backgroundColor": "transparent",
+          "border": "1px solid #2C8127",
+          "color": "#2C8127",
+          "cursor": "pointer",
+          "padding": "0.5rem",
+        },
+        Object {
+          "background": "repeating-linear-gradient(
+      45deg,
+      #3CB534,
+      #3CB534 10px,
+      #2C8127 10px,
+      #2C8127 20px
+    )",
+          "backgroundColor": "#2C8127",
+          "border": "1px solid white",
+          "color": "white",
+          "opacity": 0.9,
+        },
+      ]
+    }
     onClick={[Function]}
   >
     Menu

@@ -5,7 +5,6 @@
  */
 
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 import { Link, MenuVertical, MenuHorizontal } from '../components';
@@ -95,10 +94,6 @@ const styles = {
       color: Colors.mainDarker,
     },
   },
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
 };
 
 Header.defaultProps = {
