@@ -1,15 +1,10 @@
--
-  path: '/'
-  title: 'Home'
--
-  path: '/blog/'
-  title: 'Blog'
--
-  path: '/projects/'
-  title: 'Projects'
--
-  path: '/learning/'
-  title: 'Learning'
--
-  path: '/contacts/'
-  title: 'Contacts'
+- path: "/work/"
+  title: "Work"
+- path: "/experiments/"
+  title: "Experiments"
+- path: "/learning/"
+  title: "Learning"
+- path: "/blog/"
+  title: "Blog"
+- path: "/contacts/"
+  title: "Contacts"

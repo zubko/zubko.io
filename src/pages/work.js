@@ -50,14 +50,14 @@ const ProjectIcon = ({ tag }) => {
   );
 };
 
-const ProjectsPage = ({ data }) => {
+const WorkPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   const pastProjects = edges.filter(({ node }) => !node.frontmatter.active);
   const activeProjects = edges.filter(({ node }) => node.frontmatter.active);
   return (
     <Layout>
-      <SEO title="Projects" keywords={['projects', 'portfolio']} />
-      <h1>Projects</h1>
+      <SEO title="Work" keywords={['projects', 'work']} />
+      <h1>Work</h1>
       {activeProjects.length > 0 ? (
         <>
           <h4>Active projects</h4>
@@ -68,7 +68,7 @@ const ProjectsPage = ({ data }) => {
           </ul>
         </>
       ) : null}
-      <h4>List of previous works</h4>
+      <h4>Some previous full-time projects and contract work</h4>
       <ul css={STYLES.list}>
         {pastProjects.map(edge => (
           <ProjectItem node={edge.node} />
@@ -81,10 +81,10 @@ const ProjectsPage = ({ data }) => {
 };
 
 export const query = graphql`
-  query ProjectPages {
+  query WorkPages {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fields: { collection: { eq: "projects" } } }
+      filter: { fields: { collection: { eq: "work" } } }
     ) {
       edges {
         node {
@@ -112,4 +112,4 @@ const STYLES = {
   },
 };
 
-export default ProjectsPage;
+export default WorkPage;

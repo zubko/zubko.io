@@ -1,6 +1,6 @@
 ---
 date: '2017-01-01'
-path: '/projects/amila-android'
+path: '/work/amila-android'
 title: 'Baby tracker, Pregnancy week by week for Android'
 tags: ['Android', 'native', 'Java', 'Kotlin', 'SQLite']
 active: false

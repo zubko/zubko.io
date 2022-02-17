@@ -1,6 +1,6 @@
 ---
 date: '2020-01-01'
-path: '/projects/coursera-bulgaria'
+path: '/work/coursera-bulgaria'
 title: 'Coursera Labs Web App'
 tags: ['React']
 active: false

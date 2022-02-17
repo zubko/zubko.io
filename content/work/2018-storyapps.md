@@ -1,6 +1,6 @@
 ---
 date: '2018-01-01'
-path: '/projects/storyapps'
+path: '/work/storyapps'
 title: 'StoryApps for Android and iOS'
 tags: ['iOS', 'Android', 'React Native']
 active: false

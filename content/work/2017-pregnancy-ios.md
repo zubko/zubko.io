@@ -1,6 +1,6 @@
 ---
 date: '2017-01-01'
-path: '/projects/pregnancy-ios'
+path: '/work/pregnancy-ios'
 title: 'Pregnancy week by week for iOS'
 tags: ['iOS', 'Objective-C', 'React Native']
 active: false

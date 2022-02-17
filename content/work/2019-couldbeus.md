@@ -1,6 +1,6 @@
 ---
 date: '2019-01-01'
-path: '/projects/couldbeus'
+path: '/work/couldbeus'
 title: 'CouldBeUs for Android and iOS'
 tags: ['iOS', 'Android', 'React Native']
 active: false

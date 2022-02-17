@@ -1,6 +1,6 @@
 ---
 date: '2018-01-01'
-path: '/projects/civimobile'
+path: '/work/civimobile'
 title: 'CiviMobile for iOS and Android'
 tags: ['iOS', 'Android', 'React Native']
 active: false

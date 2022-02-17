@@ -17,18 +17,16 @@ const Template = ({ data, pageContext }: Object) => {
     <Layout>
       {/* TODO: add tags from post */}
       <SEO title={title} keywords={[]} />
-      <div>
-        <h1>{title}</h1>
-        <div
-          css={Styles.markdown}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-        <BottomNavigation
-          next={next && next.frontmatter}
-          prev={prev && prev.frontmatter}
-          back={{ title: 'Blog', path: '/blog' }}
-        />
-      </div>
+      <h1>{title}</h1>
+      <div
+        css={Styles.markdown}
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
+      <BottomNavigation
+        next={next && next.frontmatter}
+        prev={prev && prev.frontmatter}
+        back={{ title: 'Work', path: '/work' }}
+      />
     </Layout>
   );
 };
@@ -36,7 +34,7 @@ const Template = ({ data, pageContext }: Object) => {
 export default Template;
 
 export const query = graphql`
-  query BlogPostByPath($pathSlug: String!) {
+  query WorkProjectByPath($pathSlug: String!) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {

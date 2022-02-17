@@ -23,17 +23,20 @@ const IndexPage = ({ data }) => {
       </p>
       <p>
         This website is a tool to share{' '}
-        <Link to="/blog">my experiences and thoughts in my work</Link>. Also I
-        keep a list of my <Link to="/projects">projects</Link> and my{' '}
+        <Link to="/blog">my experiences and thoughts on my work</Link>. And I
+        keep a list of my{' '}
+        <Link to="/work">full time projects and contract work</Link> and my{' '}
         <Link useAnchor to="/CV-Alexander-Zubko-Mobile-Web.pdf">
           most recent CV
         </Link>{' '}
         here.
       </p>
       <p>
-        Also I'm learning constantly, so I keep a list of{' '}
-        <Link to="/learning">books and courses</Link> that I'm taking with a
-        little bit of review of the ones that I finished.
+        Also I like to learn new things in development, so I keep a list of{' '}
+        <Link to="/learning">books and courses</Link> that I'm taking or took.
+        And I'm tracking{' '}
+        <Link to="/experiments">the list of my hobby projects and code</Link> on
+        this website as well.
       </p>
       <h2>Recent posts</h2>
       <div>

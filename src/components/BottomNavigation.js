@@ -24,18 +24,18 @@ export default ({ next, prev, back }: Props) => (
   <>
     <hr />
     <OptionContainer>
-      {next && (
-        <span>
-          <OptionTitle>Next:</OptionTitle> <br />
-          <Link to={next.path}>{next.title} →</Link>
-        </span>
-      )}
-    </OptionContainer>
-    <OptionContainer>
       {prev && (
         <span>
           <OptionTitle>Prev:</OptionTitle> <br />
           <Link to={prev.path}>← {prev.title}</Link>
+        </span>
+      )}
+    </OptionContainer>
+    <OptionContainer>
+      {next && (
+        <span>
+          <OptionTitle>Next:</OptionTitle> <br />
+          <Link to={next.path}>{next.title} →</Link>
         </span>
       )}
     </OptionContainer>

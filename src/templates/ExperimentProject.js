@@ -15,7 +15,7 @@ const Template = ({ data, pageContext }: Object) => {
   } = post;
   return (
     <Layout>
-      {/* TODO: add tags from post */}
+      {/* TODO: add tags from item */}
       <SEO title={title} keywords={[]} />
       <h1>{title}</h1>
       <div
@@ -25,7 +25,7 @@ const Template = ({ data, pageContext }: Object) => {
       <BottomNavigation
         next={next && next.frontmatter}
         prev={prev && prev.frontmatter}
-        back={{ title: 'Projects', path: '/projects' }}
+        back={{ title: 'Experiments', path: '/experiments' }}
       />
     </Layout>
   );
@@ -33,8 +33,8 @@ const Template = ({ data, pageContext }: Object) => {
 
 export default Template;
 
-export const postQuery = graphql`
-  query ProjectByPath($pathSlug: String!) {
+export const query = graphql`
+  query ExperimentByPath($pathSlug: String!) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {

@@ -1,10 +1,10 @@
 ---
 date: '2016-01-01'
-path: '/projects/browniepoints'
+path: '/work/browniepoints'
 title: 'BrowniePoints for iOS'
 tags: ['iOS', 'Objective-C', 'Swift']
 active: false
-tech: ['React Native', 'Redux', 'Redux Saga']
+tech: ['Objective-C', 'Core Data', 'Core Animation', 'ASIHTTPRequest', 'Ruby']
 ---
 
 iOS app for the children to practice math and to earn real App Store games as rewards.
