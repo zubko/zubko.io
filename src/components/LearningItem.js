@@ -32,20 +32,20 @@ const LearningItem = ({ node }: Props) => {
   return (
     <Container>
       <Triangle opened={opened} onClick={handleClick} />
-      <Main>
+      <TitleAndContent>
         <StyledLink to="#" usePlainStyle onClick={handleClick}>
           {author} - {title}
           {year ? ` '${year}` : ''}
         </StyledLink>
         {opened && (
-          <p>
+          <Content>
             <div
               css={Styles.markdownInline}
               dangerouslySetInnerHTML={{ __html: html }}
             />
-          </p>
+          </Content>
         )}
-      </Main>
+      </TitleAndContent>
     </Container>
   );
 };
@@ -55,13 +55,6 @@ export default LearningItem;
 const Container = styled.li`
   display: flex;
   flex-direction: row;
-`;
-const Main = styled.div`
-  flex: 1;
-`;
-
-const StyledLink = styled(Link)`
-  background-image: none;
 `;
 
 const Triangle = styled.div`
@@ -77,3 +70,19 @@ const Triangle = styled.div`
 Triangle.defaultProps = {
   children: '▶',
 };
+
+const TitleAndContent = styled.div`
+  flex: 1;
+`;
+
+const StyledLink = styled(Link)`
+  background-image: none;
+`;
+
+const Content = styled.p`
+  && {
+    /* '&&' to override some list related styles in Typography.js
+       which made every last sub element of 'li' to not have margin-bottom */
+    margin: ${rhythm(0.5)} 0;
+  }
+`;
