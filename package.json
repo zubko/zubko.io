@@ -11,7 +11,11 @@
     "start": "yarn develop",
     "serve": "yarn build && yarn http-server",
     "format": "prettier --config .prettierrc --write \"{gatsby-*.js,{flow-typed,plugins,src}/**/*.js}\"",
-    "test": "yarn jest --verbose"
+    "test": "yarn jest --verbose",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "dependencies": {
     "@babel/core": "^7.16.7",
@@ -73,14 +77,19 @@
     "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
+    "axe-core": "^4.4.1",
     "babel-jest": "^27.4.6",
     "babel-preset-gatsby": "^2.5.1",
+    "cypress": "^9.5.2",
+    "cypress-axe": "^0.14.0",
     "gatsby-cli": "^4.5.1",
     "http-server": "^14.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.7",
     "prettier": "^1.18.2",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "start-server-and-test": "^1.14.0"
   },
   "engines": {
     "node": ">=14",

@@ -41,7 +41,7 @@ const Header = ({ siteTitle }: Props) => {
           <div css={styles.headerOuter}>
             <div css={styles.headerInner}>
               <Link usePlainStyle to="/" css={styles.homeLink}>
-                <h3>{siteTitle}</h3>
+                <h1>{siteTitle}</h1>
               </Link>
 
               <MenuHorizontal
@@ -88,10 +88,11 @@ const styles = {
     },
     background: 'none',
     textShadow: 'none',
-    '> h3': {
-      marginTop: 0,
-      marginBottom: 0,
+    '> h1': {
       color: Colors.mainDarker,
+      margin: 0,
+      fontWeight: 600,
+      fontSize: '1.21225rem', // h3
     },
   },
 };
