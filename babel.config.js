@@ -3,11 +3,13 @@ module.exports = {
     [
       'babel-preset-gatsby',
       {
+        reactRuntime: 'automatic',
+        reactImportSource: '@emotion/react',
         targets: {
           browsers: ['>0.25%', 'not dead'],
         },
       },
     ],
+    '@babel/preset-typescript',
   ],
-  plugins: ['transform-flow-strip-types'],
 };

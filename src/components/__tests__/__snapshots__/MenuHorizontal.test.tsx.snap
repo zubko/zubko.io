@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuHorizontal renders without regressions 1`] = `
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-u06qw9-MenuHorizontal{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}",
+      }
+    }
+    data-emotion="css u06qw9-MenuHorizontal"
+  />,
+  <div
+    className="css-u06qw9-MenuHorizontal"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-1mgyam6{-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}",
+        }
+      }
+      data-emotion="css 1mgyam6"
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-t9hu3x{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}.css-t9hu3x:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
+        }
+      }
+      data-emotion="css t9hu3x"
+    />
+    <a
+      className="css-t9hu3x"
+      href="/path-1"
+    >
+      title-1
+    </a>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-1u0gifa-Separator{color:white;margin-left:0.5rem;margin-right:0.5rem;cursor:default;}",
+        }
+      }
+      data-emotion="css 1u0gifa-Separator"
+    />
+    <span
+      className="css-1u0gifa-Separator"
+    >
+       
+    </span>
+    <a
+      className="css-t9hu3x"
+      href="/path-2"
+    >
+      title-2
+    </a>
+  </div>,
+]
+`;
