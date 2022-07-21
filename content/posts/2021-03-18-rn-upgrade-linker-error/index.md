@@ -1,8 +1,8 @@
 ---
-date: '2021-03-18'
-title: 'Linker error when upgrading from React Native v0.59 to v0.63'
-path: '/blog/rn-upgrade-linker-error'
-tags: ['react-native', 'upgrade', 'ios']
+date: "2021-03-18"
+title: "Linker error when upgrading from React Native v0.59 to v0.63"
+path: "/blog/rn-upgrade-linker-error"
+tags: ["react-native", "upgrade", "ios"]
 ---
 
 When upgrading React Native version of an existing app, it's important to check every small comment in the diff as if it's a document from a lawyer.

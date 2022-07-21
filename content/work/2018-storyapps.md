@@ -1,18 +1,18 @@
 ---
-date: '2018-01-01'
-path: '/work/storyapps'
-title: 'StoryApps for Android and iOS'
-tags: ['iOS', 'Android', 'React Native']
+date: "2018-01-01"
+path: "/work/storyapps"
+title: "StoryApps for Android and iOS"
+tags: ["iOS", "Android", "React Native"]
 active: false
-tech: ['iOS', 'Android', 'React Native', 'MobX', 'In-App Editor', 'App Center']
+tech: ["iOS", "Android", "React Native", "MobX", "In-App Editor", "App Center"]
 ---
 
 Two digital book apps made by similar technology. React Native helped to release for both Android and iOS.
 
-* Miss Moffatt's Ring for iOS: https://apple.co/2Ct61wk
-* Miss Moffatt's Ring for Android: https://bit.ly/2FxwFJn
-* Helping Lily for iOS: https://apple.co/2HPnuW5
-* Helping Lily for Android: https://bit.ly/2U9Laep
+- Miss Moffatt's Ring for iOS: https://apple.co/2Ct61wk
+- Miss Moffatt's Ring for Android: https://bit.ly/2FxwFJn
+- Helping Lily for iOS: https://apple.co/2HPnuW5
+- Helping Lily for Android: https://bit.ly/2U9Laep
 
 The book shows the pages of the story. Navigation can be done by swiping through pages or through the menu. In addition to the text the book plays a narration voice and highlights the word in the text which is pronounced currently. There is also a small game at the end of the story and some utility screens with the information and settings.
 

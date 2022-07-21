@@ -2,19 +2,19 @@
  * Common footer of the website
  */
 
-import { faReact } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Link } from '../components';
-import { rhythm } from '../Typography';
+import { Link } from "../components";
+import { rhythm } from "../Typography";
 
 export default () => (
   <footer css={{ marginTop: rhythm(1) }}>
     <p>
       ~~~
-      <br /> © {new Date().getFullYear()}, Built{' '}
+      <br /> © {new Date().getFullYear()}, Built{" "}
       <Link css={Styles.link} usePlainStyle to="/acknowledgements">
-        with 💜 and open source{' '}
+        with 💜 and open source{" "}
         <FontAwesomeIcon
           icon={faReact}
           css={Styles.faIcon}
@@ -29,8 +29,8 @@ export default () => (
 
 const Styles = {
   link: {
-    textDecoration: 'none',
-    background: 'none',
+    textDecoration: "none",
+    background: "none",
   },
-  faIcon: { color: 'violet' },
+  faIcon: { color: "violet" },
 };

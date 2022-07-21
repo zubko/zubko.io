@@ -1,8 +1,8 @@
 ---
-date: '2018-03-01'
-title: 'Save all edited files with ⌘-S'
-path: '/blog/save-all'
-tags: ['tiny', 'advice']
+date: "2018-03-01"
+title: "Save all edited files with ⌘-S"
+path: "/blog/save-all"
+tags: ["tiny", "advice"]
 ---
 
 In your code editor try to set ⌘-S (CTRL-S) to `Save All` instead of a regular `Save`.

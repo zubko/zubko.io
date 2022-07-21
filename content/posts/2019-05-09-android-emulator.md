@@ -1,8 +1,8 @@
 ---
-date: '2019-05-09'
-title: 'Running Android emulator from the terminal'
-path: '/blog/android-emulator'
-tags: ['advice', 'android', 'react-native']
+date: "2019-05-09"
+title: "Running Android emulator from the terminal"
+path: "/blog/android-emulator"
+tags: ["advice", "android", "react-native"]
 ---
 
 Add to your `~/.bash_profile`:

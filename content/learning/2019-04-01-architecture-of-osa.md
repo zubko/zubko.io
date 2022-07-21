@@ -1,9 +1,9 @@
 ---
-type: 'book'
-author: 'Various authors'
-title: 'The Architecture of Open Source Applications'
-year: '2011'
-tags: ['JavaScript', 'React', 'Node', 'MongoDB', 'GraphQL']
+type: "book"
+author: "Various authors"
+title: "The Architecture of Open Source Applications"
+year: "2011"
+tags: ["JavaScript", "React", "Node", "MongoDB", "GraphQL"]
 active: true
 ---
 

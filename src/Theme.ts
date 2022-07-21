@@ -3,14 +3,14 @@
 
  */
 
-import { css } from '@emotion/react';
+import { css } from "@emotion/react";
 
 const Colors = {
-  main: '#3CB534',
-  mainDarker: '#2C8127',
-  text: '#1a1a1a',
-  subtle: '#8d8d8d',
-  linkBackground: '#bcebb9',
+  main: "#3CB534",
+  mainDarker: "#2C8127",
+  text: "#1a1a1a",
+  subtle: "#8d8d8d",
+  linkBackground: "#bcebb9",
 };
 
 const linkPlain = css`
@@ -71,9 +71,9 @@ type Size = $Keys<typeof SIZES>;
 const Media = {
   between(smallKey: Size, largeKey: Size, excludeLarge: boolean = false) {
     if (excludeLarge) {
-      return `@media (min-width: ${
-        SIZES[smallKey].min
-      }px) and (max-width: ${SIZES[largeKey].min - 1}px)`;
+      return `@media (min-width: ${SIZES[smallKey].min}px) and (max-width: ${
+        SIZES[largeKey].min - 1
+      }px)`;
     } else {
       if (SIZES[largeKey].max === Infinity) {
         return `@media (min-width: ${SIZES[smallKey].min}px)`;
@@ -115,12 +115,12 @@ const Media = {
 const Fonts = {
   header: {
     fontSize: 60,
-    lineHeight: '65px',
+    lineHeight: "65px",
     fontWeight: 700,
 
-    [Media.lessThan('medium')]: {
+    [Media.lessThan("medium")]: {
       fontSize: 40,
-      lineHeight: '45px',
+      lineHeight: "45px",
     },
   },
   small: {
@@ -157,7 +157,7 @@ const markdownStyle = css`
    * Remove the default PrismJS theme background-color, border-radius, margin,
    * padding and overflow.
    */
-  .gatsby-highlight pre[class*='language-'] {
+  .gatsby-highlight pre[class*="language-"] {
     background-color: transparent;
     margin: 0;
     padding: 0;
@@ -167,7 +167,7 @@ const markdownStyle = css`
   }
 
   /* Adjust the position of the line numbers */
-  .gatsby-highlight pre[class*='language-'].line-numbers {
+  .gatsby-highlight pre[class*="language-"].line-numbers {
     padding-left: 2.8em;
   }
 
@@ -179,7 +179,7 @@ const markdownStyle = css`
    * Fix the font size of the code.
    * It looks bigger than the current font
    */
-  code[class*='language-'] {
+  code[class*="language-"] {
     font-size: 0.85em;
     line-height: 1.618em;
   }
@@ -190,7 +190,7 @@ const markdownStyle = css`
     font-weight: 200;
     color: ${Colors.subtle};
 
-    ${Media.greaterThan('xlarge')} {
+    ${Media.greaterThan("xlarge")} {
       font-size: 1.2em;
     }
 

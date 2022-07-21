@@ -3,19 +3,19 @@
 
  */
 
-import { Fragment } from 'react';
-import { Colors } from '../Theme';
-import { rhythm } from '../Typography';
-import Link from './Link';
+import { Fragment } from "react";
+import { Colors } from "../Theme";
+import { rhythm } from "../Typography";
+import Link from "./Link";
 
 const Separator = () => <span css={Styles.separator}> </span>;
 
 type Props = {
-  links: { path: string, title: string }[],
-  isHead: boolean,
-  isBody: boolean,
-  isOpened: boolean,
-  setOpened: (val: boolean) => any,
+  links: { path: string; title: string }[];
+  isHead: boolean;
+  isBody: boolean;
+  isOpened: boolean;
+  setOpened: (val: boolean) => any;
 };
 
 const MenuVertical = ({
@@ -31,7 +31,8 @@ const MenuVertical = ({
       {isHead ? (
         <button
           css={[Styles.button, isOpened ? Styles.buttonSelected : null]}
-          onClick={() => setOpened(!isOpened)}>
+          onClick={() => setOpened(!isOpened)}
+        >
           Menu
         </button>
       ) : null}
@@ -41,10 +42,11 @@ const MenuVertical = ({
             Styles.body,
             !isOpened
               ? {
-                  display: 'none',
+                  display: "none",
                 }
               : null,
-          ]}>
+          ]}
+        >
           {links.map((item, index) => (
             <Fragment key={item.path}>
               <Link usePlainStyle to={item.path} css={Styles.menuLink}>
@@ -63,15 +65,15 @@ export default MenuVertical;
 
 const Styles = {
   button: {
-    cursor: 'pointer',
+    cursor: "pointer",
     color: Colors.mainDarker,
     border: `1px solid ${Colors.mainDarker}`,
-    padding: '0.5rem',
-    backgroundColor: 'transparent',
-    ':focus': { outline: 0 },
+    padding: "0.5rem",
+    backgroundColor: "transparent",
+    ":focus": { outline: 0 },
   },
   buttonSelected: {
-    color: 'white',
+    color: "white",
     border: `1px solid white`,
     backgroundColor: Colors.mainDarker,
     background: `repeating-linear-gradient(
@@ -84,22 +86,22 @@ const Styles = {
     opacity: 0.9,
   },
   body: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     paddingBottom: rhythm(0.5),
     paddingTop: rhythm(1),
   },
   menuLink: {
-    textDecoration: 'none',
-    ':hover': {},
-    fontSize: '1rem',
-    fontWeight: 'medium',
-    background: 'none',
+    textDecoration: "none",
+    ":hover": {},
+    fontSize: "1rem",
+    fontWeight: "medium",
+    background: "none",
   },
   separator: {
-    height: '0.5rem',
-    color: 'white',
-    cursor: 'default',
+    height: "0.5rem",
+    color: "white",
+    cursor: "default",
   },
 };

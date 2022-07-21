@@ -16,7 +16,7 @@ module.exports = {
     feeds: [
       {
         serialize: ({ query: { site, allMarkdownRemark } }) => {
-          return allMarkdownRemark.edges.map(edge => {
+          return allMarkdownRemark.edges.map((edge) => {
             return Object.assign(
               {},
               {
@@ -25,8 +25,8 @@ module.exports = {
                 date: edge.node.frontmatter.date,
                 url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                 guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                custom_elements: [{ 'content:encoded': edge.node.html }],
-              },
+                custom_elements: [{ "content:encoded": edge.node.html }],
+              }
             );
           });
         },
@@ -54,8 +54,8 @@ module.exports = {
         }
       `,
         title: `Alexander Zubko Blog RSS feed`,
-        output: '/rss.xml',
-        match: '^/blog/',
+        output: "/rss.xml",
+        match: "^/blog/",
       },
     ],
   },

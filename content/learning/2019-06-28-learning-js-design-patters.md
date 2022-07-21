@@ -1,9 +1,9 @@
 ---
-type: 'book'
-author: 'Addy Osmani'
-title: 'Learning JavaScript Design Patterns'
-year: '2017'
-tags: ['JavaScript', 'Design Patterns']
+type: "book"
+author: "Addy Osmani"
+title: "Learning JavaScript Design Patterns"
+year: "2017"
+tags: ["JavaScript", "Design Patterns"]
 active: false
 ---
 

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Layout, SEO, Link } from '../components';
+import { Layout, SEO, Link } from "../components";
 
 const AboutPage = () => (
   <Layout>

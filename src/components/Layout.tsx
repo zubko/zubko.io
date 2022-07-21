@@ -2,11 +2,11 @@
  * Root component of the page
  */
 
-import { graphql, StaticQuery } from 'gatsby';
-import { ReactNode } from 'react';
+import { graphql, StaticQuery } from "gatsby";
+import { ReactNode } from "react";
 
-import { Footer, Header } from '../components';
-import { rhythm } from '../Typography';
+import { Footer, Header } from "../components";
+import { rhythm } from "../Typography";
 
 type Props = {
   children: ReactNode;
@@ -23,7 +23,7 @@ const Layout = ({ children }: Props) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return (
         <div
           css={{
@@ -31,7 +31,8 @@ const Layout = ({ children }: Props) => (
             maxWidth: rhythm(24),
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
-          }}>
+          }}
+        >
           <header>
             <Header siteTitle={data.site.siteMetadata.title} />
           </header>

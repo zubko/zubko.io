@@ -13,6 +13,6 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-import './commands';
-import 'cypress-axe';
-import '@testing-library/cypress/add-commands';
+import "./commands";
+import "cypress-axe";
+import "@testing-library/cypress/add-commands";

@@ -1,10 +1,19 @@
 ---
-date: '2019-01-01'
-path: '/work/couldbeus'
-title: 'CouldBeUs for Android and iOS'
-tags: ['iOS', 'Android', 'React Native']
+date: "2019-01-01"
+path: "/work/couldbeus"
+title: "CouldBeUs for Android and iOS"
+tags: ["iOS", "Android", "React Native"]
 active: false
-tech: ['iOS', 'Android', 'React Native', 'Firebase', 'Redux', 'Redux Saga', 'App Center']
+tech:
+  [
+    "iOS",
+    "Android",
+    "React Native",
+    "Firebase",
+    "Redux",
+    "Redux Saga",
+    "App Center",
+  ]
 ---
 
 Fixed and improved React Native MVP of a dating mobile application
@@ -17,7 +26,7 @@ I introduced the support of using different environments and splitting different
 
 I worked on the new features from the React Native side and on the Firebase when it was needed. Some features required the usage of cloud functions written in JS. And I've set up sharing of the Model layer of the code between the React Native and the Firebase.
 
- One of the challenging tasks from a React Native side was to add a 3D rotation effect to the feed of users (similar to the effect in the Instagram stories). I've used the `react-native-reanimated` library to make a swiping animation using `react-native-gesture-handler` events, and changed the `transform` style property of the card during the animation to add the 3D rotation during the gesture.
+One of the challenging tasks from a React Native side was to add a 3D rotation effect to the feed of users (similar to the effect in the Instagram stories). I've used the `react-native-reanimated` library to make a swiping animation using `react-native-gesture-handler` events, and changed the `transform` style property of the card during the animation to add the 3D rotation during the gesture.
 
 On the Firebase side one among of the more interesting tasks was to generate images of the tag cloud using Firebase Cloud Functions and to store them in the Firebase Cloud Storage to be loaded and shown in the application.
 

@@ -1,8 +1,8 @@
 ---
-date: '2021-04-07'
-title: 'Tip: Logging from the native code to the JS side'
-path: '/blog/rn-log-from-native-code'
-tags: ['react-native', 'android', 'ios']
+date: "2021-04-07"
+title: "Tip: Logging from the native code to the JS side"
+path: "/blog/rn-log-from-native-code"
+tags: ["react-native", "android", "ios"]
 ---
 
 When working on a native module for React Native app, sometimes it's necessary to log something from the native side and make it visible on the JS side.

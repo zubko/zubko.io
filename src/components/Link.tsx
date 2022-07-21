@@ -2,10 +2,10 @@
  * Link with styling
  */
 
-import { Link as GatsbyLink } from 'gatsby';
-import * as React from 'react';
+import { Link as GatsbyLink } from "gatsby";
+import * as React from "react";
 
-import { Styles } from '../Theme';
+import { Styles } from "../Theme";
 
 type Props = {
   useAnchor?: boolean;
@@ -22,7 +22,7 @@ export default ({
   to,
   ...otherProps
 }: Props) => {
-  const internal = to === '#' || to.indexOf('/') === 0;
+  const internal = to === "#" || to.indexOf("/") === 0;
   const style = usePlainStyle ? Styles.linkPlain : Styles.linkAnimated;
   if (!useAnchor && internal) {
     return (
@@ -31,13 +31,14 @@ export default ({
       </GatsbyLink>
     );
   }
-  const sameTab = to.indexOf('mailto:') === 0;
+  const sameTab = to.indexOf("mailto:") === 0;
   return (
     <a
       href={to}
       css={style}
-      {...(!sameTab ? { target: '_blank', rel: 'noopener noreferrer' } : null)}
-      {...otherProps}>
+      {...(!sameTab ? { target: "_blank", rel: "noopener noreferrer" } : null)}
+      {...otherProps}
+    >
       {children}
     </a>
   );

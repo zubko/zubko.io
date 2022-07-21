@@ -1,8 +1,8 @@
 ---
-date: '2021-05-11'
-title: 'CI/CD choices for mobile app development'
-path: '/blog/ci-cd-choices'
-tags: ['react-native', 'android', 'ios', 'ci/cd', 'fastlane']
+date: "2021-05-11"
+title: "CI/CD choices for mobile app development"
+path: "/blog/ci-cd-choices"
+tags: ["react-native", "android", "ios", "ci/cd", "fastlane"]
 ---
 
 TL;DR Learn [Fastlane](https://fastlane.tools/) once and use it on any CI/CD of choice to organize the building, testing and delivering of your mobile app.
@@ -13,8 +13,8 @@ Sooner or later the time will come when you will have to send your app to your c
 
 The CI/CD solutions for mobile apps that I'm aware of I can divide into 2 categories:
 
- * dedicated mobile CI/CDs (like [Bitrise](https://www.bitrise.io/), [App Center](https://appcenter.ms/) etc)
- * general purpose CI/CDs (like [Jenkins](https://www.jenkins.io/), [CircleCI](https://circleci.com/), [GitHub Actions](https://github.com/features/actions) etc)
+- dedicated mobile CI/CDs (like [Bitrise](https://www.bitrise.io/), [App Center](https://appcenter.ms/) etc)
+- general purpose CI/CDs (like [Jenkins](https://www.jenkins.io/), [CircleCI](https://circleci.com/), [GitHub Actions](https://github.com/features/actions) etc)
 
 Also to make any CI/CD solution work for mobile app, we need to take care about the distribution of the build results, esp for iOS where users can't just download and install any binary file. Some dedicated mobile CI/CDs, like App Center, provide this functionality as well. Also a separate distribution service can be used, either provided by Apple/Google for their platform or 3rd party ones.
 
@@ -24,9 +24,9 @@ Dedicated mobile CI/CDs services can definitely attract developers by the smalle
 
 I've started my own CI/CD journey from this type of solutions as I was attracted by their ease of use. At first, doing a couple of clicks or dragging some boxes looked more attractive than getting into YAML syntax or writing my own build scripts. But eventually, I've seen that such approach has its own tradeoffs:
 
-* _What if you need to move to another CI/CD service?_ For example we wanted to build a React Native app and test it with Detox on Bitrise and we found out that the build VMs were actually quite slow (compared to our machines), so the allowed build time on the service wasn't enough to build an iOS RN app and to run Detox tests on it and the higher tier of that CI/CD service was too expensive for that client. The knowledge of actions and boxes of one service doesn't necessarily apply to the other one. And you will need to recreate the same structure using the tools and the ways of another service.
+- _What if you need to move to another CI/CD service?_ For example we wanted to build a React Native app and test it with Detox on Bitrise and we found out that the build VMs were actually quite slow (compared to our machines), so the allowed build time on the service wasn't enough to build an iOS RN app and to run Detox tests on it and the higher tier of that CI/CD service was too expensive for that client. The knowledge of actions and boxes of one service doesn't necessarily apply to the other one. And you will need to recreate the same structure using the tools and the ways of another service.
 
-* _What if you make some changes to the project that will make it incompatible with the pre-made build action of the CI/CD service?_ I've had such issue with App Center. I still don't know what particular change in the project caused that App Center's UI stopped recognizing the project thus blocking the way to reconfigure the build, most likely it was around parametrising the project files of iOS and Android to support building a number of similar apps from the same project files. The UI sometimes from 5th time opened the config and let to change the parameters and it's not a priority case for a big project, so there was not much information about investigation or fixing this strange issue. We just decided to move to a fully customizable CI/CD which would let us to run Fastlane there.
+- _What if you make some changes to the project that will make it incompatible with the pre-made build action of the CI/CD service?_ I've had such issue with App Center. I still don't know what particular change in the project caused that App Center's UI stopped recognizing the project thus blocking the way to reconfigure the build, most likely it was around parametrising the project files of iOS and Android to support building a number of similar apps from the same project files. The UI sometimes from 5th time opened the config and let to change the parameters and it's not a priority case for a big project, so there was not much information about investigation or fixing this strange issue. We just decided to move to a fully customizable CI/CD which would let us to run Fastlane there.
 
 These days I will use such specialized mobile CI/CDs only if, for example, the person who will need to support this setup isn't very technical.
 
@@ -34,7 +34,7 @@ These days I will use such specialized mobile CI/CDs only if, for example, the p
 
 This is pretty clear. You get a system that can execute any actions triggered by some events (most likely Git push), and you can do whatever you want to do. As the mobile phone development is quite strong these days, most likely these CI/CDs will have some pre-made or community made actions / scripts which know how to build a general mobile app. But the support will be even more limited than in dedicated mobile CI/CDs.
 
-With the general purpose CI/CDs we can start considering writing our own build scripts that we could run on any such CI/CD, it would definitely provide a necessary flexibility. And here comes Fastlane.  [Some great developers](https://github.com/fastlane/fastlane/graphs/contributors) have already done a big chunk of work related to configuring and building the mobile app projects and they have made those scripts available as open-source.
+With the general purpose CI/CDs we can start considering writing our own build scripts that we could run on any such CI/CD, it would definitely provide a necessary flexibility. And here comes Fastlane. [Some great developers](https://github.com/fastlane/fastlane/graphs/contributors) have already done a big chunk of work related to configuring and building the mobile app projects and they have made those scripts available as open-source.
 
 ## [Fastlane](https://fastlane.tools/) with ... ([your Mac](https://www.apple.com/mac/), [Jenkins](https://www.jenkins.io/), [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/), ...anythingThatCanExecuteRubyOnMac)
 
@@ -62,6 +62,6 @@ As for the "delivery" part of CD, I've already mentioned that it can be a part o
 
 at the time of writing, for CI/CD of a mobile app most likely I will choose to:
 
-  - set / test Fastlane scripts on my machine
-  - use any general purpose CI/CD which can execute them
-  - distribute staging version with App Center
+- set / test Fastlane scripts on my machine
+- use any general purpose CI/CD which can execute them
+- distribute staging version with App Center

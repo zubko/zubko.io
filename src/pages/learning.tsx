@@ -1,16 +1,16 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import { Layout, SEO, Link } from '../components';
-import LearningItem from '../components/LearningItem';
-import { rhythm } from '../Typography';
+import { Layout, SEO, Link } from "../components";
+import LearningItem from "../components/LearningItem";
+import { rhythm } from "../Typography";
 
 const LearningSection = ({ title, items }) =>
   items.length > 0 ? (
     <>
       <h3>{title}</h3>
       <ul css={styles.list}>
-        {items.map(edge => (
+        {items.map((edge) => (
           <LearningItem node={edge.node} />
         ))}
       </ul>
@@ -20,14 +20,14 @@ const LearningSection = ({ title, items }) =>
 const LearningPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
 
-  const books = edges.filter(({ node }) => node.frontmatter.type === 'book');
+  const books = edges.filter(({ node }) => node.frontmatter.type === "book");
   const courses = edges.filter(
-    ({ node }) => node.frontmatter.type === 'course',
+    ({ node }) => node.frontmatter.type === "course"
   );
 
   return (
     <Layout>
-      <SEO title="Learning" keywords={['learning', 'books', 'courses']} />
+      <SEO title="Learning" keywords={["learning", "books", "courses"]} />
       <h1>Learning</h1>
 
       <LearningSection
@@ -84,13 +84,13 @@ export const query = graphql`
 const styles = {
   list: {
     marginLeft: 0,
-    listStyle: 'none',
+    listStyle: "none",
   },
   platformIcon: {
-    display: 'inline',
+    display: "inline",
     marginBottom: 0,
-    verticalAlign: 'text-bottom',
+    verticalAlign: "text-bottom",
     marginRight: rhythm(0.1),
-    height: '1.3em',
+    height: "1.3em",
   },
 };

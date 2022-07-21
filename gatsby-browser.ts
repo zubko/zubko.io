@@ -9,8 +9,8 @@
  * import 'typeface-quattrocento-sans';
  * import 'typeface-work-sans';
  */
-import './src/css/fonts.css';
+import "./src/css/fonts.css";
 
 // Import global styles
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
-import 'prismjs/themes/prism-solarizedlight.css';
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import "prismjs/themes/prism-solarizedlight.css";

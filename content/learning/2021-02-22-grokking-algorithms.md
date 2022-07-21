@@ -1,9 +1,9 @@
 ---
-type: 'book'
-author: 'Aditya Y. Bhargava'
-title: 'Grokking Algorithms'
-year: '2016'
-tags: ['Algorithms', 'Python']
+type: "book"
+author: "Aditya Y. Bhargava"
+title: "Grokking Algorithms"
+year: "2016"
+tags: ["Algorithms", "Python"]
 active: false
 ---
 
@@ -11,13 +11,13 @@ I got a number of different books from Humble Bundle, and for some reason I coul
 
 I think in general it's an entertaining quick read. Key take aways for me:
 
-* brush up some basic algorithm skills
-* brush up some basic Python
-* learn about dynamic programming
-* learn about KNN algorithms
-* great small teasers about advanced algorithms to fuel the interest
-* learning about algrorithms is awesome
-* Python is great in general
-* I know a book now which I can recommend to a person who has only started to do some programming 
+- brush up some basic algorithm skills
+- brush up some basic Python
+- learn about dynamic programming
+- learn about KNN algorithms
+- great small teasers about advanced algorithms to fuel the interest
+- learning about algrorithms is awesome
+- Python is great in general
+- I know a book now which I can recommend to a person who has only started to do some programming
 
 [(More info about the book.)](https://www.manning.com/books/grokking-algorithms)

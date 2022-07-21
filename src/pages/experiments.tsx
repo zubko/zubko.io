@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import { Layout, SEO, Link } from '../components';
-import { rhythm } from '../Typography';
+import { Layout, SEO, Link } from "../components";
+import { rhythm } from "../Typography";
 
 const ExperimentItem = ({ node }) => {
   const {
@@ -21,13 +21,13 @@ const ExperimentsPage = ({ data }) => {
   const activeItems = edges.filter(({ node }) => node.frontmatter.active);
   return (
     <Layout>
-      <SEO title="Experiments" keywords={['projects', 'experiments']} />
+      <SEO title="Experiments" keywords={["projects", "experiments"]} />
       <h1>Experiments</h1>
       {activeItems.length > 0 ? (
         <>
           <h4>Active personal projects</h4>
           <ul css={STYLES.list}>
-            {activeItems.map(edge => (
+            {activeItems.map((edge) => (
               <ExperimentItem node={edge.node} />
             ))}
           </ul>
@@ -35,7 +35,7 @@ const ExperimentsPage = ({ data }) => {
       ) : null}
       <h4>Previous personal projects</h4>
       <ul css={STYLES.list}>
-        {pastItems.map(edge => (
+        {pastItems.map((edge) => (
           <ExperimentItem node={edge.node} />
         ))}
       </ul>

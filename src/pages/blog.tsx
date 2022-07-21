@@ -1,7 +1,7 @@
-import { graphql } from 'gatsby';
-import React from 'react';
+import { graphql } from "gatsby";
+import React from "react";
 
-import { Layout, Link, SEO } from '../components';
+import { Layout, Link, SEO } from "../components";
 
 const BlogPage = ({ data }: Object) => {
   const { edges } = data.allMarkdownRemark;
@@ -10,10 +10,10 @@ const BlogPage = ({ data }: Object) => {
       <SEO title="Blog" keywords={[`iOS`, `Android`, `React Native`]} />
       <h1>Posts</h1>
       <div>
-        {edges.map(edge => {
+        {edges.map((edge) => {
           const { frontmatter } = edge.node;
           return (
-            <div key={frontmatter.path} css={{ marginBottom: '1rem' }}>
+            <div key={frontmatter.path} css={{ marginBottom: "1rem" }}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
             </div>
           );

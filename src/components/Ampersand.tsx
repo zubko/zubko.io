@@ -2,15 +2,15 @@
  * Component which renders a beautiful "&" symbol
  */
 
-import { css, Global } from '@emotion/react';
-import styled from '@emotion/styled';
-import React from 'react';
+import { css, Global } from "@emotion/react";
+import styled from "@emotion/styled";
+import React from "react";
 
 const globalCss = css`
   @font-face {
     font-family: Ampersand;
-    src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'),
-      local('Palatino-Italic'), local('BookAntiqua-Italic');
+    src: local("Baskerville-Italic"), local("GoudyOldStyleT-Italic"),
+      local("Palatino-Italic"), local("BookAntiqua-Italic");
     unicode-range: U+26;
   }
 `;

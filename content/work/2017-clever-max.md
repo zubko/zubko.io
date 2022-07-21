@@ -1,10 +1,10 @@
 ---
-date: '2017-01-01'
-path: '/work/clever-max'
-title: 'Clever Max for iOS'
-tags: ['iOS', 'native', 'Swift', 'SpriteKit']
+date: "2017-01-01"
+path: "/work/clever-max"
+title: "Clever Max for iOS"
+tags: ["iOS", "native", "Swift", "SpriteKit"]
 active: false
-tech: ['iOS', 'Swift', 'UIKit', 'SpriteKit', 'Realm', 'Live Reload']
+tech: ["iOS", "Swift", "UIKit", "SpriteKit", "Realm", "Live Reload"]
 ---
 
 Digital book for iPhone and iPad.

@@ -1,18 +1,18 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import { Layout, SEO, Link } from '../components';
-import { rhythm } from '../Typography';
+import { Layout, SEO, Link } from "../components";
+import { rhythm } from "../Typography";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
   faApple,
   faAndroid,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
 const TAG_TO_ICON = {
-  'React Native': faReact,
+  "React Native": faReact,
   Android: faAndroid,
   iOS: faApple,
   React: faReact,
@@ -31,8 +31,8 @@ const ProjectItem = ({ node }) => {
     <li key={path}>
       <Link to={path}>
         {title}
-        {sortedTags.map(tag =>
-          AVAILABLE_ICONS.includes(tag) ? <ProjectIcon tag={tag} /> : null,
+        {sortedTags.map((tag) =>
+          AVAILABLE_ICONS.includes(tag) ? <ProjectIcon tag={tag} /> : null
         )}
       </Link>
     </li>
@@ -56,13 +56,13 @@ const WorkPage = ({ data }) => {
   const activeProjects = edges.filter(({ node }) => node.frontmatter.active);
   return (
     <Layout>
-      <SEO title="Work" keywords={['projects', 'work']} />
+      <SEO title="Work" keywords={["projects", "work"]} />
       <h1>Work</h1>
       {activeProjects.length > 0 ? (
         <>
           <h4>Active projects</h4>
           <ul css={STYLES.list}>
-            {activeProjects.map(edge => (
+            {activeProjects.map((edge) => (
               <ProjectItem node={edge.node} />
             ))}
           </ul>
@@ -70,7 +70,7 @@ const WorkPage = ({ data }) => {
       ) : null}
       <h4>Some previous full-time projects and contract work</h4>
       <ul css={STYLES.list}>
-        {pastProjects.map(edge => (
+        {pastProjects.map((edge) => (
           <ProjectItem node={edge.node} />
         ))}
       </ul>
@@ -106,8 +106,8 @@ const STYLES = {
     marginLeft: rhythm(0.5),
   },
   platformIcon: {
-    width: '1em',
-    height: '1em',
+    width: "1em",
+    height: "1em",
     marginLeft: rhythm(0.1),
   },
 };

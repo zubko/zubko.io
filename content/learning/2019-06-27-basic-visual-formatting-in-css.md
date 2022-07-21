@@ -1,10 +1,10 @@
 ---
-type: 'book'
-author: 'Eric A. Meyer'
-title: 'Basic Visual Formatting in CSS'
-year: '2015'
+type: "book"
+author: "Eric A. Meyer"
+title: "Basic Visual Formatting in CSS"
+year: "2015"
 link: https://www.amazon.com/dp/B013FA8JYK/ref=cm_sw_r_tw_dp_U_x_lCjfDbC67K46P
-tags: ['CSS']
+tags: ["CSS"]
 active: false
 ---
 

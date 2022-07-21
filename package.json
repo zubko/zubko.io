@@ -10,7 +10,7 @@
     "develop": "gatsby develop",
     "start": "yarn develop",
     "serve": "yarn build && yarn http-server",
-    "format": "prettier --config .prettierrc --write \"{gatsby-*.js,{flow-typed,plugins,src}/**/*.js}\"",
+    "format": "prettier --ignore-path .gitignore --write .",
     "lint": "tsc && eslint --config .eslintrc.js --ext .js,.jsx,.ts,.tsx src/**/*",
     "test": "yarn jest --verbose",
     "cy:open": "cypress open",

@@ -2,19 +2,19 @@
  * Top common part of the website
  */
 
-import { graphql, StaticQuery } from 'gatsby';
-import { useState } from 'react';
+import { graphql, StaticQuery } from "gatsby";
+import { useState } from "react";
 
-import { Link, MenuHorizontal, MenuVertical } from '../components';
-import { Colors, Media } from '../Theme';
-import { rhythm } from '../Typography';
+import { Link, MenuHorizontal, MenuVertical } from "../components";
+import { Colors, Media } from "../Theme";
+import { rhythm } from "../Typography";
 
 const MENU_MEDIA_SPLIT = 780;
 const MediaForVertMenu = Media.lessThanPx(MENU_MEDIA_SPLIT);
 const MediaForHorzMenu = Media.greaterThanPx(MENU_MEDIA_SPLIT);
 
 type Props = {
-  siteTitle: string,
+  siteTitle: string;
 };
 
 const Header = ({ siteTitle }: Props) => {
@@ -34,7 +34,7 @@ const Header = ({ siteTitle }: Props) => {
         }
       `}
       render={({ allMenuYaml: { edges: menuEdges } }: Object) => {
-        const menuLinks = menuEdges.map(e => e.node);
+        const menuLinks = menuEdges.map((e) => e.node);
         return (
           <div css={styles.headerOuter}>
             <div css={styles.headerInner}>
@@ -43,14 +43,14 @@ const Header = ({ siteTitle }: Props) => {
               </Link>
 
               <MenuHorizontal
-                css={{ [MediaForVertMenu]: { display: 'none' } }}
+                css={{ [MediaForVertMenu]: { display: "none" } }}
                 links={menuLinks}
               />
               <MenuVertical
                 isHead
                 isOpened={isMenuOpened}
                 setOpened={setMenuOpened}
-                css={{ [MediaForHorzMenu]: { display: 'none' } }}
+                css={{ [MediaForHorzMenu]: { display: "none" } }}
                 links={menuLinks}
               />
             </div>
@@ -58,7 +58,7 @@ const Header = ({ siteTitle }: Props) => {
               isBody
               isOpened={isMenuOpened}
               setOpened={setMenuOpened}
-              css={{ [MediaForHorzMenu]: { display: 'none' } }}
+              css={{ [MediaForHorzMenu]: { display: "none" } }}
               links={menuLinks}
             />
           </div>
@@ -74,23 +74,23 @@ const styles = {
   },
   headerInner: {
     paddingTop: rhythm(0.5),
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   homeLink: {
     textDecoration: `none`,
-    ':hover': {
+    ":hover": {
       textDecoration: `none`,
     },
-    background: 'none',
-    textShadow: 'none',
-    '> h1': {
+    background: "none",
+    textShadow: "none",
+    "> h1": {
       color: Colors.mainDarker,
       margin: 0,
       fontWeight: 600,
-      fontSize: '1.21225rem', // h3
+      fontSize: "1.21225rem", // h3
     },
   },
 };

@@ -1,8 +1,8 @@
 ---
-date: '2019-07-19'
-title: 'Feature oriented React Native app structure'
-path: '/blog/feature-oriented-rn-app'
-tags: ['architecture', 'react-native']
+date: "2019-07-19"
+title: "Feature oriented React Native app structure"
+path: "/blog/feature-oriented-rn-app"
+tags: ["architecture", "react-native"]
 ---
 
 The modular app's architecture where the code is grouped by its features

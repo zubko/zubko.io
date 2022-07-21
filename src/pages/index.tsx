@@ -1,7 +1,7 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import { Layout, SEO, Link } from '../components';
+import { Layout, SEO, Link } from "../components";
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -22,28 +22,28 @@ const IndexPage = ({ data }) => {
         My name is Alexander. I'm a Mobile & Web Developer with Node.js skills.
       </p>
       <p>
-        This website is a tool to share{' '}
+        This website is a tool to share{" "}
         <Link to="/blog">my experiences and thoughts on my work</Link>. And I
-        keep a list of my{' '}
-        <Link to="/work">full time projects and contract work</Link> and my{' '}
+        keep a list of my{" "}
+        <Link to="/work">full time projects and contract work</Link> and my{" "}
         <Link useAnchor to="/CV-Alexander-Zubko-Mobile-Web.pdf">
           most recent CV
-        </Link>{' '}
+        </Link>{" "}
         here.
       </p>
       <p>
-        Also I like to learn new things in development, so I keep a list of{' '}
+        Also I like to learn new things in development, so I keep a list of{" "}
         <Link to="/learning">books and courses</Link> that I'm taking or took.
-        And I'm tracking{' '}
+        And I'm tracking{" "}
         <Link to="/experiments">the list of my hobby projects and code</Link> on
         this website as well.
       </p>
       <h2>Recent posts</h2>
       <div>
-        {edges.map(edge => {
+        {edges.map((edge) => {
           const { frontmatter } = edge.node;
           return (
-            <div key={frontmatter.path} css={{ marginBottom: '1rem' }}>
+            <div key={frontmatter.path} css={{ marginBottom: "1rem" }}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
             </div>
           );

@@ -3,14 +3,14 @@
 
  */
 
-import { Layout, Link, SEO } from '../components';
-import { rhythm } from '../Typography';
+import { Layout, Link, SEO } from "../components";
+import { rhythm } from "../Typography";
 
 const AcknowledgementsPage = () => (
   <Layout>
     <SEO
       title="Acknowledgements"
-      keywords={['acknowledgements', 'gatsby', 'react', 'open-source']}
+      keywords={["acknowledgements", "gatsby", "react", "open-source"]}
     />
     <h2>Acknowledgements</h2>
     <p>
@@ -18,16 +18,16 @@ const AcknowledgementsPage = () => (
       source projects like:
     </p>
     <ul css={Styles.list}>
-      <li css={Styles.listItemBullet('⚛️')}>
+      <li css={Styles.listItemBullet("⚛️")}>
         <Link to="https://reactjs.org/">React</Link>
       </li>
-      <li css={Styles.listItemBullet('🚀')}>
+      <li css={Styles.listItemBullet("🚀")}>
         <Link to="https://www.gatsbyjs.org">Gatsby</Link>
       </li>
-      <li css={Styles.listItemBullet('👩‍🎤')}>
+      <li css={Styles.listItemBullet("👩‍🎤")}>
         <Link to="https://emotion.sh">Emotion</Link>
       </li>
-      <li css={Styles.listItemBullet('🖋')}>
+      <li css={Styles.listItemBullet("🖋")}>
         <Link to="https://kyleamathews.github.io/typography.js/">
           Typography.js
         </Link>
@@ -35,18 +35,18 @@ const AcknowledgementsPage = () => (
     </ul>
     <h3>Inspired by:</h3>
     <ul css={Styles.list}>
-      <li css={Styles.listItemBullet('💜')}>
-        Structure and configs heavily inspired by{' '}
+      <li css={Styles.listItemBullet("💜")}>
+        Structure and configs heavily inspired by{" "}
         <Link to="https://github.com/gatsbyjs/gatsby-starter-blog">
           https://github.com/gatsbyjs/gatsby-starter-blog
         </Link>
-        {' and '}
+        {" and "}
         <Link to="https://github.com/reactjs/reactjs.org/">
           https://github.com/reactjs/reactjs.org/
         </Link>
       </li>
-      <li css={Styles.listItemBullet('❤️')}>
-        Markdown test{' '}
+      <li css={Styles.listItemBullet("❤️")}>
+        Markdown test{" "}
         <Link to="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">
           https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
         </Link>
@@ -54,24 +54,24 @@ const AcknowledgementsPage = () => (
     </ul>
     <h3>Tools:</h3>
     <ul css={Styles.list}>
-      <li css={Styles.listItemBullet('🛠')}>
+      <li css={Styles.listItemBullet("🛠")}>
         Codded with <Link to="https://code.visualstudio.com/">VS Code</Link>
       </li>
-      <li css={Styles.listItemBullet('👮‍')}>
-        Correctness ensured by <Link to="https://eslint.org/">ESLint</Link> and{' '}
+      <li css={Styles.listItemBullet("👮‍")}>
+        Correctness ensured by <Link to="https://eslint.org/">ESLint</Link> and{" "}
         <Link to="https://flow.org/">Flow</Link>
       </li>
-      <li css={Styles.listItemBullet('🚚')}>
+      <li css={Styles.listItemBullet("🚚")}>
         Swift module delivery by <Link to="https://eslint.org/">Yarn</Link>
       </li>
-      <li css={Styles.listItemBullet('💪')}>
-        Relentless hosting from{' '}
+      <li css={Styles.listItemBullet("💪")}>
+        Relentless hosting from{" "}
         <Link to="https://www.netlify.com/">Netlify</Link>
       </li>
     </ul>
     <h3>Code</h3>
     <p>
-      The code of this website is{' '}
+      The code of this website is{" "}
       <Link to="https://github.com/zubko/zubko.io">available on GitHub</Link>
     </p>
     {process.env.DEV ? (
@@ -84,10 +84,10 @@ const AcknowledgementsPage = () => (
 export default AcknowledgementsPage;
 const Styles = {
   list: {
-    listStyle: 'none',
+    listStyle: "none",
   },
-  listItemBullet: bullet => ({
-    '&::before': {
+  listItemBullet: (bullet) => ({
+    "&::before": {
       content: `"${bullet}"`, // marginLeft: '0.5rem',
       marginRight: rhythm(0.5),
     },

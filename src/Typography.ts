@@ -1,9 +1,9 @@
-import Typography from 'typography';
-import FairyGates from 'typography-theme-fairy-gates';
+import Typography from "typography";
+import FairyGates from "typography-theme-fairy-gates";
 
 FairyGates.overrideThemeStyles = () => ({
-  'a.gatsby-resp-image-link': {
-    boxShadow: 'none',
+  "a.gatsby-resp-image-link": {
+    boxShadow: "none",
   },
 });
 
@@ -14,7 +14,7 @@ FairyGates.scaleRatio = 1.618;
 const typography = new Typography(FairyGates);
 
 // Hot reload typography in development.
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
   typography.injectStyles();
 }
 

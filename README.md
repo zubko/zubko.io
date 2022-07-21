@@ -7,6 +7,7 @@ The source code of my personal [website / blog / portfolio / playground](https:/
 # Intro
 
 The idea of the website is to:
+
 - have a personal playground for Web/React
 - to have a place where I keep track of what I've done and what I'm doing
 - to share experience that I get while developing something

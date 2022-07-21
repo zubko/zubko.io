@@ -1,7 +1,7 @@
-import { CreatePagesArgs, GatsbyNode } from 'gatsby';
-import path from 'path';
+import { CreatePagesArgs, GatsbyNode } from "gatsby";
+import path from "path";
 
-export const sourceNodes: GatsbyNode['sourceNodes'] = ({ actions }) => {
+export const sourceNodes: GatsbyNode["sourceNodes"] = ({ actions }) => {
   // specify explicitly that `fileSystemName` has the type of string
   // otherwise it can become File type if the vale will match the file name
   actions.createTypes(`
@@ -14,7 +14,7 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = ({ actions }) => {
   `);
 };
 
-export const onCreateNode: GatsbyNode['onCreateNode'] = ({
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({
   node,
   actions,
   getNode,
@@ -27,18 +27,18 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({
     const parent = getNode(node.parent);
     createNodeField({
       node,
-      name: 'collection',
+      name: "collection",
       value: parent?.sourceInstanceName,
     });
     createNodeField({
       node,
-      name: 'fileSystemName',
+      name: "fileSystemName",
       value: parent?.relativeDirectory || parent?.name,
     });
   }
 };
 
-export const createPages: GatsbyNode['createPages'] = async args => {
+export const createPages: GatsbyNode["createPages"] = async (args) => {
   await createBlogPages(args);
   await createWorkPages(args);
   await createExperimentsPages(args);
@@ -48,9 +48,9 @@ const createBlogPages = async ({ graphql, actions }: CreatePagesArgs) => {
   return createPagesForCollection({
     graphql,
     actions,
-    collection: 'posts',
-    template: 'Post',
-    sortOder: 'ASC',
+    collection: "posts",
+    template: "Post",
+    sortOder: "ASC",
   });
 };
 
@@ -58,9 +58,9 @@ const createWorkPages = async ({ graphql, actions }: CreatePagesArgs) => {
   return createPagesForCollection({
     graphql,
     actions,
-    collection: 'work',
-    template: 'WorkProject',
-    sortOder: 'DESC',
+    collection: "work",
+    template: "WorkProject",
+    sortOder: "DESC",
   });
 };
 
@@ -71,15 +71,15 @@ const createExperimentsPages = async ({
   return createPagesForCollection({
     graphql,
     actions,
-    collection: 'experiments',
-    template: 'ExperimentProject',
-    sortOder: 'DESC',
+    collection: "experiments",
+    template: "ExperimentProject",
+    sortOder: "DESC",
   });
 };
 
 type CreatePagesForCollectionArgs = {
-  graphql: CreatePagesArgs['graphql'];
-  actions: CreatePagesArgs['actions'];
+  graphql: CreatePagesArgs["graphql"];
+  actions: CreatePagesArgs["actions"];
   collection: string;
   sortOder: string;
   template: string;
@@ -115,7 +115,7 @@ const createPagesForCollection = async ({
             }
           }
         }
-      `,
+      `
   );
 
   const posts = queryResult.data.allMarkdownRemark.edges;

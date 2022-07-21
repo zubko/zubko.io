@@ -1,6 +1,6 @@
-const rssFeedConfig = require('./src/rssFeedConfig');
+const rssFeedConfig = require("./src/rssFeedConfig");
 
-const MAIN_COLOR = '#2C8127';
+const MAIN_COLOR = "#2C8127";
 
 module.exports = {
   siteMetadata: {
@@ -9,8 +9,8 @@ module.exports = {
     author: `@_zubko`,
     siteUrl: `https://zubko.io`,
   },
-  jsxRuntime: 'automatic',
-  jsxImportSource: '@emotion/react',
+  jsxRuntime: "automatic",
+  jsxImportSource: "@emotion/react",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -64,7 +64,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
@@ -86,20 +86,20 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-embed-gist',
+            resolve: "gatsby-remark-embed-gist",
             options: {},
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: '›',
+              inlineCodeMarker: "›",
             },
           },
           {
-            resolve: 'gatsby-remark-external-links',
+            resolve: "gatsby-remark-external-links",
             options: {
-              target: '_blank',
-              rel: 'noopener noreferrer',
+              target: "_blank",
+              rel: "noopener noreferrer",
             },
           },
         ],
@@ -131,9 +131,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-146846227-1',
+        trackingId: "UA-146846227-1",
         anonymize: true,
-        cookieDomain: 'zubko.io',
+        cookieDomain: "zubko.io",
       },
     },
     {

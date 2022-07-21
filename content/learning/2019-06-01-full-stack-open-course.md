@@ -1,9 +1,9 @@
 ---
-type: 'course'
-author: 'Matti Luukkainen'
-link: 'https://fullstackopen.com/en/'
-title: 'Full Stack Open 2019'
-tags: ['JavaScript', 'React', 'Node', 'MongoDB', 'GraphQL']
+type: "course"
+author: "Matti Luukkainen"
+link: "https://fullstackopen.com/en/"
+title: "Full Stack Open 2019"
+tags: ["JavaScript", "React", "Node", "MongoDB", "GraphQL"]
 active: true
 ---
 

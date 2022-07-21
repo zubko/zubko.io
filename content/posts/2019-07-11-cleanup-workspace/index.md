@@ -1,8 +1,8 @@
 ---
-date: '2019-07-11'
-title: 'Cleanup workspace to boost productivity'
-path: '/blog/cleanup-workspace'
-tags: ['advice', 'productivity']
+date: "2019-07-11"
+title: "Cleanup workspace to boost productivity"
+path: "/blog/cleanup-workspace"
+tags: ["advice", "productivity"]
 ---
 
 A tiny Automator script & an app to manage workspaces can work nicely together to declutter the virtual work space.
@@ -19,11 +19,11 @@ So with the mighty name `Quit All Apps` the script looks like this:
 
 So it basically does 3 things:
 
-* Closes all apps
+- Closes all apps
 
-* Closes all Finder windows (because they survive the 1st step)
+- Closes all Finder windows (because they survive the 1st step)
 
-* Removes everything from the Desktop (usually it's a bunch of recent screenshots)
+- Removes everything from the Desktop (usually it's a bunch of recent screenshots)
 
 Now I can breath-in / breath-out and with a fresh mind switch to another project.
 

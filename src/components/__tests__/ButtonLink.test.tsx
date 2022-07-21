@@ -1,18 +1,19 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
+import React from "react";
+import renderer from "react-test-renderer";
 
-import ButtonLink from '../ButtonLink';
+import ButtonLink from "../ButtonLink";
 
-describe('ButtonLink', () => {
-  it('renders without regressions', () => {
+describe("ButtonLink", () => {
+  it("renders without regressions", () => {
     const tree = renderer
       .create(
         <ButtonLink
           backgroundColor="red"
           borderColor="blue"
-          to="https://button.link.to">
+          to="https://button.link.to"
+        >
           Title
-        </ButtonLink>,
+        </ButtonLink>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

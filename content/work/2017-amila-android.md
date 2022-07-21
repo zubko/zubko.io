@@ -1,16 +1,16 @@
 ---
-date: '2017-01-01'
-path: '/work/amila-android'
-title: 'Baby tracker, Pregnancy week by week for Android'
-tags: ['Android', 'native', 'Java', 'Kotlin', 'SQLite']
+date: "2017-01-01"
+path: "/work/amila-android"
+title: "Baby tracker, Pregnancy week by week for Android"
+tags: ["Android", "native", "Java", "Kotlin", "SQLite"]
 active: false
 ---
 
 Worked on a number of native Android apps for Amila.
 
-* Baby tracker (https://play.google.com/store/apps/details?id=com.amila.parenting)
+- Baby tracker (https://play.google.com/store/apps/details?id=com.amila.parenting)
 
-* Pregnancy week by week (https://play.google.com/store/apps/details?id=com.easymobs.pregnancy)
+- Pregnancy week by week (https://play.google.com/store/apps/details?id=com.easymobs.pregnancy)
 
 Both apps were engineered in a similar way. Both apps were written in Java some time ago and then Kotlin was used for the new code. The data was stored with SQLite and there was a custom ORM mapping to work with the data in a more convenient way. The UI was Fragment based, layouts, configs and static data of the app were kept in XML resources, some standard and custom controls were used to make the features.
 

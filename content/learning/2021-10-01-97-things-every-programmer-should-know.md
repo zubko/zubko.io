@@ -1,9 +1,9 @@
 ---
-type: 'book'
-author: 'Kevlin Henney .. & Experts'
-title: '97 Things Every Programmer Should Know'
-year: '2010'
-tags: ['general', 'programming']
+type: "book"
+author: "Kevlin Henney .. & Experts"
+title: "97 Things Every Programmer Should Know"
+year: "2010"
+tags: ["general", "programming"]
 active: false
 ---
 

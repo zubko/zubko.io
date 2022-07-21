@@ -1,17 +1,17 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-import { rhythm } from '../Typography';
-import Link from './Link';
+import { rhythm } from "../Typography";
+import Link from "./Link";
 
 type Item = {
-  path: string,
-  title: string,
+  path: string;
+  title: string;
 };
 
 type Props = {
-  next?: Item,
-  prev?: Item,
-  back?: Item,
+  next?: Item;
+  prev?: Item;
+  back?: Item;
 };
 
 /**

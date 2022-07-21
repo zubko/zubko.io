@@ -1,9 +1,9 @@
 ---
-type: 'book'
-author: 'Bart Jacobs'
-title: 'The Missing Manual for Swift Development'
-year: '2017'
-tags: ['iOS', 'Swift']
+type: "book"
+author: "Bart Jacobs"
+title: "The Missing Manual for Swift Development"
+year: "2017"
+tags: ["iOS", "Swift"]
 active: false
 ---
 

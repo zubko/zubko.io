@@ -1,10 +1,11 @@
 ---
-date: '2019-01-01'
-path: '/experiments/calculator-rn-web'
-title: 'Calculator with RN for Web @ FreeCodeCamp'
-tags: ['react-native', 'react-native-web', 'web', 'react', 'functional programming']
+date: "2019-01-01"
+path: "/experiments/calculator-rn-web"
+title: "Calculator with RN for Web @ FreeCodeCamp"
+tags:
+  ["react-native", "react-native-web", "web", "react", "functional programming"]
 active: false
-tech: ['React Native for Web', 'React', 'Ramda', 'math.js', 'FP']
+tech: ["React Native for Web", "React", "Ramda", "math.js", "FP"]
 ---
 
 A simple calculator Web app with FP logic core and React Native for Web UI.

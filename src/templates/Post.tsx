@@ -1,9 +1,9 @@
-import { graphql } from 'gatsby';
-import React from 'react';
+import { graphql } from "gatsby";
+import React from "react";
 
-import { Layout, SEO } from '../components';
-import BottomNavigation from '../components/BottomNavigation';
-import { Styles } from '../Theme';
+import { Layout, SEO } from "../components";
+import BottomNavigation from "../components/BottomNavigation";
+import { Styles } from "../Theme";
 
 const Template = ({ data, pageContext }: Object) => {
   const { next, prev } = pageContext;
@@ -24,7 +24,7 @@ const Template = ({ data, pageContext }: Object) => {
         <BottomNavigation
           next={next && next.frontmatter}
           prev={prev && prev.frontmatter}
-          back={{ title: 'Blog', path: '/blog' }}
+          back={{ title: "Blog", path: "/blog" }}
         />
       </div>
     </Layout>

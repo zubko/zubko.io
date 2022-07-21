@@ -1,9 +1,9 @@
 ---
-type: 'book'
-title: 'CSS Secrets'
-author: 'Lea Verou'
-year: '2015'
-tags: ['CSS']
+type: "book"
+title: "CSS Secrets"
+author: "Lea Verou"
+year: "2015"
+tags: ["CSS"]
 active: false
 ---
 
