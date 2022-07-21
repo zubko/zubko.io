@@ -1,14 +1,7 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+import { CreatePagesArgs, GatsbyNode } from 'gatsby';
+import path from 'path';
 
-'use strict';
-
-const path = require('path');
-
-exports.sourceNodes = ({ actions }) => {
+export const sourceNodes: GatsbyNode['sourceNodes'] = ({ actions }) => {
   // specify explicitly that `fileSystemName` has the type of string
   // otherwise it can become File type if the vale will match the file name
   actions.createTypes(`
@@ -21,33 +14,37 @@ exports.sourceNodes = ({ actions }) => {
   `);
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = ({
+  node,
+  actions,
+  getNode,
+}) => {
   const { createNodeField } = actions;
 
   // https://github.com/gatsbyjs/gatsby/issues/1634#issuecomment-388899348
 
-  if (node.internal && node.internal.type === `MarkdownRemark`) {
+  if (node.internal && node.internal.type === `MarkdownRemark` && node.parent) {
     const parent = getNode(node.parent);
     createNodeField({
       node,
       name: 'collection',
-      value: parent.sourceInstanceName,
+      value: parent?.sourceInstanceName,
     });
     createNodeField({
       node,
       name: 'fileSystemName',
-      value: parent.relativeDirectory || parent.name,
+      value: parent?.relativeDirectory || parent?.name,
     });
   }
 };
 
-exports.createPages = async function({ graphql, actions }) {
-  await createBlogPages({ graphql, actions });
-  await createWorkPages({ graphql, actions });
-  await createExperimentsPages({ graphql, actions });
+export const createPages: GatsbyNode['createPages'] = async args => {
+  await createBlogPages(args);
+  await createWorkPages(args);
+  await createExperimentsPages(args);
 };
 
-function createBlogPages({ graphql, actions }) {
+const createBlogPages = async ({ graphql, actions }: CreatePagesArgs) => {
   return createPagesForCollection({
     graphql,
     actions,
@@ -55,9 +52,9 @@ function createBlogPages({ graphql, actions }) {
     template: 'Post',
     sortOder: 'ASC',
   });
-}
+};
 
-function createWorkPages({ graphql, actions }) {
+const createWorkPages = async ({ graphql, actions }: CreatePagesArgs) => {
   return createPagesForCollection({
     graphql,
     actions,
@@ -65,9 +62,12 @@ function createWorkPages({ graphql, actions }) {
     template: 'WorkProject',
     sortOder: 'DESC',
   });
-}
+};
 
-function createExperimentsPages({ graphql, actions }) {
+const createExperimentsPages = async ({
+  graphql,
+  actions,
+}: CreatePagesArgs) => {
   return createPagesForCollection({
     graphql,
     actions,
@@ -75,15 +75,23 @@ function createExperimentsPages({ graphql, actions }) {
     template: 'ExperimentProject',
     sortOder: 'DESC',
   });
-}
+};
 
-async function createPagesForCollection({
+type CreatePagesForCollectionArgs = {
+  graphql: CreatePagesArgs['graphql'];
+  actions: CreatePagesArgs['actions'];
+  collection: string;
+  sortOder: string;
+  template: string;
+};
+
+const createPagesForCollection = async ({
   graphql,
   actions,
   collection,
   sortOder,
   template,
-}) {
+}: CreatePagesForCollectionArgs) => {
   const { createPage } = actions;
   const templatePath = path.resolve(`src/templates/${template}.tsx`);
 
@@ -141,4 +149,4 @@ async function createPagesForCollection({
       },
     });
   });
-}
+};

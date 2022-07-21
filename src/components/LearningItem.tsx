@@ -2,7 +2,7 @@
  * Item component for Learning page
  */
 
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 
 import styled from '@emotion/styled';
 
@@ -23,7 +23,9 @@ const LearningItem = ({ node }: Props) => {
     frontmatter: { author, title, year },
   } = node;
   const [opened, setOpened] = useState(false);
-  const handleClick = event => {
+  const handleClick = (
+    event: MouseEvent<HTMLDivElement | HTMLAnchorElement>,
+  ) => {
     event.preventDefault();
     setOpened(!opened);
   };

@@ -3,13 +3,13 @@
  */
 
 import { graphql, StaticQuery } from 'gatsby';
-import * as React from 'react';
+import { ReactNode } from 'react';
 
 import { Footer, Header } from '../components';
 import { rhythm } from '../Typography';
 
 type Props = {
-  children: React.Node,
+  children: ReactNode;
 };
 
 const Layout = ({ children }: Props) => (

@@ -12,6 +12,7 @@ type Props = {
   usePlainStyle?: boolean;
   children?: React.ReactNode;
   to: string;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 export default ({
