@@ -7,3 +7,7 @@ Next:
 - remove folder index file
 - upgrade Yarn
 - warn Calling `createTypes` in the `sourceNodes` API is deprecated. Please use: `createSchemaCustomization`
+
+Maybe:
+
+- add an icon which indicates a link to another website and use it everywhere
