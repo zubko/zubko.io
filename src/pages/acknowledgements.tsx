@@ -59,7 +59,7 @@ const AcknowledgementsPage = () => (
       </li>
       <li css={Styles.listItemBullet("👮‍")}>
         Correctness ensured by <Link to="https://eslint.org/">ESLint</Link> and{" "}
-        <Link to="https://flow.org/">Flow</Link>
+        <Link to="https://www.typescriptlang.org/">TypeScript</Link>
       </li>
       <li css={Styles.listItemBullet("🚚")}>
         Swift module delivery by <Link to="https://eslint.org/">Yarn</Link>
@@ -84,12 +84,12 @@ const AcknowledgementsPage = () => (
 export default AcknowledgementsPage;
 const Styles = {
   list: {
-    listStyle: "none",
+    listStyle: "none"
   },
-  listItemBullet: (bullet) => ({
+  listItemBullet: bullet => ({
     "&::before": {
       content: `"${bullet}"`, // marginLeft: '0.5rem',
-      marginRight: rhythm(0.5),
-    },
-  }),
+      marginRight: rhythm(0.5)
+    }
+  })
 };
