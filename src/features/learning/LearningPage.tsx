@@ -1,4 +1,4 @@
-import { graphql, PageProps } from "gatsby";
+import { PageProps } from "gatsby";
 
 import { Layout, Link, SEO } from "../../components";
 import { rhythm } from "../../Typography";
@@ -72,29 +72,6 @@ const LearningSection = ({
       </ul>
     </>
   ) : null;
-
-export const query = graphql`
-  query LearningItems {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [fields___fileSystemName] }
-      filter: { fields: { collection: { eq: "learning" } } }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            type
-            author
-            title
-            year
-            tags
-            active
-          }
-        }
-      }
-    }
-  }
-`;
 
 const Styles = {
   list: {
