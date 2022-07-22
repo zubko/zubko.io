@@ -5,10 +5,10 @@ Array [
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@font-face{font-family:Ampersand;src:local('Baskerville-Italic'),local('GoudyOldStyleT-Italic'),local('Palatino-Italic'),local('BookAntiqua-Italic');unicode-range:U+26;}",
+        "__html": "@font-face{font-family:Ampersand;src:local(\\"Baskerville-Italic\\"),local(\\"GoudyOldStyleT-Italic\\"),local(\\"Palatino-Italic\\"),local(\\"BookAntiqua-Italic\\");unicode-range:U+26;}",
       }
     }
-    data-emotion="css-global xpv7vx"
+    data-emotion="css-global 1jhw1vb"
   />,
   <style
     dangerouslySetInnerHTML={

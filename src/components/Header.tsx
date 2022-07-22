@@ -14,13 +14,13 @@ const MediaForVertMenu = Media.lessThanPx(MENU_MEDIA_SPLIT);
 const MediaForHorzMenu = Media.greaterThanPx(MENU_MEDIA_SPLIT);
 
 type Props = {
-  siteTitle: string;
+  siteTitle?: string;
 };
 
-const Header = ({ siteTitle }: Props) => {
+const Header = ({ siteTitle = "" }: Props) => {
   const [isMenuOpened, setMenuOpened] = useState(false);
   return (
-    <StaticQuery
+    <StaticQuery<Queries.MenuQueryQuery>
       query={graphql`
         query MenuQuery {
           allMenuYaml {
@@ -33,8 +33,8 @@ const Header = ({ siteTitle }: Props) => {
           }
         }
       `}
-      render={({ allMenuYaml: { edges: menuEdges } }: Object) => {
-        const menuLinks = menuEdges.map((e) => e.node);
+      render={({ allMenuYaml: { edges: menuEdges } }) => {
+        const menuLinks = menuEdges.map(e => e.node);
         return (
           <div css={styles.headerOuter}>
             <div css={styles.headerInner}>
@@ -70,19 +70,19 @@ const Header = ({ siteTitle }: Props) => {
 
 const styles = {
   headerOuter: {
-    marginBottom: `${rhythm(0.5)}`,
+    marginBottom: `${rhythm(0.5)}`
   },
   headerInner: {
     paddingTop: rhythm(0.5),
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "center"
   },
   homeLink: {
     textDecoration: `none`,
     ":hover": {
-      textDecoration: `none`,
+      textDecoration: `none`
     },
     background: "none",
     textShadow: "none",
@@ -90,13 +90,9 @@ const styles = {
       color: Colors.mainDarker,
       margin: 0,
       fontWeight: 600,
-      fontSize: "1.21225rem", // h3
-    },
-  },
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
+      fontSize: "1.21225rem" // h3
+    }
+  }
 };
 
 export default Header;

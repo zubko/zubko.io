@@ -1,48 +1,61 @@
-import React from "react";
-import { graphql } from "gatsby";
+import {
+  faAndroid,
+  faApple,
+  faReact
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { graphql, PageProps } from "gatsby";
 
-import { Layout, SEO, Link } from "../components";
+import { Layout, Link, SEO } from "../components";
 import { rhythm } from "../Typography";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faReact,
-  faApple,
-  faAndroid,
-} from "@fortawesome/free-brands-svg-icons";
+type WorkNode = {
+  readonly frontmatter: {
+    readonly title: string;
+    readonly path: string;
+    readonly date: string;
+    readonly active: boolean;
+    readonly tags: ReadonlyArray<string>;
+  };
+};
 
 const TAG_TO_ICON = {
   "React Native": faReact,
   Android: faAndroid,
   iOS: faApple,
-  React: faReact,
+  React: faReact
 };
 
 const AVAILABLE_ICONS = Object.keys(TAG_TO_ICON);
 
-const TAG_SORT = (a, b) => a.toLowerCase().localeCompare(b.toLowerCase());
+const TAG_SORT = (a: string, b: string) =>
+  a.toLowerCase().localeCompare(b.toLowerCase());
 
-const ProjectItem = ({ node }) => {
+const ProjectItem = ({ node }: { node: WorkNode }) => {
   const {
-    frontmatter: { path, tags = [], title },
+    frontmatter: { path, tags, title }
   } = node;
   const sortedTags = [...tags].sort(TAG_SORT);
   return (
     <li key={path}>
       <Link to={path}>
         {title}
-        {sortedTags.map((tag) =>
-          AVAILABLE_ICONS.includes(tag) ? <ProjectIcon tag={tag} /> : null
-        )}
+        {sortedTags.map(tag => (
+          <ProjectIcon key={tag} tag={tag} />
+        ))}
       </Link>
     </li>
   );
 };
 
-const ProjectIcon = ({ tag }) => {
+const ProjectIcon = ({ tag }: { tag: string }) => {
+  if (!AVAILABLE_ICONS.includes(tag)) {
+    return null;
+  }
   return (
     <FontAwesomeIcon
       css={STYLES.platformIcon}
+      // @ts-expect-error: Check after updating fontawesome to the latest version
       icon={TAG_TO_ICON[tag]}
       width={18}
       height={18}
@@ -50,10 +63,10 @@ const ProjectIcon = ({ tag }) => {
   );
 };
 
-const WorkPage = ({ data }) => {
+const WorkPage = ({ data }: PageProps<Queries.WorkPagesQuery>) => {
   const { edges } = data.allMarkdownRemark;
-  const pastProjects = edges.filter(({ node }) => !node.frontmatter.active);
-  const activeProjects = edges.filter(({ node }) => node.frontmatter.active);
+  const pastProjects = edges.filter(({ node }) => !node.frontmatter?.active);
+  const activeProjects = edges.filter(({ node }) => node.frontmatter?.active);
   return (
     <Layout>
       <SEO title="Work" keywords={["projects", "work"]} />
@@ -62,16 +75,16 @@ const WorkPage = ({ data }) => {
         <>
           <h4>Active projects</h4>
           <ul css={STYLES.list}>
-            {activeProjects.map((edge) => (
-              <ProjectItem node={edge.node} />
+            {activeProjects.map(edge => (
+              <ProjectItem node={edge.node as WorkNode} />
             ))}
           </ul>
         </>
       ) : null}
       <h4>Some previous full-time projects and contract work</h4>
       <ul css={STYLES.list}>
-        {pastProjects.map((edge) => (
-          <ProjectItem node={edge.node} />
+        {pastProjects.map(edge => (
+          <ProjectItem node={edge.node as WorkNode} />
         ))}
       </ul>
 
@@ -103,13 +116,13 @@ export const query = graphql`
 
 const STYLES = {
   list: {
-    marginLeft: rhythm(0.5),
+    marginLeft: rhythm(0.5)
   },
   platformIcon: {
     width: "1em",
     height: "1em",
-    marginLeft: rhythm(0.1),
-  },
+    marginLeft: rhythm(0.1)
+  }
 };
 
 export default WorkPage;
