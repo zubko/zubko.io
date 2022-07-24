@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomNavigation renders without regressions 1`] = `
+Array [
+  <hr />,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-ldhagr{margin-bottom:1.618rem;}",
+      }
+    }
+    data-emotion="css ldhagr"
+  />,
+  <div
+    className="css-ldhagr"
+  >
+    <span>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-66vicj{font-weight:600;}",
+          }
+        }
+        data-emotion="css 66vicj"
+      />
+      <span
+        className="css-66vicj"
+      >
+        Prev:
+      </span>
+       
+      <br />
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-1kqtbsh-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );-webkit-background-position:0 100%;background-position:0 100%;background-repeat:repeat-x;-webkit-background-size:4px 1px;background-size:4px 1px;-webkit-transition:background-size 0s;transition:background-size 0s;}.css-1kqtbsh-Link:hover{color:black;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );-webkit-background-size:4px 100%;background-size:4px 100%;-webkit-transition:background-size 0.15s;transition:background-size 0.15s;}",
+          }
+        }
+        data-emotion="css 1kqtbsh-Link"
+      />
+      <a
+        className="css-1kqtbsh-Link"
+        href="/prev-path"
+      >
+        ← 
+        prev-title
+      </a>
+    </span>
+  </div>,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-ldhagr{margin-bottom:1.618rem;}",
+      }
+    }
+    data-emotion="css ldhagr"
+  />,
+  <div
+    className="css-ldhagr"
+  >
+    <span>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-66vicj{font-weight:600;}",
+          }
+        }
+        data-emotion="css 66vicj"
+      />
+      <span
+        className="css-66vicj"
+      >
+        Next:
+      </span>
+       
+      <br />
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-1kqtbsh-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );-webkit-background-position:0 100%;background-position:0 100%;background-repeat:repeat-x;-webkit-background-size:4px 1px;background-size:4px 1px;-webkit-transition:background-size 0s;transition:background-size 0s;}.css-1kqtbsh-Link:hover{color:black;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );-webkit-background-size:4px 100%;background-size:4px 100%;-webkit-transition:background-size 0.15s;transition:background-size 0.15s;}",
+          }
+        }
+        data-emotion="css 1kqtbsh-Link"
+      />
+      <a
+        className="css-1kqtbsh-Link"
+        href="/next-path"
+      >
+        next-title
+         →
+      </a>
+    </span>
+  </div>,
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-ldhagr{margin-bottom:1.618rem;}",
+      }
+    }
+    data-emotion="css ldhagr"
+  />,
+  <div
+    className="css-ldhagr"
+  >
+    <span>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-66vicj{font-weight:600;}",
+          }
+        }
+        data-emotion="css 66vicj"
+      />
+      <span
+        className="css-66vicj"
+      >
+        Back:
+      </span>
+       
+      <br />
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-1kqtbsh-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to bottom,
+    currentColor 0%,
+    currentColor 100%
+  );-webkit-background-position:0 100%;background-position:0 100%;background-repeat:repeat-x;-webkit-background-size:4px 1px;background-size:4px 1px;-webkit-transition:background-size 0s;transition:background-size 0s;}.css-1kqtbsh-Link:hover{color:black;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+      to bottom,
+      #bcebb9 0%,
+      #bcebb9 100%
+    );-webkit-background-size:4px 100%;background-size:4px 100%;-webkit-transition:background-size 0.15s;transition:background-size 0.15s;}",
+          }
+        }
+        data-emotion="css 1kqtbsh-Link"
+      />
+      <a
+        className="css-1kqtbsh-Link"
+        href="/back-path"
+      >
+        ← 
+        back-title
+      </a>
+    </span>
+  </div>,
+]
+`;

@@ -1,7 +1,7 @@
 node_modules/*
 
 # Ignore markdown files and examples
-posts/*
+blog/*
 
 # Ignore built files
 public/*

@@ -4,7 +4,6 @@
 
 import { css, Global } from "@emotion/react";
 import styled from "@emotion/styled";
-import React from "react";
 
 const globalCss = css`
   @font-face {
@@ -20,11 +19,9 @@ const TextWithAmp = styled.span`
   font-size: 115%;
 `;
 
-const Ampersand = () => (
+export const Ampersand = () => (
   <>
     <Global styles={globalCss} />
     <TextWithAmp>&</TextWithAmp>
   </>
 );
-
-export default Ampersand;

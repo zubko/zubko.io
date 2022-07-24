@@ -1,10 +1,11 @@
 import Typography from "typography";
+// @ts-expect-error: no typings yet
 import FairyGates from "typography-theme-fairy-gates";
 
 FairyGates.overrideThemeStyles = () => ({
   "a.gatsby-resp-image-link": {
-    boxShadow: "none",
-  },
+    boxShadow: "none"
+  }
 });
 
 delete FairyGates.googleFonts;

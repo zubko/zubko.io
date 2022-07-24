@@ -1,35 +1,13 @@
 import { graphql } from "gatsby";
-import React from "react";
 
-import { Layout, Link, SEO } from "../components";
-
-const BlogPage = ({ data }: Object) => {
-  const { edges } = data.allMarkdownRemark;
-  return (
-    <Layout>
-      <SEO title="Blog" keywords={[`iOS`, `Android`, `React Native`]} />
-      <h1>Posts</h1>
-      <div>
-        {edges.map((edge) => {
-          const { frontmatter } = edge.node;
-          return (
-            <div key={frontmatter.path} css={{ marginBottom: "1rem" }}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
-            </div>
-          );
-        })}
-      </div>
-      <Link to="/">← Home</Link>
-    </Layout>
-  );
-};
+export { BlogPage as default } from "../features/blog/BlogPage";
 
 export const query = graphql`
-  query BlogPageQuery {
+  query BlogPage {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
-        fields: { collection: { eq: "posts" } }
+        fields: { collection: { eq: "blog" } }
         frontmatter: { hidden: { ne: true } }
       }
     ) {
@@ -45,5 +23,3 @@ export const query = graphql`
     }
   }
 `;
-
-export default BlogPage;

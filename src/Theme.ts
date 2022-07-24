@@ -1,6 +1,5 @@
 /**
  * Theme of the website
-
  */
 
 import { css } from "@emotion/react";
@@ -10,7 +9,7 @@ const Colors = {
   mainDarker: "#2C8127",
   text: "#1a1a1a",
   subtle: "#8d8d8d",
-  linkBackground: "#bcebb9",
+  linkBackground: "#bcebb9"
 };
 
 const linkPlain = css`
@@ -57,28 +56,28 @@ const linkAnimated = css`
   }
 `;
 
-const SIZES = {
+const Sizes = {
   xsmall: { min: 0, max: 599 },
   small: { min: 600, max: 779 },
   medium: { min: 780, max: 979 },
   large: { min: 980, max: 1279 },
   xlarge: { min: 1280, max: 1339 },
-  xxlarge: { min: 1340, max: Infinity },
+  xxlarge: { min: 1340, max: Infinity }
 };
 
-type Size = $Keys<typeof SIZES>;
+type Size = keyof typeof Sizes;
 
 const Media = {
-  between(smallKey: Size, largeKey: Size, excludeLarge: boolean = false) {
+  between(smallKey: Size, largeKey: Size, excludeLarge = false) {
     if (excludeLarge) {
-      return `@media (min-width: ${SIZES[smallKey].min}px) and (max-width: ${
-        SIZES[largeKey].min - 1
-      }px)`;
+      return `@media (min-width: ${
+        Sizes[smallKey].min
+      }px) and (max-width: ${Sizes[largeKey].min - 1}px)`;
     } else {
-      if (SIZES[largeKey].max === Infinity) {
-        return `@media (min-width: ${SIZES[smallKey].min}px)`;
+      if (Sizes[largeKey].max === Infinity) {
+        return `@media (min-width: ${Sizes[smallKey].min}px)`;
       } else {
-        return `@media (min-width: ${SIZES[smallKey].min}px) and (max-width: ${SIZES[largeKey].max}px)`;
+        return `@media (min-width: ${Sizes[smallKey].min}px) and (max-width: ${Sizes[largeKey].max}px)`;
       }
     }
   },
@@ -88,7 +87,7 @@ const Media = {
   },
 
   greaterThan(key: Size) {
-    return `@media (min-width: ${SIZES[key].min}px)`;
+    return `@media (min-width: ${Sizes[key].min}px)`;
   },
 
   lessThanPx(px: number) {
@@ -96,12 +95,11 @@ const Media = {
   },
 
   lessThan(key: Size) {
-    return `@media (max-width: ${SIZES[key].min - 1}px)`;
+    return `@media (max-width: ${Sizes[key].min - 1}px)`;
   },
 
   size(key: Size) {
-    const size = SIZES[key];
-
+    const size = Sizes[key];
     if (size.min == null) {
       return Media.lessThan(key);
     } else if (size.max == null) {
@@ -109,7 +107,7 @@ const Media = {
     } else {
       return Media.between(key, key);
     }
-  },
+  }
 };
 
 const Fonts = {
@@ -120,12 +118,12 @@ const Fonts = {
 
     [Media.lessThan("medium")]: {
       fontSize: 40,
-      lineHeight: "45px",
-    },
+      lineHeight: "45px"
+    }
   },
   small: {
-    fontSize: 14,
-  },
+    fontSize: 14
+  }
 };
 
 // MD as a separate page
@@ -218,7 +216,7 @@ const Styles = {
   linkAnimated,
 
   markdown: markdownStyle,
-  markdownInline: markdownInlineStyle,
+  markdownInline: markdownInlineStyle
 };
 
 export { Colors, Styles, Media, Fonts };

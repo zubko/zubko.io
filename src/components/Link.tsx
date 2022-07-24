@@ -12,10 +12,11 @@ type Props = {
   usePlainStyle?: boolean;
   children?: React.ReactNode;
   to: string;
+  className?: string;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
-export default ({
+export const Link = ({
   useAnchor,
   usePlainStyle,
   children,

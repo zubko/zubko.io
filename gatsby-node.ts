@@ -1,5 +1,7 @@
-import { CreatePagesArgs, GatsbyNode } from "gatsby";
-import { createPagesForCollection } from "./src/createPagesForCollection";
+import { GatsbyNode } from "gatsby";
+import { createBlogPages } from "./src/features/blog/createBlogPages";
+import { createExperimentsPages } from "./src/features/experiments/createExperimentsPages";
+import { createWorkPages } from "./src/features/work/createWorkPages";
 
 export const sourceNodes: GatsbyNode["sourceNodes"] = ({ actions }) => {
   // specify explicitly that `fileSystemName` has the type of string
@@ -42,37 +44,4 @@ export const createPages: GatsbyNode["createPages"] = async args => {
   await createBlogPages(args);
   await createWorkPages(args);
   await createExperimentsPages(args);
-};
-
-const createBlogPages = async ({ graphql, actions }: CreatePagesArgs) => {
-  return createPagesForCollection({
-    graphql,
-    actions,
-    collection: "posts",
-    template: "Post",
-    sortOder: "ASC"
-  });
-};
-
-const createWorkPages = async ({ graphql, actions }: CreatePagesArgs) => {
-  return createPagesForCollection({
-    graphql,
-    actions,
-    collection: "work",
-    template: "WorkProject",
-    sortOder: "DESC"
-  });
-};
-
-const createExperimentsPages = async ({
-  graphql,
-  actions
-}: CreatePagesArgs) => {
-  return createPagesForCollection({
-    graphql,
-    actions,
-    collection: "experiments",
-    template: "ExperimentProject",
-    sortOder: "DESC"
-  });
 };

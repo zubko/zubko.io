@@ -6,7 +6,7 @@ import { MouseEvent, useState } from "react";
 
 import styled from "@emotion/styled";
 
-import Link from "../../components/Link";
+import { Link } from "../../components/Link";
 import { Styles } from "../../Theme";
 import { rhythm } from "../../Typography";
 

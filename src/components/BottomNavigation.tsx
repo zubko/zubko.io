@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 import { rhythm } from "../Typography";
-import Link from "./Link";
+import { Link } from "./Link";
 
 type Item = {
   path: string;
@@ -9,15 +9,15 @@ type Item = {
 };
 
 type Props = {
-  next?: Item;
-  prev?: Item;
-  back?: Item;
+  next?: Item | null;
+  prev?: Item | null;
+  back?: Item | null;
 };
 
 /**
  * Component which displays Next/Prev navigation at the bottom of the page
  */
-export default ({ next, prev, back }: Props) => (
+export const BottomNavigation = ({ next, prev, back }: Props) => (
   <>
     <hr />
     <OptionContainer>

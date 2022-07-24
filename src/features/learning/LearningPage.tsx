@@ -1,7 +1,9 @@
 import { PageProps } from "gatsby";
 
-import { Layout, Link, SEO } from "../../components";
+import { Link } from "../../components/Link";
+import { Seo } from "../../components/Seo";
 import { rhythm } from "../../Typography";
+import { Layout } from "../layout/Layout";
 
 import { LearningItem } from "./LearningItem";
 
@@ -27,7 +29,7 @@ export const LearningPage = ({
 
   return (
     <Layout>
-      <SEO title="Learning" keywords={["learning", "books", "courses"]} />
+      <Seo title="Learning" keywords={["learning", "books", "courses"]} />
       <h1>Learning</h1>
 
       <LearningSection
@@ -67,7 +69,7 @@ const LearningSection = ({
       <h3>{title}</h3>
       <ul css={Styles.list}>
         {items.map(node => (
-          <LearningItem node={node} />
+          <LearningItem key={node.frontmatter.title} node={node} />
         ))}
       </ul>
     </>

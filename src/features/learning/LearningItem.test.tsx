@@ -63,20 +63,20 @@ describe("LearningItem", () => {
             <style
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": ".css-13utqo0{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+                  "__html": ".css-1wqujsd-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
           to top,
           rgba(0, 0, 0, 0),
           rgba(0, 0, 0, 0) 1px,
           currentColor 1px,
           currentColor 2px,
           rgba(0, 0, 0, 0) 2px
-        );background-image:none;}.css-13utqo0:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
+        );background-image:none;}.css-1wqujsd-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
                 }
               }
-              data-emotion="css 13utqo0"
+              data-emotion="css 1wqujsd-Link"
             />
             <a
-              className="css-13utqo0"
+              className="css-1wqujsd-Link"
               href="#"
               onClick={[Function]}
             >

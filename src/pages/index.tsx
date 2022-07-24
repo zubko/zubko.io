@@ -1,25 +1,35 @@
-import React from "react";
-import { graphql } from "gatsby";
+import { graphql, PageProps } from "gatsby";
 
-import { Layout, SEO, Link } from "../components";
+import { Link } from "../components/Link";
+import { Seo } from "../components/Seo";
+import { Layout } from "../features/layout/Layout";
 
-const IndexPage = ({ data }) => {
+type PostData = {
+  readonly frontmatter: {
+    readonly path: string;
+    readonly title: string;
+  };
+};
+
+const IndexPage = ({ data }: PageProps<Queries.HomePageQuery>) => {
   const { edges } = data.allMarkdownRemark;
+  const nodes = edges.map(({ node }) => node as PostData);
   return (
     <Layout>
-      <SEO
+      <Seo
         title="Home"
         keywords={[
           `Zubko`,
           `Alexander`,
           `iOS Developer`,
           `Android Developer`,
-          `React Native Developer`,
+          `React Native Developer`
         ]}
       />
       <h2>Hello</h2>
       <p>
-        My name is Alexander. I'm a Mobile & Web Developer with Node.js skills.
+        My name is Alexander. I&apos;m a Mobile & Web Developer with Node.js
+        skills.
       </p>
       <p>
         This website is a tool to share{" "}
@@ -33,15 +43,15 @@ const IndexPage = ({ data }) => {
       </p>
       <p>
         Also I like to learn new things in development, so I keep a list of{" "}
-        <Link to="/learning">books and courses</Link> that I'm taking or took.
-        And I'm tracking{" "}
+        <Link to="/learning">books and courses</Link> that I&apos;m taking or
+        took. And I&apos;m tracking{" "}
         <Link to="/experiments">the list of my hobby projects and code</Link> on
         this website as well.
       </p>
-      <h2>Recent posts</h2>
+      <h2>Recent blog posts</h2>
       <div>
-        {edges.map((edge) => {
-          const { frontmatter } = edge.node;
+        {nodes.map(node => {
+          const { frontmatter } = node;
           return (
             <div key={frontmatter.path} css={{ marginBottom: "1rem" }}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
@@ -54,11 +64,11 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-  query HomePageQuery {
+  query HomePage {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
-        fields: { collection: { eq: "posts" } }
+        fields: { collection: { eq: "blog" } }
         frontmatter: { hidden: { ne: true } }
       }
     ) {
@@ -67,7 +77,6 @@ export const query = graphql`
           frontmatter {
             title
             path
-            date
           }
         }
       }

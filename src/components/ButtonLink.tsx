@@ -3,7 +3,7 @@
  */
 
 import * as React from "react";
-import Link from "./Link";
+import { Link } from "./Link";
 
 type Props = {
   backgroundColor: string;
@@ -12,7 +12,7 @@ type Props = {
   children?: React.Node;
 };
 
-export default ({
+export const ButtonLink = ({
   backgroundColor,
   borderColor,
   to,
@@ -52,11 +52,11 @@ const styles = {
       color: "white",
       transform: "translate(0, -2px)",
       boxShadow: "0px 8px 0px  var(--boxShadowColor, #000)",
-      filter: "brightness(110%)",
+      filter: "brightness(110%)"
     },
     "&:active": {
       transform: "translate(0, 3px)",
-      boxShadow: "0px 2px 0px  var(--boxShadowColor, #000)",
-    },
-  },
+      boxShadow: "0px 2px 0px  var(--boxShadowColor, #000)"
+    }
+  }
 };

@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders without regressions 1`] = `
+Array [
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-onf4p3{margin-bottom:0.809rem;}",
+      }
+    }
+    data-emotion="css onf4p3"
+  />,
+  <div
+    className="css-onf4p3"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-vls6ey{padding-top:0.809rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}",
+        }
+      }
+      data-emotion="css vls6ey"
+    />
+    <div
+      className="css-vls6ey"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-1crlzb{-webkit-text-decoration:none;text-decoration:none;background:none;text-shadow:none;}.css-1crlzb:hover{-webkit-text-decoration:none;text-decoration:none;}.css-1crlzb >h1{color:#2C8127;margin:0;font-weight:600;font-size:1.21225rem;}",
+          }
+        }
+        data-emotion="css 1crlzb"
+      />
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-vbatjp-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );-webkit-text-decoration:none;text-decoration:none;background:none;text-shadow:none;}.css-vbatjp-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}.css-vbatjp-Link:hover{-webkit-text-decoration:none;text-decoration:none;}.css-vbatjp-Link >h1{color:#2C8127;margin:0;font-weight:600;font-size:1.21225rem;}",
+          }
+        }
+        data-emotion="css vbatjp-Link"
+      />
+      <a
+        className="css-vbatjp-Link"
+        href="/"
+      >
+        <h1>
+          siteTitle
+        </h1>
+      </a>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "@media (max-width: 779px){.css-12od4kl{display:none;}}",
+          }
+        }
+        data-emotion="css 12od4kl"
+      />
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-8d8lv6-MenuHorizontal{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}@media (max-width: 779px){.css-8d8lv6-MenuHorizontal{display:none;}}",
+          }
+        }
+        data-emotion="css 8d8lv6-MenuHorizontal"
+      />
+      <div
+        className="css-8d8lv6-MenuHorizontal"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-1be2rwe{-webkit-text-decoration:none;text-decoration:none;fontsize:1rem;font-weight:medium;background:none;}",
+            }
+          }
+          data-emotion="css 1be2rwe"
+        />
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-2w87gj-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );-webkit-text-decoration:none;text-decoration:none;fontsize:1rem;font-weight:medium;background:none;}.css-2w87gj-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
+            }
+          }
+          data-emotion="css 2w87gj-Link"
+        />
+        <a
+          className="css-2w87gj-Link"
+          href="/path-1/"
+        >
+          title-1
+        </a>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-11b9gp{color:white;margin-left:0.5rem;margin-right:0.5rem;cursor:default;}",
+            }
+          }
+          data-emotion="css 11b9gp"
+        />
+        <span
+          className="css-11b9gp"
+        />
+        <a
+          className="css-2w87gj-Link"
+          href="/path-2/"
+        >
+          title-2
+        </a>
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "@media (min-width: 780px){.css-1u0qo0x{display:none;}}",
+          }
+        }
+        data-emotion="css 1u0qo0x"
+      />
+      <div
+        className="css-1u0qo0x"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-1dridds{cursor:pointer;color:#2C8127;border:1px solid #2C8127;padding:0.5rem;background-color:transparent;}.css-1dridds:focus{outline:0;}",
+            }
+          }
+          data-emotion="css 1dridds"
+        />
+        <button
+          className="css-1dridds"
+          onClick={[Function]}
+        >
+          Menu
+        </button>
+      </div>
+    </div>
+    <div
+      className="css-1u0qo0x"
+    >
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": ".css-lnkmq4{display:none;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-bottom:0.809rem;padding-top:1.618rem;}",
+          }
+        }
+        data-emotion="css lnkmq4"
+      />
+      <div
+        className="css-lnkmq4"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-u6unsj{-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}",
+            }
+          }
+          data-emotion="css u6unsj"
+        />
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-wj5h1p-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}.css-wj5h1p-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
+            }
+          }
+          data-emotion="css wj5h1p-Link"
+        />
+        <a
+          className="css-wj5h1p-Link"
+          href="/path-1/"
+        >
+          title-1
+        </a>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": ".css-1xtjhx3{height:0.5rem;color:white;cursor:default;}",
+            }
+          }
+          data-emotion="css 1xtjhx3"
+        />
+        <span
+          className="css-1xtjhx3"
+        />
+        <a
+          className="css-wj5h1p-Link"
+          href="/path-2/"
+        >
+          title-2
+        </a>
+      </div>
+    </div>
+  </div>,
+]
+`;

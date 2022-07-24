@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuVertical body renders without regressions 1`] = `
+<div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-lnkmq4{display:none;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-bottom:0.809rem;padding-top:1.618rem;}",
+      }
+    }
+    data-emotion="css lnkmq4"
+  />
+  <div
+    className="css-lnkmq4"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-u6unsj{-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}",
+        }
+      }
+      data-emotion="css u6unsj"
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-wj5h1p-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}.css-wj5h1p-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
+        }
+      }
+      data-emotion="css wj5h1p-Link"
+    />
+    <a
+      className="css-wj5h1p-Link"
+      href="/path-1"
+    >
+      title-1
+    </a>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-1xtjhx3{height:0.5rem;color:white;cursor:default;}",
+        }
+      }
+      data-emotion="css 1xtjhx3"
+    />
+    <span
+      className="css-1xtjhx3"
+    />
+    <a
+      className="css-wj5h1p-Link"
+      href="/path-2"
+    >
+      title-2
+    </a>
+  </div>
+</div>
+`;
+
+exports[`MenuVertical head renders without regressions 1`] = `
+<div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-1dridds{cursor:pointer;color:#2C8127;border:1px solid #2C8127;padding:0.5rem;background-color:transparent;}.css-1dridds:focus{outline:0;}",
+      }
+    }
+    data-emotion="css 1dridds"
+  />
+  <button
+    className="css-1dridds"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`MenuVertical opened body renders without regressions 1`] = `
+<div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-1vl9wua{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-bottom:0.809rem;padding-top:1.618rem;}",
+      }
+    }
+    data-emotion="css 1vl9wua"
+  />
+  <div
+    className="css-1vl9wua"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-u6unsj{-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}",
+        }
+      }
+      data-emotion="css u6unsj"
+    />
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-wj5h1p-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    currentColor 1px,
+    currentColor 2px,
+    rgba(0, 0, 0, 0) 2px
+  );-webkit-text-decoration:none;text-decoration:none;font-size:1rem;font-weight:medium;background:none;}.css-wj5h1p-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
+        }
+      }
+      data-emotion="css wj5h1p-Link"
+    />
+    <a
+      className="css-wj5h1p-Link"
+      href="/path-1"
+    >
+      title-1
+    </a>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".css-1xtjhx3{height:0.5rem;color:white;cursor:default;}",
+        }
+      }
+      data-emotion="css 1xtjhx3"
+    />
+    <span
+      className="css-1xtjhx3"
+    />
+    <a
+      className="css-wj5h1p-Link"
+      href="/path-2"
+    >
+      title-2
+    </a>
+  </div>
+</div>
+`;
+
+exports[`MenuVertical opened head renders without regressions 1`] = `
+<div>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": ".css-194ekfi{cursor:pointer;color:#2C8127;border:1px solid #2C8127;padding:0.5rem;background-color:transparent;color:white;border:1px solid white;background-color:#2C8127;background:repeating-linear-gradient(
+    45deg,
+    #3CB534,
+    #3CB534 10px,
+    #2C8127 10px,
+    #2C8127 20px
+  );opacity:0.9;}.css-194ekfi:focus{outline:0;}",
+      }
+    }
+    data-emotion="css 194ekfi"
+  />
+  <button
+    className="css-194ekfi"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
