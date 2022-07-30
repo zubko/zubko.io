@@ -1,5 +1,6 @@
 import { graphql, PageProps } from "gatsby";
 import styled from "styled-components";
+import { Ampersand } from "../components/Ampersand";
 
 import { Link } from "../components/Link";
 import { Seo } from "../components/Seo";
@@ -29,8 +30,8 @@ const IndexPage = ({ data }: PageProps<Queries.HomePageQuery>) => {
       />
       <h2>Hello</h2>
       <p>
-        My name is Alexander. I&apos;m a Mobile & Web Developer with Node.js
-        skills.
+        My name is Alexander. I&apos;m a Mobile <Ampersand /> Web Developer with
+        Node.js skills.
       </p>
       <p>
         This website is a tool to share{" "}
