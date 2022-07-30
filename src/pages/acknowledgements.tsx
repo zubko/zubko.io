@@ -3,7 +3,7 @@
 
  */
 
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import { Link } from "../components/Link";
 import { Seo } from "../components/Seo";
 import { Layout } from "../features/layout/Layout";
@@ -27,8 +27,8 @@ const AcknowledgementsPage = () => (
       <ListItem bullet="🚀">
         <Link to="https://www.gatsbyjs.org">Gatsby</Link>
       </ListItem>
-      <ListItem bullet="👩‍🎤">
-        <Link to="https://emotion.sh">Emotion</Link>
+      <ListItem bullet=" 💅🏾">
+        <Link to="https://styled-components.com/">Styled Components</Link>
       </ListItem>
       <ListItem bullet="🖋">
         <Link to="https://kyleamathews.github.io/typography.js/">

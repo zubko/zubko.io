@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import { PageProps } from "gatsby";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
 import { Seo } from "../../components/Seo";
@@ -17,12 +17,12 @@ type ExperimentNode = {
 };
 
 export const ExperimentsPage = ({
-  data
+  data,
 }: PageProps<Queries.ExperimentsPagesQuery>) => {
   const { edges } = data.allMarkdownRemark;
   const nodes = edges.map(({ node }) => node as ExperimentNode);
-  const pastItems = nodes.filter(node => !node.frontmatter.active);
-  const activeItems = nodes.filter(node => node.frontmatter.active);
+  const pastItems = nodes.filter((node) => !node.frontmatter.active);
+  const activeItems = nodes.filter((node) => node.frontmatter.active);
   return (
     <Layout>
       <Seo title="Experiments" keywords={["projects", "experiments"]} />
@@ -31,7 +31,7 @@ export const ExperimentsPage = ({
         <>
           <h4>Active personal projects</h4>
           <List>
-            {activeItems.map(node => (
+            {activeItems.map((node) => (
               <ExperimentItem key={node.frontmatter.path} node={node} />
             ))}
           </List>
@@ -39,7 +39,7 @@ export const ExperimentsPage = ({
       ) : null}
       <h4>Previous personal projects</h4>
       <List>
-        {pastItems.map(node => (
+        {pastItems.map((node) => (
           <ExperimentItem key={node.frontmatter.path} node={node} />
         ))}
       </List>
@@ -51,7 +51,7 @@ export const ExperimentsPage = ({
 
 const ExperimentItem = ({ node }: { node: ExperimentNode }) => {
   const {
-    frontmatter: { path, title }
+    frontmatter: { path, title },
   } = node;
   return (
     <li key={path}>

@@ -2,9 +2,9 @@
  * Root component of the page
  */
 
-import styled from "@emotion/styled";
 import { graphql, StaticQuery } from "gatsby";
 import { ReactNode } from "react";
+import styled from "styled-components";
 
 import { rhythm } from "../../Typography";
 import { Footer } from "./Footer";
@@ -25,7 +25,7 @@ export const Layout = ({ children }: Props) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return (
         <Container>
           <header>

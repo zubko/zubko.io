@@ -2,8 +2,8 @@
  * Component which renders a button to be used as a link
  */
 
-import styled from "@emotion/styled";
 import { ReactNode } from "react";
+import styled from "styled-components";
 import { Link } from "./Link";
 
 type Props = {

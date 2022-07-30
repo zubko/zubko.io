@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
 import {
   faAndroid,
   faApple,
-  faReact
+  faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
 
 import { rhythm } from "../../Typography";
 
@@ -12,7 +12,7 @@ const TagToIcon = {
   "React Native": faReact,
   Android: faAndroid,
   iOS: faApple,
-  React: faReact
+  React: faReact,
 };
 
 const AvailableIcons = Object.keys(TagToIcon);

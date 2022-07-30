@@ -1,83 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link inner animated link renders without regressions 1`] = `
-Array [
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": ".css-1kqtbsh-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
-    to bottom,
-    currentColor 0%,
-    currentColor 100%
-  );-webkit-background-position:0 100%;background-position:0 100%;background-repeat:repeat-x;-webkit-background-size:4px 1px;background-size:4px 1px;-webkit-transition:background-size 0s;transition:background-size 0s;}.css-1kqtbsh-Link:hover{color:black;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
-      to bottom,
-      #bcebb9 0%,
-      #bcebb9 100%
-    );-webkit-background-size:4px 100%;background-size:4px 100%;-webkit-transition:background-size 0.15s;transition:background-size 0.15s;}",
-      }
-    }
-    data-emotion="css 1kqtbsh-Link"
-  />,
-  <a
-    className="css-1kqtbsh-Link"
-    href="/inner-link"
-  >
-    Title
-  </a>,
-]
+<a
+  className="Link__StyledLink-sc-ualt9-0 hjXVxL"
+  href="/inner-link"
+>
+  Title
+</a>
 `;
 
 exports[`Link inner plain link renders without regressions 1`] = `
-Array [
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": ".css-5tzfc4-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0) 1px,
-    currentColor 1px,
-    currentColor 2px,
-    rgba(0, 0, 0, 0) 2px
-  );}.css-5tzfc4-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
-      }
-    }
-    data-emotion="css 5tzfc4-Link"
-  />,
-  <a
-    className="css-5tzfc4-Link"
-    href="/inner-link"
-  >
-    Title
-  </a>,
-]
+<a
+  className="Link__StyledLink-sc-ualt9-0 gpCrQD"
+  href="/inner-link"
+  usePlainStyle={true}
+>
+  Title
+</a>
 `;
 
 exports[`Link outer link renders without regressions 1`] = `
-Array [
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": ".css-1kqtbsh-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
-    to bottom,
-    currentColor 0%,
-    currentColor 100%
-  );-webkit-background-position:0 100%;background-position:0 100%;background-repeat:repeat-x;-webkit-background-size:4px 1px;background-size:4px 1px;-webkit-transition:background-size 0s;transition:background-size 0s;}.css-1kqtbsh-Link:hover{color:black;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
-      to bottom,
-      #bcebb9 0%,
-      #bcebb9 100%
-    );-webkit-background-size:4px 100%;background-size:4px 100%;-webkit-transition:background-size 0.15s;transition:background-size 0.15s;}",
-      }
-    }
-    data-emotion="css 1kqtbsh-Link"
-  />,
-  <a
-    className="css-1kqtbsh-Link"
-    href="https://outer.link.to"
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    Title
-  </a>,
-]
+<a
+  className="Link__StyledAnchor-sc-ualt9-1 eQkEtD"
+  href="https://outer.link.to"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  Title
+</a>
 `;

@@ -1,8 +1,8 @@
 import { PageProps } from "gatsby";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
 import { Seo } from "../../components/Seo";
-import { rhythm } from "../../Typography";
 import { Layout } from "../layout/Layout";
 
 import { LearningItem } from "./LearningItem";
@@ -20,12 +20,12 @@ type LearningNode = {
 };
 
 export const LearningPage = ({
-  data
+  data,
 }: PageProps<Queries.LearningItemsQuery>) => {
   const { edges } = data.allMarkdownRemark;
-  const nodes = edges.map(edge => edge.node) as LearningNode[];
-  const books = nodes.filter(node => node.frontmatter.type === "book");
-  const courses = nodes.filter(node => node.frontmatter.type === "course");
+  const nodes = edges.map((edge) => edge.node) as LearningNode[];
+  const books = nodes.filter((node) => node.frontmatter.type === "book");
+  const courses = nodes.filter((node) => node.frontmatter.type === "course");
 
   return (
     <Layout>
@@ -34,22 +34,22 @@ export const LearningPage = ({
 
       <LearningSection
         title="Currently reading 📖"
-        items={books.filter(node => node.frontmatter.active)}
+        items={books.filter((node) => node.frontmatter.active)}
       />
 
       <LearningSection
         title="Currently doing 🏋️‍♂️"
-        items={courses.filter(node => node.frontmatter.active)}
+        items={courses.filter((node) => node.frontmatter.active)}
       />
 
       <LearningSection
         title="Finished books 📚"
-        items={books.filter(node => !node.frontmatter.active)}
+        items={books.filter((node) => !node.frontmatter.active)}
       />
 
       <LearningSection
         title="Finished courses 🏅"
-        items={courses.filter(node => !node.frontmatter.active)}
+        items={courses.filter((node) => !node.frontmatter.active)}
       />
 
       <Link to="/">← Home</Link>
@@ -59,7 +59,7 @@ export const LearningPage = ({
 
 const LearningSection = ({
   title,
-  items
+  items,
 }: {
   title: string;
   items: LearningNode[];
@@ -67,24 +67,15 @@ const LearningSection = ({
   items.length > 0 ? (
     <>
       <h3>{title}</h3>
-      <ul css={Styles.list}>
-        {items.map(node => (
+      <List>
+        {items.map((node) => (
           <LearningItem key={node.frontmatter.title} node={node} />
         ))}
-      </ul>
+      </List>
     </>
   ) : null;
 
-const Styles = {
-  list: {
-    marginLeft: 0,
-    listStyle: "none"
-  },
-  platformIcon: {
-    display: "inline",
-    marginBottom: 0,
-    verticalAlign: "text-bottom",
-    marginRight: rhythm(0.1),
-    height: "1.3em"
-  }
-};
+const List = styled.ul`
+  list-style: none;
+  margin-left: 0;
+`;

@@ -1,64 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MenuHorizontal renders without regressions 1`] = `
-Array [
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": ".css-u06qw9-MenuHorizontal{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}",
-      }
-    }
-    data-emotion="css u06qw9-MenuHorizontal"
-  />,
-  <div
-    className="css-u06qw9-MenuHorizontal"
+<div
+  className="MenuHorizontal__Container-sc-1eqslyb-0 dDlQZC"
+>
+  <a
+    className="Link__StyledLink-sc-ualt9-0 gpCrQD MenuHorizontal__MenuLink-sc-1eqslyb-1 gpYiQp"
+    href="/path-1"
+    usePlainStyle={true}
   >
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".css-1be2rwe{-webkit-text-decoration:none;text-decoration:none;fontsize:1rem;font-weight:medium;background:none;}",
-        }
-      }
-      data-emotion="css 1be2rwe"
-    />
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".css-2w87gj-Link{color:#2C8127;-webkit-text-decoration:none;text-decoration:none;background-image:linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0) 1px,
-    currentColor 1px,
-    currentColor 2px,
-    rgba(0, 0, 0, 0) 2px
-  );-webkit-text-decoration:none;text-decoration:none;fontsize:1rem;font-weight:medium;background:none;}.css-2w87gj-Link:hover{background-image:none;-webkit-filter:brightness(1.3);filter:brightness(1.3);}",
-        }
-      }
-      data-emotion="css 2w87gj-Link"
-    />
-    <a
-      className="css-2w87gj-Link"
-      href="/path-1"
-    >
-      title-1
-    </a>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".css-11b9gp{color:white;margin-left:0.5rem;margin-right:0.5rem;cursor:default;}",
-        }
-      }
-      data-emotion="css 11b9gp"
-    />
-    <span
-      className="css-11b9gp"
-    />
-    <a
-      className="css-2w87gj-Link"
-      href="/path-2"
-    >
-      title-2
-    </a>
-  </div>,
-]
+    title-1
+  </a>
+  <span
+    className="MenuHorizontal__Separator-sc-1eqslyb-2 ijqdii"
+  />
+  <a
+    className="Link__StyledLink-sc-ualt9-0 gpCrQD MenuHorizontal__MenuLink-sc-1eqslyb-1 gpYiQp"
+    href="/path-2"
+    usePlainStyle={true}
+  >
+    title-2
+  </a>
+</div>
 `;

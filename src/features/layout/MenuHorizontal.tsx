@@ -2,8 +2,8 @@
  * Top bar menu component
  */
 
-import styled from "@emotion/styled";
 import { Fragment } from "react";
+import styled from "styled-components";
 import { Link } from "../../components/Link";
 
 type Props = {
@@ -12,13 +12,7 @@ type Props = {
 
 export const MenuHorizontal = ({ links, ...otherProps }: Props) => {
   return (
-    <div
-      css={{
-        display: "flex",
-        flexDirection: "row"
-      }}
-      {...otherProps}
-    >
+    <Container {...otherProps}>
       {links.map((item, index) => (
         <Fragment key={item.path}>
           <MenuLink usePlainStyle to={item.path}>
@@ -27,9 +21,14 @@ export const MenuHorizontal = ({ links, ...otherProps }: Props) => {
           {index < links.length - 1 ? <Separator /> : null}
         </Fragment>
       ))}
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const MenuLink = styled(Link)`
   text-decoration: none;

@@ -4,8 +4,9 @@
 
 import { Link as GatsbyLink } from "gatsby";
 import * as React from "react";
+import styled from "styled-components";
 
-import { Styles } from "../Theme";
+import { AnimatedLinkStyle, PlainLinkStyle } from "../Theme";
 
 type Props = {
   useAnchor?: boolean;
@@ -24,23 +25,30 @@ export const Link = ({
   ...otherProps
 }: Props) => {
   const internal = to === "#" || to.indexOf("/") === 0;
-  const style = usePlainStyle ? Styles.linkPlain : Styles.linkAnimated;
   if (!useAnchor && internal) {
     return (
-      <GatsbyLink to={to} css={style} {...otherProps}>
+      <StyledLink to={to} usePlainStyle={usePlainStyle} {...otherProps}>
         {children}
-      </GatsbyLink>
+      </StyledLink>
     );
   }
   const sameTab = to.indexOf("mailto:") === 0;
   return (
-    <a
+    <StyledAnchor
+      usePlainStyle={usePlainStyle}
       href={to}
-      css={style}
       {...(!sameTab ? { target: "_blank", rel: "noopener noreferrer" } : null)}
       {...otherProps}
     >
       {children}
-    </a>
+    </StyledAnchor>
   );
 };
+
+const StyledLink = styled(GatsbyLink)<{ usePlainStyle?: boolean }>`
+  ${({ usePlainStyle }) => (usePlainStyle ? PlainLinkStyle : AnimatedLinkStyle)}
+`;
+
+const StyledAnchor = styled.a<{ usePlainStyle?: boolean }>`
+  ${({ usePlainStyle }) => (usePlainStyle ? PlainLinkStyle : AnimatedLinkStyle)}
+`;

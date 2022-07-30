@@ -2,9 +2,9 @@
  * Top common part of the website
  */
 
-import styled from "@emotion/styled";
 import { graphql, StaticQuery } from "gatsby";
 import { useState } from "react";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
 import { Colors, Media } from "../../Theme";
@@ -43,7 +43,7 @@ export const Header = ({ siteTitle = "" }: Props) => {
         }
       `}
       render={({ allMenuYaml: { edges: menuEdges } }) => {
-        const menuLinks = menuEdges.map(e => e.node as LinkNode);
+        const menuLinks = menuEdges.map((e) => e.node as LinkNode);
         return (
           <HeaderOuter>
             <HeaderInner>

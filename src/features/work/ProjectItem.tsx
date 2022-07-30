@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
 
@@ -10,14 +10,14 @@ const TagSort = (a: string, b: string) =>
 
 export const ProjectItem = ({ node }: { node: WorkNode }) => {
   const {
-    frontmatter: { path, tags, title }
+    frontmatter: { path, tags, title },
   } = node;
   const sortedTags = [...tags].sort(TagSort);
   return (
     <li key={path}>
       <Link to={path}>
         <Title>{title}</Title>
-        {sortedTags.map(tag => (
+        {sortedTags.map((tag) => (
           <ProjectIcon key={tag} tag={tag} />
         ))}
       </Link>

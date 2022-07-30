@@ -1,4 +1,5 @@
 import { graphql, PageProps } from "gatsby";
+import styled from "styled-components";
 
 import { Link } from "../components/Link";
 import { Seo } from "../components/Seo";
@@ -23,7 +24,7 @@ const IndexPage = ({ data }: PageProps<Queries.HomePageQuery>) => {
           `Alexander`,
           `iOS Developer`,
           `Android Developer`,
-          `React Native Developer`
+          `React Native Developer`,
         ]}
       />
       <h2>Hello</h2>
@@ -50,12 +51,12 @@ const IndexPage = ({ data }: PageProps<Queries.HomePageQuery>) => {
       </p>
       <h2>Recent blog posts</h2>
       <div>
-        {nodes.map(node => {
+        {nodes.map((node) => {
           const { frontmatter } = node;
           return (
-            <div key={frontmatter.path} css={{ marginBottom: "1rem" }}>
+            <BlogPostItem key={frontmatter.path}>
               <Link to={frontmatter.path}>{frontmatter.title}</Link>
-            </div>
+            </BlogPostItem>
           );
         })}
       </div>
@@ -82,6 +83,10 @@ export const query = graphql`
       }
     }
   }
+`;
+
+const BlogPostItem = styled.div`
+  margin-bottom: 1rem;
 `;
 
 export default IndexPage;

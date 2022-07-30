@@ -2,8 +2,8 @@
  * Vertical top bar menu component. It's displayed on small screens.
  */
 
-import styled from "@emotion/styled";
 import { Fragment } from "react";
+import styled from "styled-components";
 import { Link } from "../../components/Link";
 import { Colors } from "../../Theme";
 import { rhythm } from "../../Typography";
@@ -48,7 +48,7 @@ export const MenuVertical = ({
   );
 };
 
-const MenuButton = styled("button")<{ isOpened: boolean }>([
+const MenuButton = styled("button")<{ isOpened: boolean }>(({ isOpened }) => [
   `
   cursor: pointer;
   color: ${Colors.mainDarker};
@@ -59,9 +59,8 @@ const MenuButton = styled("button")<{ isOpened: boolean }>([
     outline: 0;
   }
 `,
-  ({ isOpened }) =>
-    isOpened
-      ? `
+  isOpened
+    ? `
   color: white;
   border: 1px solid white;
   background-color: ${Colors.mainDarker};
@@ -74,7 +73,7 @@ const MenuButton = styled("button")<{ isOpened: boolean }>([
   );
   opacity: 0.9;
 `
-      : null
+    : null,
 ]);
 
 const Separator = styled.span`

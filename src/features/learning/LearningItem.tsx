@@ -4,10 +4,10 @@
 
 import { MouseEvent, useState } from "react";
 
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
-import { Styles } from "../../Theme";
+import { Markdown } from "../../components/Markdown";
 import { rhythm } from "../../Typography";
 
 type Props = {
@@ -20,7 +20,7 @@ type Props = {
 export const LearningItem = ({ node }: Props) => {
   const {
     html,
-    frontmatter: { author, title, year }
+    frontmatter: { author, title, year },
   } = node;
   const [opened, setOpened] = useState(false);
   const handleClick = (
@@ -39,10 +39,7 @@ export const LearningItem = ({ node }: Props) => {
         </StyledLink>
         {opened && (
           <Content>
-            <div
-              css={Styles.markdownInline}
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            <Markdown htmlContent={html} inline />
           </Content>
         )}
       </TitleAndContent>
@@ -55,19 +52,18 @@ const Container = styled.li`
   flex-direction: row;
 `;
 
-const Triangle = styled.div<{ opened: boolean }>`
+const Triangle = styled.div.attrs({
+  children: "▶",
+})<{ opened: boolean }>`
   display: inline-block;
   margin-right: ${rhythm(0.5)};
-  transform: rotate(${props => (props.opened ? 90 : 0)}deg);
+  transform: rotate(${(props) => (props.opened ? 90 : 0)}deg);
   transform-origin: 50% 45%;
   align-self: flex-start;
   transition: transform 0.2s;
   cursor: pointer;
   user-select: none;
 `;
-Triangle.defaultProps = {
-  children: "▶"
-};
 
 const TitleAndContent = styled.div`
   flex: 1;
@@ -77,7 +73,7 @@ const StyledLink = styled(Link)`
   background-image: none;
 `;
 
-const Content = styled.p`
+const Content = styled.div`
   && {
     /* '&&' to override some list related styles in Typography.js
        which made every last sub element of 'li' to not have margin-bottom */

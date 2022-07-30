@@ -2,15 +2,15 @@
  * Common footer of the website
  */
 
-import styled from "@emotion/styled";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
 import { rhythm } from "../../Typography";
 
 export const Footer = () => (
-  <footer css={{ marginTop: rhythm(1) }}>
+  <Container>
     <p>
       ~~~
       <br /> © {new Date().getFullYear()}, Built{" "}
@@ -19,8 +19,12 @@ export const Footer = () => (
         <Icon icon={faReact} size="lg" width={25} height={25} />
       </AcknowledgementsLink>
     </p>
-  </footer>
+  </Container>
 );
+
+const Container = styled.footer`
+  margin-top: ${rhythm(1)};
+`;
 
 const AcknowledgementsLink = styled(Link)`
   text-decoration: none;

@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import { PageProps } from "gatsby";
+import styled from "styled-components";
 
 import { Link } from "../../components/Link";
 import { Seo } from "../../components/Seo";
@@ -21,7 +21,7 @@ export const BlogPage = ({ data }: PageProps<Queries.BlogPageQuery>) => {
       <Seo title="Blog" keywords={[`iOS`, `Android`, `React Native`]} />
       <h1>Blog</h1>
       <div>
-        {posts.map(node => {
+        {posts.map((node) => {
           const { frontmatter } = node;
           return (
             <Title key={frontmatter.path}>

@@ -1,9 +1,9 @@
 import { graphql, PageProps } from "gatsby";
 
 import { BottomNavigation } from "../../components/BottomNavigation";
+import { Markdown } from "../../components/Markdown";
 import { Seo } from "../../components/Seo";
 import { CollectionPageContext } from "../../createPagesForCollection";
-import { Styles } from "../../Theme";
 import { Layout } from "../layout/Layout";
 
 type PostData = {
@@ -16,22 +16,19 @@ type PostData = {
 
 const Template = ({
   data,
-  pageContext
+  pageContext,
 }: PageProps<Queries.ExperimentByPathQuery, CollectionPageContext>) => {
   const { next, prev } = pageContext;
   const post = data.markdownRemark as PostData;
   const {
-    frontmatter: { title }
+    frontmatter: { title },
   } = post;
   return (
     <Layout>
       {/* TODO: add tags from item */}
       <Seo title={title} keywords={[]} />
       <h1>{title}</h1>
-      <div
-        css={Styles.markdown}
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <Markdown htmlContent={post.html} />
       <BottomNavigation
         next={next && next.frontmatter}
         prev={prev && prev.frontmatter}

@@ -7,10 +7,9 @@ module.exports = {
     title: `Alexander Zubko`,
     description: `I'm building mobile apps and React websites and sharing my experience here.`,
     author: `@_zubko`,
-    siteUrl: `https://zubko.io`
+    siteUrl: `https://zubko.io`,
   },
   jsxRuntime: "automatic",
-  jsxImportSource: "@emotion/react",
   graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,8 +17,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -32,37 +31,37 @@ module.exports = {
         background_color: MAIN_COLOR,
         theme_color: MAIN_COLOR,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`
-      }
+        icon: `src/images/favicon.png`,
+      },
     },
     `gatsby-plugin-flow`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/blog/`
-      }
+        path: `${__dirname}/content/blog/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `work`,
-        path: `${__dirname}/content/work/`
-      }
+        path: `${__dirname}/content/work/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `learning`,
-        path: `${__dirname}/content/learning/`
-      }
+        path: `${__dirname}/content/learning/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `experiments`,
-        path: `${__dirname}/content/experiments/`
-      }
+        path: `${__dirname}/content/experiments/`,
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -76,69 +75,69 @@ module.exports = {
               quality: 80,
               linkImagesToOriginal: true,
               withWebp: {
-                quality: 80
-              }
-            }
+                quality: 80,
+              },
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           {
             resolve: "gatsby-remark-embed-gist",
-            options: {}
+            options: {},
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: "›"
-            }
+              inlineCodeMarker: "›",
+            },
           },
           {
             resolve: "gatsby-remark-external-links",
             options: {
               target: "_blank",
-              rel: "noopener noreferrer"
-            }
-          }
-        ]
-      }
+              rel: "noopener noreferrer",
+            },
+          },
+        ],
+      },
     },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: MAIN_COLOR
-      }
+        color: MAIN_COLOR,
+      },
     },
-    `gatsby-plugin-emotion`,
+    "gatsby-plugin-styled-components",
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/Typography`,
-        omitGoogleFont: true
-      }
+        omitGoogleFont: true,
+      },
     },
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: `${__dirname}/content/`
-      }
+        path: `${__dirname}/content/`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-146846227-1",
         anonymize: true,
-        cookieDomain: "zubko.io"
-      }
+        cookieDomain: "zubko.io",
+      },
     },
     {
-      ...rssFeedConfig
-    }
-  ]
+      ...rssFeedConfig,
+    },
+  ],
 };

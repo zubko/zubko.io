@@ -16,8 +16,8 @@ The idea of the website is to:
 
 - [Gatsby](https://www.gatsbyjs.org/) (and some plugins)
 - Gatsby means - [React](https://reactjs.org/) + [GraphQL](https://graphql.org/) + SSR (behind the curtains)
-- [Emotion](https://emotion.sh)
-- [Flow](https://flow.org/)
+- [Styled Components](https://styled-components.com)
+- [TypeScript](https://www.typescriptlang.org/)
 - [ESLint](https://eslint.org/)
 - [Jest](https://jestjs.io/)
 

@@ -2,10 +2,9 @@
  * Component which renders a beautiful "&" symbol
  */
 
-import { css, Global } from "@emotion/react";
-import styled from "@emotion/styled";
+import styled, { createGlobalStyle } from "styled-components";
 
-const globalCss = css`
+const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: Ampersand;
     src: local("Baskerville-Italic"), local("GoudyOldStyleT-Italic"),
@@ -21,7 +20,7 @@ const TextWithAmp = styled.span`
 
 export const Ampersand = () => (
   <>
-    <Global styles={globalCss} />
+    <GlobalStyle />
     <TextWithAmp>&</TextWithAmp>
   </>
 );

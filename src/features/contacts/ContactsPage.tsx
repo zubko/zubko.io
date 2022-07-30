@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
 
 import { ButtonLink } from "../../components/ButtonLink";
 import { Link } from "../../components/Link";
@@ -13,7 +13,7 @@ export const ContactsPage = () => (
     <h2>Contacts</h2>
     <p>You can find me here:</p>
     <ButtonGroup>
-      {Links.map(l => (
+      {Links.map((l) => (
         <Button key={l.to} data={l} />
       ))}
     </ButtonGroup>
@@ -22,7 +22,7 @@ export const ContactsPage = () => (
 );
 
 const Button = ({
-  data: { color, borderColor, to, title, icon }
+  data: { color, borderColor, to, title, icon },
 }: {
   data: LinkData;
 }) => {

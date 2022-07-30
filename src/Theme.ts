@@ -2,17 +2,17 @@
  * Theme of the website
  */
 
-import { css } from "@emotion/react";
+import { css } from "styled-components";
 
-const Colors = {
+export const Colors = {
   main: "#3CB534",
   mainDarker: "#2C8127",
   text: "#1a1a1a",
   subtle: "#8d8d8d",
-  linkBackground: "#bcebb9"
+  linkBackground: "#bcebb9",
 };
 
-const linkPlain = css`
+export const PlainLinkStyle = css`
   color: ${Colors.mainDarker};
   text-decoration: none;
   background-image: linear-gradient(
@@ -29,7 +29,7 @@ const linkPlain = css`
   }
 `;
 
-const linkAnimated = css`
+export const AnimatedLinkStyle = css`
   color: ${Colors.mainDarker};
   text-decoration: none;
 
@@ -62,17 +62,17 @@ const Sizes = {
   medium: { min: 780, max: 979 },
   large: { min: 980, max: 1279 },
   xlarge: { min: 1280, max: 1339 },
-  xxlarge: { min: 1340, max: Infinity }
+  xxlarge: { min: 1340, max: Infinity },
 };
 
 type Size = keyof typeof Sizes;
 
-const Media = {
+export const Media = {
   between(smallKey: Size, largeKey: Size, excludeLarge = false) {
     if (excludeLarge) {
-      return `@media (min-width: ${
-        Sizes[smallKey].min
-      }px) and (max-width: ${Sizes[largeKey].min - 1}px)`;
+      return `@media (min-width: ${Sizes[smallKey].min}px) and (max-width: ${
+        Sizes[largeKey].min - 1
+      }px)`;
     } else {
       if (Sizes[largeKey].max === Infinity) {
         return `@media (min-width: ${Sizes[smallKey].min}px)`;
@@ -107,10 +107,10 @@ const Media = {
     } else {
       return Media.between(key, key);
     }
-  }
+  },
 };
 
-const Fonts = {
+export const Fonts = {
   header: {
     fontSize: 60,
     lineHeight: "65px",
@@ -118,105 +118,10 @@ const Fonts = {
 
     [Media.lessThan("medium")]: {
       fontSize: 40,
-      lineHeight: "45px"
-    }
+      lineHeight: "45px",
+    },
   },
   small: {
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };
-
-// MD as a separate page
-const markdownStyle = css`
-  .gatsby-highlight-code-line {
-    background-color: #feb;
-    display: block;
-    margin-right: -1em;
-    margin-left: -1em;
-    padding-right: 1em;
-    padding-left: 0.75em;
-    border-left: 0.25em solid #f99;
-  }
-
-  /**
-   * Add back the container background-color, border-radius, padding, margin
-   * and overflow that we removed from <pre>.
-   */
-  .gatsby-highlight {
-    background-color: #fdf6e3;
-    border-radius: 0.3em;
-    margin: 0.5em 0;
-    margin-bottom: 1.618rem;
-    padding: 1em;
-    overflow: auto;
-  }
-
-  /**
-   * Remove the default PrismJS theme background-color, border-radius, margin,
-   * padding and overflow.
-   */
-  .gatsby-highlight pre[class*="language-"] {
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    overflow: initial;
-    float: left;
-    min-width: 100%;
-  }
-
-  /* Adjust the position of the line numbers */
-  .gatsby-highlight pre[class*="language-"].line-numbers {
-    padding-left: 2.8em;
-  }
-
-  a:not(.anchor):not(.gatsby-resp-image-link) {
-    ${linkAnimated};
-  }
-
-  /**
-   * Fix the font size of the code.
-   * It looks bigger than the current font
-   */
-  code[class*="language-"] {
-    font-size: 0.85em;
-    line-height: 1.618em;
-  }
-
-  /* First paragraph of the blog */
-  & > p:first-child {
-    font-size: 1.1em;
-    font-weight: 200;
-    color: ${Colors.subtle};
-
-    ${Media.greaterThan("xlarge")} {
-      font-size: 1.2em;
-    }
-
-    a,
-    strong {
-      font-weight: 400;
-    }
-  }
-
-  /* using **bold** inside > quote */
-  blockquote em {
-    font-weight: 600;
-  }
-`;
-
-// MD included in the page
-const markdownInlineStyle = css`
-  a {
-    ${linkAnimated}
-  }
-`;
-
-const Styles = {
-  linkPlain,
-  linkAnimated,
-
-  markdown: markdownStyle,
-  markdownInline: markdownInlineStyle
-};
-
-export { Colors, Styles, Media, Fonts };
