@@ -35,20 +35,12 @@ const IndexPage = ({ data }: PageProps<Queries.HomePageQuery>) => {
       </p>
       <p>
         This website is a tool to share{" "}
-        <Link to="/blog">my experiences and thoughts on my work</Link>. And I
-        keep a list of my{" "}
-        <Link to="/work">full time projects and contract work</Link> and my{" "}
+        <Link to="/blog">my experiences and thoughts on my work</Link>. You can
+        see my{" "}
         <Link useAnchor to="/CV-Alexander-Zubko-Mobile-Web.pdf">
           most recent CV
         </Link>{" "}
         here.
-      </p>
-      <p>
-        Also I like to learn new things in development, so I keep a list of{" "}
-        <Link to="/learning">books and courses</Link> that I&apos;m taking or
-        took. And I&apos;m tracking{" "}
-        <Link to="/experiments">the list of my hobby projects and code</Link> on
-        this website as well.
       </p>
       <h2>Recent blog posts</h2>
       <div>
